@@ -1,0 +1,16 @@
+TODO:
+
+Database:
+
+Application:
+	Login.CS
+		add data from db to uxLoginBTN_click
+
+	ActionSelector.cs
+		on load populate combobox
+		UXPersonalReviews_SelectedIndexChanged
+		Review action button items
+		add tabs for all the queries listed in the proposal
+
+Data:
+Create test data
