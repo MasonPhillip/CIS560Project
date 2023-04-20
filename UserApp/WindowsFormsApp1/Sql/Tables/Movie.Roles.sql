@@ -7,7 +7,7 @@ BEGIN
       MovieId INT NOT NULL,
       IsDirector BIT NOT NULL,
       IsActor BIT NOT NULL,
-      AmountPaid DECIMAL(10,2)
+      AmountPaid INT NOT NULL
       
 
       CONSTRAINT PK_Movie_Roles_RoleId PRIMARY KEY CLUSTERED

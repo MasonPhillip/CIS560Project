@@ -1,0 +1,7 @@
+﻿DROP TABLE IF EXISTS Movie.Movies;
+DROP TABLE IF EXISTS Movie.Genres;
+DROP TABLE IF EXISTS Movie.People;
+DROP TABLE IF EXISTS Movie.PersonalRatings;
+DROP TABLE IF EXISTS Movie.Roles;
+DROP TABLE IF EXISTS Movie.Studios;
+DROP TABLE IF EXISTS Movie.Users;
