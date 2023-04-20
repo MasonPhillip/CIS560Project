@@ -5,6 +5,18 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{9B96D076-CD5D-45BD-812F-3B98F5DB18FE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B66BDCD9-1C03-49AF-9E82-BEBD1DD2E155}"
+	ProjectSection(SolutionItems) = preProject
+		RebuildDatabase.ps1 = RebuildDatabase.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{DBE21CED-774B-4B16-B358-231DC785BBBD}"
+	ProjectSection(SolutionItems) = preProject
+		CreateDatabase.ps1 = CreateDatabase.ps1
+		CreateDatabase.sql = CreateDatabase.sql
+		DropDatabase.ps1 = DropDatabase.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DBE21CED-774B-4B16-B358-231DC785BBBD} = {B66BDCD9-1C03-49AF-9E82-BEBD1DD2E155}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED22F37C-415F-4879-BF47-C3C81F9EFBC2}
