@@ -58,6 +58,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Genres.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ActionSelector.resx">
@@ -91,7 +92,12 @@
   <ItemGroup>
     <Content Include="Sql\Data\Movie.Genres.sql" />
     <Content Include="Sql\Schemas\Movie.sql" />
+    <Content Include="Sql\Tables\Movie.Genres.sql" />
+    <Content Include="Sql\Tables\Movie.Movies.sql" />
+    <Content Include="Sql\Tables\Movie.People.sql" />
     <Content Include="Sql\Tables\Movie.PersonalRatings.sql" />
+    <Content Include="Sql\Tables\Movie.Roles.sql" />
+    <Content Include="Sql\Tables\Movie.Studios.sql" />
     <Content Include="Sql\Tables\Movie.Users.sql" />
   </ItemGroup>
   <ItemGroup>
