@@ -89,12 +89,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sql\Data\Movie.Genres.sql" />
     <Content Include="Sql\Schemas\Movie.sql" />
     <Content Include="Sql\Tables\Movie.PersonalRatings.sql" />
     <Content Include="Sql\Tables\Movie.Users.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Sql\Data\" />
     <Folder Include="Sql\Procedures\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
