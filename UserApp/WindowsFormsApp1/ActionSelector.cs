@@ -76,5 +76,25 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UXPersonalReviewLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UxAddMovies_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
