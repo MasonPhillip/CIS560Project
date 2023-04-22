@@ -3,11 +3,11 @@ BEGIN
    CREATE TABLE Movie.Genres
    (
       GenreId INT NOT NULL,
-      [Genre] VARCHAR(12) NOT NULL,
+      Genre VARCHAR(12) NOT NULL,
 
-      CONSTRAINT PK_Movie_Genres_AddressTypeId PRIMARY KEY CLUSTERED
+      CONSTRAINT PK_Movie_Genres_GenreId PRIMARY KEY CLUSTERED
       (
-         AddressTypeId ASC
+         GenreId ASC
       )
    );
 END;
@@ -27,6 +27,6 @@ BEGIN
    ALTER TABLE Movie.Genres
    ADD CONSTRAINT [UK_Movie_Genres_Genre] UNIQUE NONCLUSTERED
    (
-      [Genre] ASC
+      Genre ASC
    )
 END;

@@ -37,13 +37,14 @@ IF NOT EXISTS
       SELECT *
       FROM sys.key_constraints kc
       WHERE kc.parent_object_id = OBJECT_ID(N'Movie.Movies')
-         AND kc.[name] = N'UK_Movie_Movies_MovieName'
+         AND kc.[name] = N'UK_Movie_Movies_MovieName_ReleaseDate'
    )
 BEGIN
    ALTER TABLE Movie.Movies
-   ADD CONSTRAINT [UK_Movie_Movies_MovieName] UNIQUE NONCLUSTERED
+   ADD CONSTRAINT [UK_Movie_Movies_MovieName_ReleaseDate] UNIQUE NONCLUSTERED
    (
-      MovieName ASC
+      MovieName ASC,
+      ReleaseDate ASC
    )
 END;
 

@@ -2,15 +2,15 @@
 BEGIN
    CREATE TABLE Movie.Users
    (
-      PersonId INT NOT NULL IDENTITY(1, 1),
+      UserId INT NOT NULL IDENTITY(1, 1),
       Username NVARCHAR(32) NOT NULL,
       [Password] NVARCHAR(32) NOT NULL,
       [Name] NVARCHAR(32) NOT NULL,
       RecoveryEmail NVARCHAR(32) NOT NULL,
 
-      CONSTRAINT PK_Movie_Users_PersonId PRIMARY KEY CLUSTERED
+      CONSTRAINT PK_Movie_Users_UserId PRIMARY KEY CLUSTERED
       (
-         PersonId ASC
+         UserId ASC
       )
    );
 END;

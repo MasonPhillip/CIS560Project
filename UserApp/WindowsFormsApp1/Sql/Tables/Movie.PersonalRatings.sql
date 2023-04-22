@@ -10,7 +10,7 @@ BEGIN
 
       CONSTRAINT PK_Movie_PersonalRatings_RatingId PRIMARY KEY CLUSTERED
       (
-         PersonId ASC
+         RatingId ASC
       ),
 
       CONSTRAINT FK_Movie_PersonalRatings_Movie_Movies FOREIGN KEY(MovieId)

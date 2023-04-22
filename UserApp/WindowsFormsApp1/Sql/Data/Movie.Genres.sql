@@ -1,12 +1,12 @@
 ﻿DECLARE @GenresStaging TABLE
 (
    GenreId TINYINT NOT NULL PRIMARY KEY,
-   [Genre] VARCHAR(12) NOT NULL UNIQUE
+   Genre VARCHAR(12) NOT NULL UNIQUE
 );
 
 /***************************** Modify values here *****************************/
 
-INSERT @AddressTypeStaging(AddressTypeId, [Name])
+INSERT @GenresStaging(GenreId, Genre)
 VALUES
    (1, 'Action'),
    (2, 'Adventure'),
@@ -29,9 +29,9 @@ VALUES
 
 MERGE Movie.Genres G
 USING @GenresStaging S ON S.GenreId = G.GenreId
-WHEN MATCHED AND S.[Genre] <> G.[Genre] THEN
+WHEN MATCHED AND S.Genre <> G.Genre THEN
    UPDATE
-   SET [Genre] = S.[Genre]
+   SET Genre = S.Genre
 WHEN NOT MATCHED THEN
-   INSERT(GenreId, [Genre])
-   VALUES(S.GenreId, S.[Genre]);
+   INSERT(GenreId, Genre)
+   VALUES(S.GenreId, S.Genre);

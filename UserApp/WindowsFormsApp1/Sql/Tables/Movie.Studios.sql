@@ -5,12 +5,10 @@ BEGIN
       StudioId INT NOT NULL IDENTITY(1, 1),
       StudioName NVARCHAR(32) NOT NULL UNIQUE,
 
-      CONSTRAINT PK_Movie_Users_PersonId PRIMARY KEY CLUSTERED
+      CONSTRAINT PK_Movie_Studios_StudioId PRIMARY KEY CLUSTERED
       (
          StudioId ASC
       ),
-
-      CONSTRAINT PK_Movie_Movies_MovieName UNIQUE
    );
 END;
 
