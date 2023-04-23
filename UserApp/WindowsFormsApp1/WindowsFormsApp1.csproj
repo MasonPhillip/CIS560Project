@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sql\Data\Movie.Genres.sql" />
+    <Content Include="Sql\Procedures\Movie.CreateUsers.sql" />
     <Content Include="Sql\Schemas\Movie.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
     <Content Include="Sql\Tables\Movie.Genres.sql" />
@@ -107,8 +108,6 @@
     <Content Include="Sql\Tables\Movie.Studios.sql" />
     <Content Include="Sql\Tables\Movie.Users.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sql\Procedures\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
