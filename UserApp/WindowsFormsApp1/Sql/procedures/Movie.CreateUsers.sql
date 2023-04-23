@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE Person.CreatePerson
+CREATE OR ALTER PROCEDURE Movie.CreateUsers
    @UserName NVARCHAR(32),
    @Password NVARCHAR(32),
    @Name NVARCHAR(32),
