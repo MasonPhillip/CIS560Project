@@ -3,8 +3,8 @@ BEGIN
    CREATE TABLE Movie.People
    (
       PersonId INT NOT NULL IDENTITY(1, 1),
-      FirstName VARCHAR(30) NOT NULL,
-      LastName VARCHAR(30) NOT NULL
+      FirstName VARCHAR(32) NOT NULL,
+      LastName VARCHAR(32) NOT NULL
 
       CONSTRAINT PK_Movie_People_PersonId PRIMARY KEY CLUSTERED
       (

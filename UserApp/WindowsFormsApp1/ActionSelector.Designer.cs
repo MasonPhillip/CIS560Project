@@ -40,31 +40,31 @@
             this.uxMovieName = new System.Windows.Forms.TextBox();
             this.UXPersonalReviews = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.UxMovieLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.UxIMDBScore = new System.Windows.Forms.TextBox();
-            this.UXImdbScoreLabel = new System.Windows.Forms.Label();
-            this.UXPersonalReviewLabel = new System.Windows.Forms.Label();
-            this.UXPersonalRatingQuery = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.UXRottenTomatoesRating = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.UXPersonalRatingQuery = new System.Windows.Forms.TextBox();
+            this.UXPersonalReviewLabel = new System.Windows.Forms.Label();
+            this.UXImdbScoreLabel = new System.Windows.Forms.Label();
+            this.UxIMDBScore = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.UxMovieLabel = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.UxActorsResultBox = new System.Windows.Forms.ListBox();
+            this.UxEndMonth = new System.Windows.Forms.MonthCalendar();
+            this.UxBeginMonth = new System.Windows.Forms.MonthCalendar();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.UXProfitResultBox = new System.Windows.Forms.ListBox();
+            this.UxGenreSelect = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.UXGenreResultListBox = new System.Windows.Forms.ListBox();
+            this.UxGenreBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.UxAddMovies = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label2 = new System.Windows.Forms.Label();
-            this.UxGenreBox = new System.Windows.Forms.ComboBox();
-            this.UXGenreResultListBox = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.UxGenreSelect = new System.Windows.Forms.ComboBox();
-            this.UXProfitResultBox = new System.Windows.Forms.ListBox();
-            this.UxBeginMonth = new System.Windows.Forms.MonthCalendar();
-            this.UxEndMonth = new System.Windows.Forms.MonthCalendar();
-            this.UxActorsResultBox = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.UXTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).BeginInit();
@@ -218,47 +218,36 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(776, 417);
+            this.tabPage2.Size = new System.Drawing.Size(786, 417);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Compare Ratings";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // UxMovieLabel
+            // UXRottenTomatoesRating
             // 
-            this.UxMovieLabel.AutoSize = true;
-            this.UxMovieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UxMovieLabel.Location = new System.Drawing.Point(6, 19);
-            this.UxMovieLabel.Name = "UxMovieLabel";
-            this.UxMovieLabel.Size = new System.Drawing.Size(94, 20);
-            this.UxMovieLabel.TabIndex = 0;
-            this.UxMovieLabel.Text = "Movie Title";
-            this.UxMovieLabel.Click += new System.EventHandler(this.label1_Click);
+            this.UXRottenTomatoesRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UXRottenTomatoesRating.Location = new System.Drawing.Point(578, 143);
+            this.UXRottenTomatoesRating.Name = "UXRottenTomatoesRating";
+            this.UXRottenTomatoesRating.Size = new System.Drawing.Size(41, 38);
+            this.UXRottenTomatoesRating.TabIndex = 7;
             // 
-            // comboBox1
+            // label1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(5, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(765, 24);
-            this.comboBox1.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(523, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Rotten Tomatoes";
             // 
-            // UxIMDBScore
+            // UXPersonalRatingQuery
             // 
-            this.UxIMDBScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UxIMDBScore.Location = new System.Drawing.Point(313, 143);
-            this.UxIMDBScore.Name = "UxIMDBScore";
-            this.UxIMDBScore.Size = new System.Drawing.Size(41, 38);
-            this.UxIMDBScore.TabIndex = 2;
-            // 
-            // UXImdbScoreLabel
-            // 
-            this.UXImdbScoreLabel.AutoSize = true;
-            this.UXImdbScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXImdbScoreLabel.Location = new System.Drawing.Point(309, 120);
-            this.UXImdbScoreLabel.Name = "UXImdbScoreLabel";
-            this.UXImdbScoreLabel.Size = new System.Drawing.Size(54, 20);
-            this.UXImdbScoreLabel.TabIndex = 3;
-            this.UXImdbScoreLabel.Text = "IMDB";
+            this.UXPersonalRatingQuery.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UXPersonalRatingQuery.Location = new System.Drawing.Point(79, 143);
+            this.UXPersonalRatingQuery.Name = "UXPersonalRatingQuery";
+            this.UXPersonalRatingQuery.Size = new System.Drawing.Size(41, 38);
+            this.UXPersonalRatingQuery.TabIndex = 5;
             // 
             // UXPersonalReviewLabel
             // 
@@ -271,31 +260,42 @@
             this.UXPersonalReviewLabel.Text = "Your Rating";
             this.UXPersonalReviewLabel.Click += new System.EventHandler(this.UXPersonalReviewLabel_Click);
             // 
-            // UXPersonalRatingQuery
+            // UXImdbScoreLabel
             // 
-            this.UXPersonalRatingQuery.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXPersonalRatingQuery.Location = new System.Drawing.Point(79, 143);
-            this.UXPersonalRatingQuery.Name = "UXPersonalRatingQuery";
-            this.UXPersonalRatingQuery.Size = new System.Drawing.Size(41, 38);
-            this.UXPersonalRatingQuery.TabIndex = 5;
+            this.UXImdbScoreLabel.AutoSize = true;
+            this.UXImdbScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UXImdbScoreLabel.Location = new System.Drawing.Point(309, 120);
+            this.UXImdbScoreLabel.Name = "UXImdbScoreLabel";
+            this.UXImdbScoreLabel.Size = new System.Drawing.Size(54, 20);
+            this.UXImdbScoreLabel.TabIndex = 3;
+            this.UXImdbScoreLabel.Text = "IMDB";
             // 
-            // label1
+            // UxIMDBScore
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(523, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Rotten Tomatoes";
+            this.UxIMDBScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UxIMDBScore.Location = new System.Drawing.Point(313, 143);
+            this.UxIMDBScore.Name = "UxIMDBScore";
+            this.UxIMDBScore.Size = new System.Drawing.Size(41, 38);
+            this.UxIMDBScore.TabIndex = 2;
             // 
-            // UXRottenTomatoesRating
+            // comboBox1
             // 
-            this.UXRottenTomatoesRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXRottenTomatoesRating.Location = new System.Drawing.Point(578, 143);
-            this.UXRottenTomatoesRating.Name = "UXRottenTomatoesRating";
-            this.UXRottenTomatoesRating.Size = new System.Drawing.Size(41, 38);
-            this.UXRottenTomatoesRating.TabIndex = 7;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(5, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(765, 24);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // UxMovieLabel
+            // 
+            this.UxMovieLabel.AutoSize = true;
+            this.UxMovieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UxMovieLabel.Location = new System.Drawing.Point(6, 19);
+            this.UxMovieLabel.Name = "UxMovieLabel";
+            this.UxMovieLabel.Size = new System.Drawing.Size(94, 20);
+            this.UxMovieLabel.TabIndex = 0;
+            this.UxMovieLabel.Text = "Movie Title";
+            this.UxMovieLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabPage3
             // 
@@ -306,10 +306,49 @@
             this.tabPage3.Controls.Add(this.UxBeginMonth);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(776, 417);
+            this.tabPage3.Size = new System.Drawing.Size(786, 417);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Actors";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(537, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "End Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Start Date";
+            // 
+            // UxActorsResultBox
+            // 
+            this.UxActorsResultBox.FormattingEnabled = true;
+            this.UxActorsResultBox.ItemHeight = 16;
+            this.UxActorsResultBox.Location = new System.Drawing.Point(3, 231);
+            this.UxActorsResultBox.Name = "UxActorsResultBox";
+            this.UxActorsResultBox.Size = new System.Drawing.Size(768, 180);
+            this.UxActorsResultBox.TabIndex = 2;
+            // 
+            // UxEndMonth
+            // 
+            this.UxEndMonth.Location = new System.Drawing.Point(540, 66);
+            this.UxEndMonth.Name = "UxEndMonth";
+            this.UxEndMonth.TabIndex = 1;
+            // 
+            // UxBeginMonth
+            // 
+            this.UxBeginMonth.Location = new System.Drawing.Point(3, 66);
+            this.UxBeginMonth.Name = "UxBeginMonth";
+            this.UxBeginMonth.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -318,10 +357,36 @@
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(776, 417);
+            this.tabPage4.Size = new System.Drawing.Size(786, 417);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Profit";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // UXProfitResultBox
+            // 
+            this.UXProfitResultBox.FormattingEnabled = true;
+            this.UXProfitResultBox.ItemHeight = 16;
+            this.UXProfitResultBox.Location = new System.Drawing.Point(5, 145);
+            this.UXProfitResultBox.Name = "UXProfitResultBox";
+            this.UXProfitResultBox.Size = new System.Drawing.Size(768, 260);
+            this.UXProfitResultBox.TabIndex = 2;
+            // 
+            // UxGenreSelect
+            // 
+            this.UxGenreSelect.FormattingEnabled = true;
+            this.UxGenreSelect.Location = new System.Drawing.Point(55, 103);
+            this.UxGenreSelect.Name = "UxGenreSelect";
+            this.UxGenreSelect.Size = new System.Drawing.Size(121, 24);
+            this.UxGenreSelect.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Genre";
             // 
             // tabPage5
             // 
@@ -330,17 +395,44 @@
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(776, 417);
+            this.tabPage5.Size = new System.Drawing.Size(786, 417);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Genre";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // UXGenreResultListBox
+            // 
+            this.UXGenreResultListBox.FormattingEnabled = true;
+            this.UXGenreResultListBox.ItemHeight = 16;
+            this.UXGenreResultListBox.Location = new System.Drawing.Point(4, 167);
+            this.UXGenreResultListBox.Name = "UXGenreResultListBox";
+            this.UXGenreResultListBox.Size = new System.Drawing.Size(768, 244);
+            this.UXGenreResultListBox.TabIndex = 2;
+            // 
+            // UxGenreBox
+            // 
+            this.UxGenreBox.FormattingEnabled = true;
+            this.UxGenreBox.Location = new System.Drawing.Point(33, 85);
+            this.UxGenreBox.Name = "UxGenreBox";
+            this.UxGenreBox.Size = new System.Drawing.Size(121, 24);
+            this.UxGenreBox.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Genre";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.UxAddMovies);
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(776, 417);
+            this.tabPage6.Size = new System.Drawing.Size(786, 417);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "AddMovies";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -359,98 +451,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Genre";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // UxGenreBox
-            // 
-            this.UxGenreBox.FormattingEnabled = true;
-            this.UxGenreBox.Location = new System.Drawing.Point(33, 85);
-            this.UxGenreBox.Name = "UxGenreBox";
-            this.UxGenreBox.Size = new System.Drawing.Size(121, 24);
-            this.UxGenreBox.TabIndex = 1;
-            // 
-            // UXGenreResultListBox
-            // 
-            this.UXGenreResultListBox.FormattingEnabled = true;
-            this.UXGenreResultListBox.ItemHeight = 16;
-            this.UXGenreResultListBox.Location = new System.Drawing.Point(4, 167);
-            this.UXGenreResultListBox.Name = "UXGenreResultListBox";
-            this.UXGenreResultListBox.Size = new System.Drawing.Size(768, 244);
-            this.UXGenreResultListBox.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Genre";
-            // 
-            // UxGenreSelect
-            // 
-            this.UxGenreSelect.FormattingEnabled = true;
-            this.UxGenreSelect.Location = new System.Drawing.Point(55, 103);
-            this.UxGenreSelect.Name = "UxGenreSelect";
-            this.UxGenreSelect.Size = new System.Drawing.Size(121, 24);
-            this.UxGenreSelect.TabIndex = 1;
-            // 
-            // UXProfitResultBox
-            // 
-            this.UXProfitResultBox.FormattingEnabled = true;
-            this.UXProfitResultBox.ItemHeight = 16;
-            this.UXProfitResultBox.Location = new System.Drawing.Point(5, 145);
-            this.UXProfitResultBox.Name = "UXProfitResultBox";
-            this.UXProfitResultBox.Size = new System.Drawing.Size(768, 260);
-            this.UXProfitResultBox.TabIndex = 2;
-            // 
-            // UxBeginMonth
-            // 
-            this.UxBeginMonth.Location = new System.Drawing.Point(3, 66);
-            this.UxBeginMonth.Name = "UxBeginMonth";
-            this.UxBeginMonth.TabIndex = 0;
-            // 
-            // UxEndMonth
-            // 
-            this.UxEndMonth.Location = new System.Drawing.Point(540, 66);
-            this.UxEndMonth.Name = "UxEndMonth";
-            this.UxEndMonth.TabIndex = 1;
-            // 
-            // UxActorsResultBox
-            // 
-            this.UxActorsResultBox.FormattingEnabled = true;
-            this.UxActorsResultBox.ItemHeight = 16;
-            this.UxActorsResultBox.Location = new System.Drawing.Point(3, 231);
-            this.UxActorsResultBox.Name = "UxActorsResultBox";
-            this.UxActorsResultBox.Size = new System.Drawing.Size(768, 180);
-            this.UxActorsResultBox.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Start Date";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(537, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "End Date";
             // 
             // ActionSelector
             // 

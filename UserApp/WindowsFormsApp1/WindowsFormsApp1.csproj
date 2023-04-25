@@ -97,8 +97,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sql\Data\Movie.Genres.sql" />
+    <Content Include="Sql\Procedures\Movie.CreateMovie.sql" />
+    <Content Include="Sql\Procedures\Movie.CreatePeople.sql" />
     <Content Include="Sql\Procedures\Movie.CreatePersonalRatings.sql" />
+    <Content Include="Sql\Procedures\Movie.CreateRole.sql" />
+    <Content Include="Sql\Procedures\Movie.CreateStudio.sql" />
     <Content Include="Sql\Procedures\Movie.CreateUsers.sql" />
+    <Content Include="Sql\Procedures\Movie.SaveUser.sql" />
     <Content Include="Sql\Schemas\Movie.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
     <Content Include="Sql\Tables\Movie.Genres.sql" />
