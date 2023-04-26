@@ -101,12 +101,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sql\Data\Movie.Genres.sql" />
+    <Content Include="Sql\Procedures\Movie.AverageCostProductionByGenre.sql" />
+    <Content Include="Sql\Procedures\Movie.AverageStudioProfitByGenre.sql" />
     <Content Include="Sql\Procedures\Movie.CreateMovie.sql" />
     <Content Include="Sql\Procedures\Movie.CreatePeople.sql" />
     <Content Include="Sql\Procedures\Movie.CreatePersonalRatings.sql" />
     <Content Include="Sql\Procedures\Movie.CreateRole.sql" />
     <Content Include="Sql\Procedures\Movie.CreateStudio.sql" />
     <Content Include="Sql\Procedures\Movie.CreateUsers.sql" />
+    <Content Include="Sql\Procedures\Movie.HighestPaidWithin.sql" />
     <Content Include="Sql\Procedures\Movie.RatingCompareByMovieName.sql" />
     <Content Include="Sql\Procedures\Movie.SaveMovie.sql" />
     <Content Include="Sql\Procedures\Movie.SavePersonalRating.sql" />
