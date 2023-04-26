@@ -107,6 +107,10 @@
     <Content Include="Sql\Procedures\Movie.CreateRole.sql" />
     <Content Include="Sql\Procedures\Movie.CreateStudio.sql" />
     <Content Include="Sql\Procedures\Movie.CreateUsers.sql" />
+    <Content Include="Sql\Procedures\Movie.RatingCompareByMovieName.sql" />
+    <Content Include="Sql\Procedures\Movie.SaveMovie.sql" />
+    <Content Include="Sql\Procedures\Movie.SavePersonalRating.sql" />
+    <Content Include="Sql\Procedures\Movie.SaveRole.sql" />
     <Content Include="Sql\Procedures\Movie.SaveUser.sql" />
     <Content Include="Sql\Schemas\Movie.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
