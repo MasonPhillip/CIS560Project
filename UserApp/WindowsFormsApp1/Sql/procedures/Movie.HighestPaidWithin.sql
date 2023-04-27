@@ -1,6 +1,6 @@
 ﻿CREATE OR ALTER PROCEDURE Movie.HighestPaidWithin
-   @StartDate DATE,
-   @EndDate DATE
+   @StartDate SMALLINT,
+   @EndDate SMALLINT
 AS
 
 SELECT P.PersonId, P.FirstName, P.LastName, ISNULL(SUM(R.AmountPaid), 0.00) AS TotalAmountPaid

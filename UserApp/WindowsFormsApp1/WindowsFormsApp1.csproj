@@ -133,6 +133,9 @@
   <ItemGroup>
     <Content Include="Sql\Data\Movie.Genres.sql" />
     <Content Include="Sql\Data\Movie.Movies.sql" />
+    <Content Include="Sql\Data\Movie.People.sql" />
+    <Content Include="Sql\Data\Movie.Roles.sql" />
+    <Content Include="Sql\Data\Movie.Studios.sql" />
     <Content Include="Sql\Procedures\Movie.AverageCostProductionByGenre.sql" />
     <Content Include="Sql\Procedures\Movie.AverageStudioProfitByGenre.sql" />
     <Content Include="Sql\Procedures\Movie.CreateMovie.sql" />

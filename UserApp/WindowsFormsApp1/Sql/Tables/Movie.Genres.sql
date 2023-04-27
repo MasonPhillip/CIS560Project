@@ -2,8 +2,8 @@
 BEGIN
    CREATE TABLE Movie.Genres
    (
-      GenreId INT NOT NULL,
-      Genre VARCHAR(12) NOT NULL,
+      GenreId INT NOT NULL IDENTITY(1, 1),
+      Genre NVARCHAR(12) NOT NULL,
 
       CONSTRAINT PK_Movie_Genres_GenreId PRIMARY KEY CLUSTERED
       (

@@ -13,7 +13,7 @@ namespace WindowsFormsApp1.DataDelegates
         public readonly int movieId;
         public readonly int studioId;
         public readonly string movieName;
-        public readonly DateTimeOffset releaseDate;
+        public readonly int releaseDate;
         public readonly decimal imdb;
         public readonly int audience;
         public readonly long domestic;
@@ -22,7 +22,7 @@ namespace WindowsFormsApp1.DataDelegates
         public readonly int genreId;
         public readonly int critic;
 
-        public SaveMovieDataDelegate(int movieId, int studioId, string movieName, DateTimeOffset releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
+        public SaveMovieDataDelegate(int movieId, int studioId, string movieName, int releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
            : base("Movie.SaveMovie")
         {
             this.movieId = movieId;

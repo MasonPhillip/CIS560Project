@@ -2,7 +2,7 @@ CREATE OR ALTER PROCEDURE Movie.SaveMovie
    @MovieId INT,
    @StudioId INT,
    @MovieName NVARCHAR(256),
-   @ReleaseDate DATE,
+   @ReleaseDate SMALLINT,
    @IMDBRating INT,
    @RottenTomatoesAudienceRating INT,
    @DomesticRevenue BIGINT,
