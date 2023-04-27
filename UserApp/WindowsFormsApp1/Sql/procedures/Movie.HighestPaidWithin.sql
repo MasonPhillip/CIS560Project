@@ -7,11 +7,11 @@ SELECT P.PersonId, P.FirstName, P.LastName, ISNULL(SUM(R.AmountPaid), 0.00) AS T
 FROM Movie.People P
 INNER JOIN
 Movie.Roles R
-ON
+On
 R.PersonId = P.PersonId
 INNER JOIN
 Movie.Movies M
-ON
+On
 M.MovieId = R.MovieId
 WHERE M.ReleaseDate > @StartDate AND M.ReleaseDate < @EndDate
 GROUP BY P.PersonId, P.FirstName, P.LastName
