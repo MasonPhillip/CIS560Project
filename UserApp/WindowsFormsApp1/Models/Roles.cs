@@ -11,10 +11,10 @@ namespace WindowsFormsApp1.Models
         public int RoleId { get; }
         public int PersonId { get; }
         public int MovieId { get; }
-        public bool IsDirector { get; }
-        public bool IsActor { get; }
+        public byte IsDirector { get; }
+        public byte IsActor { get; }
         public int AmountPaid { get; }
-        internal Roles(int roleId, int personId, int movieId, bool isDirector, bool isActor, int amountPaid) 
+        internal Roles(int roleId, int personId, int movieId, byte isDirector, byte isActor, int amountPaid) 
         { 
             RoleId = roleId;
             PersonId = personId;

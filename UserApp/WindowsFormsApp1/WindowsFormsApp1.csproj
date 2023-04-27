@@ -53,6 +53,20 @@
     <Compile Include="ActionSelector.Designer.cs">
       <DependentUpon>ActionSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataDelegates\CreateGenreDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreatePeopleDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreatePersonalRatingDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreateRoleDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreateStudioDataDelegate.cs" />
+    <Compile Include="DataDelegates\CreateUserDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchGenreDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchPeopleDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchPersonalRatingDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchRoleDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchStudioDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchUserDataDelegate.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,9 +82,21 @@
     <Compile Include="Models\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IGenresRepository.cs" />
+    <Compile Include="Repositories\IMoviesRepository.cs" />
     <Compile Include="Repositories\IPeopleRepository.cs" />
+    <Compile Include="Repositories\IPersonalRatingsRepository.cs" />
+    <Compile Include="Repositories\IRolesRepository.cs" />
+    <Compile Include="Repositories\IStudiosRepository.cs" />
+    <Compile Include="Repositories\IUsersRepository.cs" />
     <Compile Include="Repositories\RecordNotFoundException.cs" />
+    <Compile Include="Repositories\SqlGenresRepository.cs" />
+    <Compile Include="Repositories\SqlMoviesRepository.cs" />
     <Compile Include="Repositories\SqlPeopleRepository.cs" />
+    <Compile Include="Repositories\SqlPersonalRatingsRepository.cs" />
+    <Compile Include="Repositories\SqlRolesRepository.cs" />
+    <Compile Include="Repositories\SqlStudiosRepository.cs" />
+    <Compile Include="Repositories\SqlUsersRepository.cs" />
     <EmbeddedResource Include="ActionSelector.resx">
       <DependentUpon>ActionSelector.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,12 +127,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sql\Data\Movie.Genres.sql" />
+    <Content Include="Sql\Procedures\Movie.AverageCostProductionByGenre.sql" />
+    <Content Include="Sql\Procedures\Movie.AverageStudioProfitByGenre.sql" />
     <Content Include="Sql\Procedures\Movie.CreateMovie.sql" />
     <Content Include="Sql\Procedures\Movie.CreatePeople.sql" />
     <Content Include="Sql\Procedures\Movie.CreatePersonalRatings.sql" />
     <Content Include="Sql\Procedures\Movie.CreateRole.sql" />
     <Content Include="Sql\Procedures\Movie.CreateStudio.sql" />
     <Content Include="Sql\Procedures\Movie.CreateUsers.sql" />
+    <Content Include="Sql\Procedures\Movie.HighestPaidWithin.sql" />
     <Content Include="Sql\Procedures\Movie.RatingCompareByMovieName.sql" />
     <Content Include="Sql\Procedures\Movie.SaveMovie.sql" />
     <Content Include="Sql\Procedures\Movie.SavePersonalRating.sql" />
@@ -122,6 +151,11 @@
     <Content Include="Sql\Tables\Movie.Studios.sql" />
     <Content Include="Sql\Tables\Movie.Users.sql" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{d420f8b2-d7af-4ee5-90fe-6c2b91d410ed}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

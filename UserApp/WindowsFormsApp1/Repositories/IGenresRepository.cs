@@ -7,12 +7,10 @@ using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.Repositories
 {
-    public interface IPeopleRepository
+    public interface IGenresRepository
     {
-        //IReadOnlyList<People> RetrievePeople();
+        Genres FetchGenre(int genreId);
 
-        People FetchPerson(int personId);
-
-        People CreatePerson(string firstName, string lastName);
+        Genres CreateGenre(Genre genre);
     }
 }

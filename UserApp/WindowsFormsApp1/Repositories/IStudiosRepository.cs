@@ -7,12 +7,10 @@ using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.Repositories
 {
-    public interface IPeopleRepository
+    public interface IStudiosRepository
     {
-        //IReadOnlyList<People> RetrievePeople();
+        Studios FetchStudio(int studioId);
 
-        People FetchPerson(int personId);
-
-        People CreatePerson(string firstName, string lastName);
+        Studios CreateStudio(string studioName);
     }
 }

@@ -7,12 +7,10 @@ using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.Repositories
 {
-    public interface IPeopleRepository
+    public interface IUsersRepository
     {
-        //IReadOnlyList<People> RetrievePeople();
+        Users FetchUser(int userId);
 
-        People FetchPerson(int personId);
-
-        People CreatePerson(string firstName, string lastName);
+        Users CreateUser(string username, string password, string name, string recoveryEmail);
     }
 }

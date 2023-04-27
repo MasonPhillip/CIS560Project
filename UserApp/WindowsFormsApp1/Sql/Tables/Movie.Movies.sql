@@ -6,7 +6,7 @@ BEGIN
       StudioId INT NOT NULL,
       MovieName NVARCHAR(256) NOT NULL,
       [ReleaseDate] DATE NOT NULL,
-      IMDBRating INT NOT NULL,
+      IMDBRating DECIMAL(2,1) NOT NULL,
       RottenTomatoesAudienceRating INT NOT NULL,
       DomesticRevenue BIGINT NOT NULL,
       InternationlRevenue BIGINT NOT NULL,
