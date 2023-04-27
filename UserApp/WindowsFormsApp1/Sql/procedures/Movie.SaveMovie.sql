@@ -2,7 +2,7 @@ CREATE OR ALTER PROCEDURE Movie.SaveMovie
    @MovieId INT,
    @StudioId INT,
    @MovieName NVARCHAR(256),
-   @ReleseDate DATE,
+   @ReleaseDate DATE,
    @IMDBRating INT,
    @RottenTomatoesAudienceRating INT,
    @DomesticRevenue BIGINT,
@@ -14,21 +14,20 @@ AS
 MERGE Movie.Movies M
 USING
       (
-         VALUES(@MovieId, @StudioId, @MovieName, @ReleseDate, @IMDBRating, @RottenTomatoesAudienceRating, @DomesticRevenue, @InternationlRevenue, @Cost, @GenreId, @RottenTomatoesCriticRating)
-      ) S(MovieId, StudioId, MovieName, ReleseDate, IMDBRating, RottenTomatoesAudienceRating, DomesticRevenue, InternationlRevenue, Cost, GenreId, RottenTomatoesCriticRating)
-   ON S.MovieId = U.MovieId
+         VALUES(@MovieId, @StudioId, @MovieName, @ReleaseDate, @IMDBRating, @RottenTomatoesAudienceRating, @DomesticRevenue, @InternationlRevenue, @Cost, @GenreId, @RottenTomatoesCriticRating)
+      ) S(MovieId, StudioId, MovieName, ReleaseDate, IMDBRating, RottenTomatoesAudienceRating, DomesticRevenue, InternationlRevenue, Cost, GenreId, RottenTomatoesCriticRating)
+   ON S.MovieId = M.MovieId
 WHEN MATCHED AND NOT EXISTS
       (
-         SELECT S.StudioId, S.MovieName, S.ReleseDate, S.IMDBRating, S.RottenTomatoesAudienceRating , S.DomesticRevenue , S.InternationlRevenue , S.Cost, S.GenreId, S.RottenTomatoesCriticRating
+         SELECT S.StudioId, S.MovieName, S.ReleaseDate, S.IMDBRating, S.RottenTomatoesAudienceRating , S.DomesticRevenue , S.InternationlRevenue , S.Cost, S.GenreId, S.RottenTomatoesCriticRating
          INTERSECT
-         SELECT  U.StudioId, U.MovieName, U.ReleseDate, U.IMDBRating, U.RottenTomatoesAudienceRating , U.DomesticRevenue , U.InternationlRevenue , U.Cost, U.GenreId, U.RottenTomatoesCriticRating
+         SELECT  M.StudioId, M.MovieName, M.ReleaseDate, M.IMDBRating, M.RottenTomatoesAudienceRating , M.DomesticRevenue , M.InternationlRevenue , M.Cost, M.GenreId, M.RottenTomatoesCriticRating
       ) THEN
    UPDATE
    SET
-      MovieId = S.MovieId,
       StudioId = S.StudioId,
       MovieName = S.MovieName,
-      ReleseDate = S.ReleseDate,
+      ReleaseDate = S.ReleaseDate,
       IMDBRating = S.IMDBRating,
       RottenTomatoesAudienceRating = S.RottenTomatoesAudienceRating,
       DomesticRevenue = S.DomesticRevenue,
@@ -37,6 +36,6 @@ WHEN MATCHED AND NOT EXISTS
       GenreId = S.GenreId,
       RottenTomatoesCriticRating = S.RottenTomatoesCriticRating
 WHEN NOT MATCHED THEN
-   INSERT(MovieId, StudioId, MovieName, ReleseDate, IMDBRating, RottenTomatoesAudienceRating , DomesticRevenue , InternationlRevenue , Cost, GenreId, RottenTomatoesCriticRating)
-   VALUES(S.MovieId, S.StudioId, S.MovieName, S.ReleseDate, S.IMDBRating, S.RottenTomatoesAudienceRating , S.DomesticRevenue , S.InternationlRevenue , S.Cost, S.GenreId, S.RottenTomatoesCriticRating);
+   INSERT(MovieId, StudioId, MovieName, ReleaseDate, IMDBRating, RottenTomatoesAudienceRating , DomesticRevenue , InternationlRevenue , Cost, GenreId, RottenTomatoesCriticRating)
+   VALUES(S.MovieId, S.StudioId, S.MovieName, S.ReleaseDate, S.IMDBRating, S.RottenTomatoesAudienceRating , S.DomesticRevenue , S.InternationlRevenue , S.Cost, S.GenreId, S.RottenTomatoesCriticRating);
 GO

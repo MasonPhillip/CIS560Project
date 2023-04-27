@@ -8,11 +8,11 @@ BEGIN
       [ReleaseDate] DATE NOT NULL,
       IMDBRating DECIMAL(2,1) NOT NULL,
       RottenTomatoesAudienceRating INT NOT NULL,
+      RottenTomatoesCriticRating INT NOT NULL,
       DomesticRevenue BIGINT NOT NULL,
       InternationlRevenue BIGINT NOT NULL,
       Cost INT NOT NULL,
       GenreId INT NOT NULL,
-      RottenTomatoesCriticRating INT NOT NULL,
 
 
       CONSTRAINT PK_Movie_Movies_MovieId PRIMARY KEY CLUSTERED

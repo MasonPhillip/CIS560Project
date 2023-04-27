@@ -6,4 +6,5 @@ SELECT M.MovieId, M.MovieName, ISNULL(AVG(R.PersonalRating), 0.00) AS PersonalRa
 FROM Movie.Movies M
 	INNER JOIN Movie.PersonalRatings R ON M.MovieId = R.MovieId
 WHERE M.MovieId = @MovieId
+GROUP BY M.MovieId, M.MovieName, M.IMDBRating, M.RottenTomatoesAudienceRating, M.RottenTomatoesCriticRating
 GO
