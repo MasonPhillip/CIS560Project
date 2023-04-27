@@ -38,5 +38,10 @@ namespace WindowsFormsApp1.Repositories
             var d = new FetchUserDataDelegate(userId);
             return executor.ExecuteReader(d);
         }
+
+        public void SaveUser(int userId, string username, string password, string name, string recoveryEmail)
+        {
+            executor.ExecuteNonQuery(new SaveUserDataDelegate(userId, username, password, name, recoveryEmail));
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace WindowsFormsApp1.Repositories
     {
         Roles FetchRole(int roleId);
 
-        Roles CreateRole(int personId, int movieId, byte isDirector, byte isActor, int amountPaid);
+        Roles CreateRole(int personId, int movieId, bool isDirector, bool isActor, int amountPaid);
+
+        void SaveRole(int roleId, int personId, int movieId, bool isDirector, bool isActor, int amountPaid);
     }
 }

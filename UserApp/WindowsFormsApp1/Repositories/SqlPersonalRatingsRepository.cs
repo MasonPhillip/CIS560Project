@@ -32,5 +32,10 @@ namespace WindowsFormsApp1.Repositories
             var d = new FetchPersonalRatingDataDelegate(ratingId);
             return executor.ExecuteReader(d);
         }
+
+        public void SavePersonalRating(int ratingId, int movieId, int authorUserId, int personalRating, string ratingDescription)
+        {
+            executor.ExecuteNonQuery(new SavePersonalRatingDataDelegate(ratingId, movieId, authorUserId, personalRating, ratingDescription));
+        }
     }
 }

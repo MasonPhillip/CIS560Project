@@ -1,22 +1,26 @@
-﻿using WindowsFormsApp1.Models;
-using DataAccess;
-using System.Data;
-using System.Data.SqlClient;
+﻿using DataAccess;
 using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.DataDelegates
 {
-    internal class CreateRoleDataDelegate : NonQueryDataDelegate<Roles>
+    internal class SaveRoleDataDelegate : DataDelegate
     {
+        public readonly int roleId;
         public readonly int personId;
         public readonly int movieId;
         public readonly bool isDirector;
         public readonly bool isActor;
         public readonly int amountPaid;
 
-        public CreateRoleDataDelegate(int personId, int movieId, bool isDirector, bool isActor, int amountPaid)
-           : base("Movie.CreateRole")
+        public SaveRoleDataDelegate(int roleId, int personId, int movieId, bool isDirector, bool isActor, int amountPaid)
+           : base("Movie.SaveRole")
         {
+            this.roleId = roleId;
             this.personId = personId;
             this.movieId = movieId;
             this.isDirector = isDirector;
@@ -28,20 +32,12 @@ namespace WindowsFormsApp1.DataDelegates
         {
             base.PrepareCommand(command);
 
+            command.Parameters.AddWithValue("RoleId", roleId);
             command.Parameters.AddWithValue("PersonId", personId);
             command.Parameters.AddWithValue("MovieId", movieId);
             command.Parameters.AddWithValue("IsDirector", isDirector);
             command.Parameters.AddWithValue("IsActor", isActor);
             command.Parameters.AddWithValue("AmountPaid", amountPaid);
-
-            var p = command.Parameters.Add("RoleId", SqlDbType.Int);
-            p.Direction = ParameterDirection.Output;
-        }
-
-        public override Roles Translate(SqlCommand command)
-        {
-            return new Roles((int)command.Parameters["RoleId"].Value, personId, movieId, isDirector, isActor, amountPaid);
         }
     }
 }
-

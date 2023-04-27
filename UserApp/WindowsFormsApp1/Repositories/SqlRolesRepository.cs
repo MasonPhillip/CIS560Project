@@ -18,7 +18,7 @@ namespace WindowsFormsApp1.Repositories
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public Roles CreateRole(int personId, int movieId, byte isDirector, byte isActor, int amountPaid)
+        public Roles CreateRole(int personId, int movieId, bool isDirector, bool isActor, int amountPaid)
         {
             var d = new CreateRoleDataDelegate(personId, movieId, isDirector, isActor, amountPaid);
             return executor.ExecuteNonQuery(d);
@@ -28,6 +28,11 @@ namespace WindowsFormsApp1.Repositories
         {
             var d = new FetchRoleDataDelegate(roleId);
             return executor.ExecuteReader(d);
+        }
+
+        public void SaveRole(int roleId, int personId, int movieId, bool isDirector, bool isActor, int amountPaid)
+        {
+            executor.ExecuteNonQuery(new SaveRoleDataDelegate(roleId, personId, movieId, isDirector, isActor, amountPaid));
         }
     }
 }

@@ -53,6 +53,7 @@
     <Compile Include="ActionSelector.Designer.cs">
       <DependentUpon>ActionSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller.cs" />
     <Compile Include="DataDelegates\CreateGenreDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\CreatePeopleDataDelegate.cs" />
@@ -67,6 +68,10 @@
     <Compile Include="DataDelegates\FetchRoleDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchStudioDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchUserDataDelegate.cs" />
+    <Compile Include="DataDelegates\SaveMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\SavePersonalRatingDataDelegate.cs" />
+    <Compile Include="DataDelegates\SaveRoleDataDelegate.cs" />
+    <Compile Include="DataDelegates\SaveUserDataDelegate.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

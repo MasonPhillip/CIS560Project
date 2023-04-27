@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\UserApp",
+    "\\UserApp\\WindowsFormsApp1",
+    "\\UserApp\\WindowsFormsApp1\\Sql",
+    "\\UserApp\\WindowsFormsApp1\\Sql\\procedures"
   ],
-  "SelectedNode": "\\UserApp.sln",
+  "SelectedNode": "\\UserApp\\WindowsFormsApp1\\Sql\\procedures\\Movie.CreateMovie.sql",
   "PreviewInSolutionExplorer": false
 }

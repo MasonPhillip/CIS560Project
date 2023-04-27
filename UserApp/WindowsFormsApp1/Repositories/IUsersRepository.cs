@@ -12,5 +12,7 @@ namespace WindowsFormsApp1.Repositories
         Users FetchUser(int userId);
 
         Users CreateUser(string username, string password, string name, string recoveryEmail);
+
+        void SaveUser(int userId, string username, string password, string name, string recoveryEmail);
     }
 }

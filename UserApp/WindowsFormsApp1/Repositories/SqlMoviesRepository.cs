@@ -34,5 +34,10 @@ namespace WindowsFormsApp1.Repositories
             var d = new FetchMovieDataDelegate(movieId);
             return executor.ExecuteReader(d);
         }
+
+        public void SaveMovie(int movieId, int studioId, string movieName, DateTimeOffset releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
+        {
+            executor.ExecuteNonQuery(new SaveMovieDataDelegate(movieId, studioId, movieName, releaseDate, imdb, audience, domestic, international, cost, genreId, critic));
+        }
     }
 }

@@ -12,5 +12,7 @@ namespace WindowsFormsApp1.Repositories
         PersonalRatings FetchPersonalRating(int ratingId);
 
         PersonalRatings CreatePersonalRating(int movieId, int authorUserId, int personalRating, string ratingDescription);
+
+        void SavePersonalRating(int ratingId, int movieId, int authorUserId, int personalRating, string ratingDescription);
     }
 }
