@@ -91,15 +91,24 @@ namespace WindowsFormsApp1
 
         private void UxAddMovies_Click(object sender, EventArgs e)
         {
-            /*SqlCommand cmd = new SqlCommand();
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movie.Movies", sqlcon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                ux_MovieDataGrid.DataSource = dtbl;
-            }*/
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("Movie.CreateMovie", sqlcon);
+                cmd.Parameters.AddWithValue("@StudioId", ux_StudioIdValue.Value);
+                cmd.Parameters.AddWithValue("@MovieName", ux_MovieNameValue.Text);
+                cmd.Parameters.AddWithValue("@ReleaseDate", ux_ReleaseDateValue.Value);
+                cmd.Parameters.AddWithValue("@IMDBRating", ux_IMDBRatingValue.Value);
+                cmd.Parameters.AddWithValue("@RottenTomatoesAudienceRating", ux_RottenTomatoesAudienceRatingValue.Value);
+                cmd.Parameters.AddWithValue("@DomesticRevenue", ux_DomesticRevenueValue.Value);
+                cmd.Parameters.AddWithValue("@InternationlRevenue", ux_InternationalRevenueValue.Value);
+                cmd.Parameters.AddWithValue("@Cost", ux_CostValue.Value);
+                cmd.Parameters.AddWithValue("@GenreId", ux_GenreIdValue.Value);
+                cmd.Parameters.AddWithValue("@RottenTomatoesCriticRating", ux_RottenTomatoesCriticRatingValue.Value);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -143,6 +152,58 @@ namespace WindowsFormsApp1
         private void ux_GenresDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ux_CalcHighestPaidWithin_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("Movie.HighestPaidWithin", sqlcon);
+                cmd.Parameters.AddWithValue("@StartDate", ux_StartDatePicker.Value);
+                cmd.Parameters.AddWithValue("@EndDate", ux_EndDatePicker.Value);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_HighestPaidWithinData.DataSource = dtbl;
+            }
+        }
+
+        private void ux_ASPbGButton_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("Movie.AverageStudioProfitByGenre", sqlcon);
+                cmd.Parameters.AddWithValue("@GenreId", ux_GenrePicker.Value);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_ASPbGDataGrid.DataSource = dtbl;
+            }
+        }
+
+        private void ux_CompareButton_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("Movie.RatingCompareByMovieName", sqlcon);
+                cmd.Parameters.AddWithValue("@MovieId", ux_CompareMovieIdPicker.Value);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_CompareDataGrid.DataSource = dtbl;
+            }
         }
     }
 }

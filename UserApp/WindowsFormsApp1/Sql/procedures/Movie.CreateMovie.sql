@@ -11,9 +11,11 @@ CREATE OR ALTER PROCEDURE Movie.CreateMovie
    @RottenTomatoesCriticRating INT,
    @MovieId INT OUTPUT
 AS
-
-INSERT Movie.Movies(StudioId, MovieName, [ReleaseDate], IMDBRating, RottenTomatoesAudienceRating, DomesticRevenue, InternationlRevenue, Cost, GenreId, RottenTomatoesCriticRating)
-VALUES(@StudioId, @MovieName, @ReleaseDate, @IMDBRating, @RottenTomatoesAudienceRating, @DomesticRevenue, @InternationlRevenue, @Cost, @GenreId, @RottenTomatoesCriticRating);
-
-SET @MovieId = SCOPE_IDENTITY();
-GO
+Begin
+--Declare @MovieId INT
+--SELECT @MovieId = coalesce((select max(@MovieId) + 1),1) 
+--FROM Movie.Movies
+	INSERT INTO Movie.Movies(StudioId, MovieName, [ReleaseDate], IMDBRating, RottenTomatoesAudienceRating, DomesticRevenue, InternationlRevenue, Cost, GenreId, RottenTomatoesCriticRating)
+	VALUES(@StudioId, @MovieName, @ReleaseDate, @IMDBRating, @RottenTomatoesAudienceRating, @DomesticRevenue, @InternationlRevenue, @Cost, @GenreId, @RottenTomatoesCriticRating)
+	SET @MovieId= SCOPE_IDENTITY()
+END
