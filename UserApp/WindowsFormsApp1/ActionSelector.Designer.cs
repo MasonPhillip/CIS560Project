@@ -65,6 +65,9 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.UxAddMovies = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ux_MoviesList = new System.Windows.Forms.TabPage();
+            this.ux_MovieDataGrid = new System.Windows.Forms.DataGridView();
+            this.ux_populateButton = new System.Windows.Forms.Button();
             this.UXTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).BeginInit();
@@ -73,6 +76,8 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.ux_MoviesList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // UXTabControl
@@ -83,6 +88,7 @@
             this.UXTabControl.Controls.Add(this.tabPage4);
             this.UXTabControl.Controls.Add(this.tabPage5);
             this.UXTabControl.Controls.Add(this.tabPage6);
+            this.UXTabControl.Controls.Add(this.ux_MoviesList);
             this.UXTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UXTabControl.Location = new System.Drawing.Point(4, 2);
             this.UXTabControl.Name = "UXTabControl";
@@ -218,7 +224,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(786, 417);
+            this.tabPage2.Size = new System.Drawing.Size(776, 417);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Compare Ratings";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -306,7 +312,7 @@
             this.tabPage3.Controls.Add(this.UxBeginMonth);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(786, 417);
+            this.tabPage3.Size = new System.Drawing.Size(776, 417);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Actors";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -357,7 +363,7 @@
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(786, 417);
+            this.tabPage4.Size = new System.Drawing.Size(776, 417);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Profit";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -395,7 +401,7 @@
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(786, 417);
+            this.tabPage5.Size = new System.Drawing.Size(776, 417);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Genre";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -432,7 +438,7 @@
             this.tabPage6.Controls.Add(this.UxAddMovies);
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(786, 417);
+            this.tabPage6.Size = new System.Drawing.Size(776, 417);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "AddMovies";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -451,6 +457,36 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // ux_MoviesList
+            // 
+            this.ux_MoviesList.Controls.Add(this.ux_populateButton);
+            this.ux_MoviesList.Controls.Add(this.ux_MovieDataGrid);
+            this.ux_MoviesList.Location = new System.Drawing.Point(4, 25);
+            this.ux_MoviesList.Name = "ux_MoviesList";
+            this.ux_MoviesList.Padding = new System.Windows.Forms.Padding(3);
+            this.ux_MoviesList.Size = new System.Drawing.Size(776, 417);
+            this.ux_MoviesList.TabIndex = 6;
+            this.ux_MoviesList.Text = "Movies List";
+            this.ux_MoviesList.UseVisualStyleBackColor = true;
+            // 
+            // ux_MovieDataGrid
+            // 
+            this.ux_MovieDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_MovieDataGrid.Location = new System.Drawing.Point(3, 142);
+            this.ux_MovieDataGrid.Name = "ux_MovieDataGrid";
+            this.ux_MovieDataGrid.Size = new System.Drawing.Size(767, 269);
+            this.ux_MovieDataGrid.TabIndex = 0;
+            // 
+            // ux_populateButton
+            // 
+            this.ux_populateButton.Location = new System.Drawing.Point(6, 6);
+            this.ux_populateButton.Name = "ux_populateButton";
+            this.ux_populateButton.Size = new System.Drawing.Size(175, 43);
+            this.ux_populateButton.TabIndex = 1;
+            this.ux_populateButton.Text = "Populate Movie List";
+            this.ux_populateButton.UseVisualStyleBackColor = true;
+            this.ux_populateButton.Click += new System.EventHandler(this.ux_populateButton_Click);
             // 
             // ActionSelector
             // 
@@ -474,6 +510,8 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
+            this.ux_MoviesList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -517,5 +555,8 @@
         private System.Windows.Forms.ListBox UxActorsResultBox;
         private System.Windows.Forms.MonthCalendar UxEndMonth;
         private System.Windows.Forms.MonthCalendar UxBeginMonth;
+        private System.Windows.Forms.TabPage ux_MoviesList;
+        private System.Windows.Forms.Button ux_populateButton;
+        private System.Windows.Forms.DataGridView ux_MovieDataGrid;
     }
 }

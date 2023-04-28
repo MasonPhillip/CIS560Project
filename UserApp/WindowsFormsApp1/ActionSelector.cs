@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
     public partial class ActionSelector : Form
     {
         private string curUser;
+        string connectionString = @";"; //put link to local database string
 
         public ActionSelector(string user)
         {
@@ -95,6 +97,20 @@ namespace WindowsFormsApp1
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ux_populateButton_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movies", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                //Method 1 - direct method
+                ux_MovieDataGrid.DataSource = dtbl;
+            }
         }
     }
 }
