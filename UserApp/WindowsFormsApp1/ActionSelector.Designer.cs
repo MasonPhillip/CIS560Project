@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.UXTabControl = new System.Windows.Forms.TabControl();
+            this.components = new System.ComponentModel.Container();
+            this.ux_TabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.UxDeleteButton = new System.Windows.Forms.Button();
             this.UXCommentsLabel = new System.Windows.Forms.Label();
@@ -62,39 +63,42 @@
             this.UXGenreResultListBox = new System.Windows.Forms.ListBox();
             this.UxGenreBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.ux_AddMovies = new System.Windows.Forms.TabPage();
             this.UxAddMovies = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ux_MoviesList = new System.Windows.Forms.TabPage();
+            this.ux_populateMoviesButton = new System.Windows.Forms.Button();
             this.ux_MovieDataGrid = new System.Windows.Forms.DataGridView();
-            this.ux_populateButton = new System.Windows.Forms.Button();
-            this.UXTabControl.SuspendLayout();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ux_TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.ux_AddMovies.SuspendLayout();
             this.ux_MoviesList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // UXTabControl
+            // ux_TabControl
             // 
-            this.UXTabControl.Controls.Add(this.tabPage1);
-            this.UXTabControl.Controls.Add(this.tabPage2);
-            this.UXTabControl.Controls.Add(this.tabPage3);
-            this.UXTabControl.Controls.Add(this.tabPage4);
-            this.UXTabControl.Controls.Add(this.tabPage5);
-            this.UXTabControl.Controls.Add(this.tabPage6);
-            this.UXTabControl.Controls.Add(this.ux_MoviesList);
-            this.UXTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXTabControl.Location = new System.Drawing.Point(4, 2);
-            this.UXTabControl.Name = "UXTabControl";
-            this.UXTabControl.SelectedIndex = 0;
-            this.UXTabControl.Size = new System.Drawing.Size(784, 446);
-            this.UXTabControl.TabIndex = 3;
+            this.ux_TabControl.Controls.Add(this.ux_MoviesList);
+            this.ux_TabControl.Controls.Add(this.tabPage1);
+            this.ux_TabControl.Controls.Add(this.tabPage2);
+            this.ux_TabControl.Controls.Add(this.tabPage3);
+            this.ux_TabControl.Controls.Add(this.tabPage4);
+            this.ux_TabControl.Controls.Add(this.tabPage5);
+            this.ux_TabControl.Controls.Add(this.ux_AddMovies);
+            this.ux_TabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ux_TabControl.Location = new System.Drawing.Point(4, 2);
+            this.ux_TabControl.Name = "ux_TabControl";
+            this.ux_TabControl.SelectedIndex = 0;
+            this.ux_TabControl.Size = new System.Drawing.Size(784, 446);
+            this.ux_TabControl.TabIndex = 3;
             // 
             // tabPage1
             // 
@@ -403,7 +407,7 @@
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(776, 417);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Genre";
+            this.tabPage5.Text = "Genres";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // UXGenreResultListBox
@@ -433,15 +437,15 @@
             this.label2.Text = "Genre";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // tabPage6
+            // ux_AddMovies
             // 
-            this.tabPage6.Controls.Add(this.UxAddMovies);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(776, 417);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "AddMovies";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.ux_AddMovies.Controls.Add(this.UxAddMovies);
+            this.ux_AddMovies.Location = new System.Drawing.Point(4, 25);
+            this.ux_AddMovies.Name = "ux_AddMovies";
+            this.ux_AddMovies.Size = new System.Drawing.Size(776, 417);
+            this.ux_AddMovies.TabIndex = 5;
+            this.ux_AddMovies.Text = "AddMovies";
+            this.ux_AddMovies.UseVisualStyleBackColor = true;
             // 
             // UxAddMovies
             // 
@@ -454,13 +458,9 @@
             this.UxAddMovies.UseVisualStyleBackColor = true;
             this.UxAddMovies.Click += new System.EventHandler(this.UxAddMovies_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // ux_MoviesList
             // 
-            this.ux_MoviesList.Controls.Add(this.ux_populateButton);
+            this.ux_MoviesList.Controls.Add(this.ux_populateMoviesButton);
             this.ux_MoviesList.Controls.Add(this.ux_MovieDataGrid);
             this.ux_MoviesList.Location = new System.Drawing.Point(4, 25);
             this.ux_MoviesList.Name = "ux_MoviesList";
@@ -470,34 +470,52 @@
             this.ux_MoviesList.Text = "Movies List";
             this.ux_MoviesList.UseVisualStyleBackColor = true;
             // 
+            // ux_populateMoviesButton
+            // 
+            this.ux_populateMoviesButton.Location = new System.Drawing.Point(6, 6);
+            this.ux_populateMoviesButton.Name = "ux_populateMoviesButton";
+            this.ux_populateMoviesButton.Size = new System.Drawing.Size(175, 43);
+            this.ux_populateMoviesButton.TabIndex = 1;
+            this.ux_populateMoviesButton.Text = "Populate Movie List";
+            this.ux_populateMoviesButton.UseVisualStyleBackColor = true;
+            this.ux_populateMoviesButton.Click += new System.EventHandler(this.ux_populateMoviesButton_Click);
+            // 
             // ux_MovieDataGrid
             // 
             this.ux_MovieDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ux_MovieDataGrid.Location = new System.Drawing.Point(3, 142);
+            this.ux_MovieDataGrid.Location = new System.Drawing.Point(3, 55);
             this.ux_MovieDataGrid.Name = "ux_MovieDataGrid";
-            this.ux_MovieDataGrid.Size = new System.Drawing.Size(767, 269);
+            this.ux_MovieDataGrid.Size = new System.Drawing.Size(767, 356);
             this.ux_MovieDataGrid.TabIndex = 0;
             // 
-            // ux_populateButton
+            // openFileDialog1
             // 
-            this.ux_populateButton.Location = new System.Drawing.Point(6, 6);
-            this.ux_populateButton.Name = "ux_populateButton";
-            this.ux_populateButton.Size = new System.Drawing.Size(175, 43);
-            this.ux_populateButton.TabIndex = 1;
-            this.ux_populateButton.Text = "Populate Movie List";
-            this.ux_populateButton.UseVisualStyleBackColor = true;
-            this.ux_populateButton.Click += new System.EventHandler(this.ux_populateButton_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // ActionSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.UXTabControl);
+            this.Controls.Add(this.ux_TabControl);
             this.Name = "ActionSelector";
             this.Text = "ActionSelector";
             this.Load += new System.EventHandler(this.ActionSelector_Load);
-            this.UXTabControl.ResumeLayout(false);
+            this.ux_TabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).EndInit();
@@ -509,16 +527,17 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
+            this.ux_AddMovies.ResumeLayout(false);
             this.ux_MoviesList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl UXTabControl;
+        private System.Windows.Forms.TabControl ux_TabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ComboBox UXPersonalReviews;
         private System.Windows.Forms.TextBox uxMovieName;
@@ -541,7 +560,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage ux_AddMovies;
         private System.Windows.Forms.Button UxAddMovies;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label2;
@@ -556,7 +575,9 @@
         private System.Windows.Forms.MonthCalendar UxEndMonth;
         private System.Windows.Forms.MonthCalendar UxBeginMonth;
         private System.Windows.Forms.TabPage ux_MoviesList;
-        private System.Windows.Forms.Button ux_populateButton;
+        private System.Windows.Forms.Button ux_populateMoviesButton;
         private System.Windows.Forms.DataGridView ux_MovieDataGrid;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

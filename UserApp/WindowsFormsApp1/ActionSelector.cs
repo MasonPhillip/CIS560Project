@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     public partial class ActionSelector : Form
     {
         private string curUser;
-        string connectionString = @";"; //put link to local database string
+        string connectionString = @"; Initial Catalog= ; Integrated Security=True;"; //put link to local database string then the Db name
 
         public ActionSelector(string user)
         {
@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void ux_populateButton_Click(object sender, EventArgs e)
+        private void ux_populateMoviesButton_Click(object sender, EventArgs e)
         {
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
@@ -107,9 +107,16 @@ namespace WindowsFormsApp1
                 SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movies", sqlcon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
-
-                //Method 1 - direct method
                 ux_MovieDataGrid.DataSource = dtbl;
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Delete From Movies Where ",sqlcon);
             }
         }
     }
