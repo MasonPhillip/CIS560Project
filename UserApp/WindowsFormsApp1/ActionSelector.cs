@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     public partial class ActionSelector : Form
     {
         private string curUser;
-        string connectionString = @"; Initial Catalog= ; Integrated Security=True;"; //put link to local database string then the Db name
+        string connectionString = @"(localdb)\MSSQLLocalDb; Initial Catalog = Movie; Integrated Security=True;";
 
         public ActionSelector(string user)
         {
@@ -118,6 +118,23 @@ namespace WindowsFormsApp1
                 sqlcon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("Delete From Movies Where ",sqlcon);
             }
+        }
+
+        private void ux_GenrePopulateButton_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Genres", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_GenresDataView.DataSource = dtbl;
+            }
+        }
+
+        private void ux_GenresDataView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

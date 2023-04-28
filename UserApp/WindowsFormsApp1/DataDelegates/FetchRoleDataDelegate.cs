@@ -28,15 +28,54 @@ namespace WindowsFormsApp1.DataDelegates
 
         public override Roles Translate(SqlCommand command, IDataRowReader reader)
         {
+            string temp;
             if (!reader.Read())
                 throw new RecordNotFoundException(roleId.ToString());
-
-            return new Roles(roleId,
-               reader.GetInt32("PersonId"),
-               reader.GetInt32("MovieId"),
-               reader.GetByte("isDirector"),
-               reader.GetByte("isActor"),
-               reader.GetInt32("AmountPaid"));
+            temp = reader.GetString("isDirector");
+            if (temp.ToLower() == "true")
+            {
+                temp = reader.GetString("isActor");
+                if (temp.ToLower() == "true")
+                {
+                    return new Roles(roleId,
+                    reader.GetInt32("PersonId"),
+                    reader.GetInt32("MovieId"),
+                    true,
+                    true,
+                    reader.GetInt32("AmountPaid"));
+                }
+                else
+                {
+                    return new Roles(roleId,
+                    reader.GetInt32("PersonId"),
+                    reader.GetInt32("MovieId"),
+                    true,
+                    false,
+                    reader.GetInt32("AmountPaid"));
+                }
+            }
+            else
+            {
+                temp = reader.GetString("isActor");
+                if (temp.ToLower() == "true")
+                {
+                    return new Roles(roleId,
+                    reader.GetInt32("PersonId"),
+                    reader.GetInt32("MovieId"),
+                    false,
+                    true,
+                    reader.GetInt32("AmountPaid"));
+                }
+                else
+                {
+                    return new Roles(roleId,
+                    reader.GetInt32("PersonId"),
+                    reader.GetInt32("MovieId"),
+                    false,
+                    false,
+                    reader.GetInt32("AmountPaid"));
+                }
+            }
         }
     }
 }

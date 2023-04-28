@@ -71,6 +71,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ux_GenresList = new System.Windows.Forms.TabPage();
+            this.ux_GenrePopulateButton = new System.Windows.Forms.Button();
+            this.ux_GenresDataView = new System.Windows.Forms.DataGridView();
             this.ux_TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).BeginInit();
@@ -82,6 +85,8 @@
             this.ux_MoviesList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.ux_GenresList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).BeginInit();
             this.SuspendLayout();
             // 
             // ux_TabControl
@@ -93,6 +98,7 @@
             this.ux_TabControl.Controls.Add(this.tabPage4);
             this.ux_TabControl.Controls.Add(this.tabPage5);
             this.ux_TabControl.Controls.Add(this.ux_AddMovies);
+            this.ux_TabControl.Controls.Add(this.ux_GenresList);
             this.ux_TabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_TabControl.Location = new System.Drawing.Point(4, 2);
             this.ux_TabControl.Name = "ux_TabControl";
@@ -497,14 +503,45 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 26);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // ux_GenresList
+            // 
+            this.ux_GenresList.Controls.Add(this.ux_GenrePopulateButton);
+            this.ux_GenresList.Controls.Add(this.ux_GenresDataView);
+            this.ux_GenresList.Location = new System.Drawing.Point(4, 25);
+            this.ux_GenresList.Name = "ux_GenresList";
+            this.ux_GenresList.Padding = new System.Windows.Forms.Padding(3);
+            this.ux_GenresList.Size = new System.Drawing.Size(776, 417);
+            this.ux_GenresList.TabIndex = 7;
+            this.ux_GenresList.Text = "Genres List";
+            this.ux_GenresList.UseVisualStyleBackColor = true;
+            // 
+            // ux_GenrePopulateButton
+            // 
+            this.ux_GenrePopulateButton.Location = new System.Drawing.Point(8, 6);
+            this.ux_GenrePopulateButton.Name = "ux_GenrePopulateButton";
+            this.ux_GenrePopulateButton.Size = new System.Drawing.Size(175, 43);
+            this.ux_GenrePopulateButton.TabIndex = 3;
+            this.ux_GenrePopulateButton.Text = "Populate Genres List";
+            this.ux_GenrePopulateButton.UseVisualStyleBackColor = true;
+            this.ux_GenrePopulateButton.Click += new System.EventHandler(this.ux_GenrePopulateButton_Click);
+            // 
+            // ux_GenresDataView
+            // 
+            this.ux_GenresDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_GenresDataView.Location = new System.Drawing.Point(5, 55);
+            this.ux_GenresDataView.Name = "ux_GenresDataView";
+            this.ux_GenresDataView.Size = new System.Drawing.Size(767, 356);
+            this.ux_GenresDataView.TabIndex = 2;
+            this.ux_GenresDataView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ux_GenresDataView_CellContentClick);
             // 
             // ActionSelector
             // 
@@ -531,6 +568,8 @@
             this.ux_MoviesList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.ux_GenresList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,5 +618,8 @@
         private System.Windows.Forms.DataGridView ux_MovieDataGrid;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.TabPage ux_GenresList;
+        private System.Windows.Forms.Button ux_GenrePopulateButton;
+        private System.Windows.Forms.DataGridView ux_GenresDataView;
     }
 }

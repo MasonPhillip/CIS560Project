@@ -4,3 +4,9 @@ C:\Users\wildc\Source\Repos\CIS560Project\UserApp\DataAccess\bin\Debug\DataAcces
 C:\Users\wildc\Source\Repos\CIS560Project\UserApp\DataAccess\bin\Debug\DataAccess.pdb
 C:\Users\wildc\Source\Repos\CIS560Project\UserApp\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\wildc\Source\Repos\CIS560Project\UserApp\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Garrett\source\repos\CIS560Project\UserApp\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Garrett\source\repos\CIS560Project\UserApp\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Garrett\source\repos\CIS560Project\UserApp\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Garrett\source\repos\CIS560Project\UserApp\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Garrett\source\repos\CIS560Project\UserApp\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Garrett\source\repos\CIS560Project\UserApp\DataAccess\obj\Debug\DataAccess.pdb

@@ -11,8 +11,8 @@ namespace WindowsFormsApp1.Repositories
     {
         Movies FetchMovie(int movieId);
 
-        Movies CreateMovie(int studioId, string movieName, DateTimeOffset releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic);
+        Movies CreateMovie(int studioId, string movieName, int releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic);
 
-        void SaveMovie(int movieId, int studioId, string movieName, DateTimeOffset releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
+        void SaveMovie(int movieId, int studioId, string movieName, int releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic);
     }
 }
