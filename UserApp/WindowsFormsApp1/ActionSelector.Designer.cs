@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ux_TabControl = new System.Windows.Forms.TabControl();
+            this.ux_MoviesList = new System.Windows.Forms.TabPage();
+            this.ux_populateMoviesButton = new System.Windows.Forms.Button();
+            this.ux_MovieDataGrid = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.UxDeleteButton = new System.Windows.Forms.Button();
             this.UXCommentsLabel = new System.Windows.Forms.Label();
@@ -64,17 +67,46 @@
             this.UxGenreBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ux_AddMovies = new System.Windows.Forms.TabPage();
-            this.UxAddMovies = new System.Windows.Forms.Button();
-            this.ux_MoviesList = new System.Windows.Forms.TabPage();
-            this.ux_populateMoviesButton = new System.Windows.Forms.Button();
-            this.ux_MovieDataGrid = new System.Windows.Forms.DataGridView();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ux_AddMoviesButton = new System.Windows.Forms.Button();
             this.ux_GenresList = new System.Windows.Forms.TabPage();
             this.ux_GenrePopulateButton = new System.Windows.Forms.Button();
             this.ux_GenresDataView = new System.Windows.Forms.DataGridView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ux_StudioIdValue = new System.Windows.Forms.TextBox();
+            this.ux_ReleaseDateValue = new System.Windows.Forms.TextBox();
+            this.ux_MovieNameValue = new System.Windows.Forms.TextBox();
+            this.ux_InternationalRevenueValue = new System.Windows.Forms.TextBox();
+            this.ux_DomesticRevenueValue = new System.Windows.Forms.TextBox();
+            this.ux_RottenTomatoesAudienceRatingValue = new System.Windows.Forms.TextBox();
+            this.ux_IMDBRatingValue = new System.Windows.Forms.TextBox();
+            this.ux_RottenTomatoesCriticRatingValue = new System.Windows.Forms.TextBox();
+            this.ux_GenreIdValue = new System.Windows.Forms.TextBox();
+            this.ux_CostValue = new System.Windows.Forms.TextBox();
+            this.ux_Label = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.ux_TabControl.SuspendLayout();
+            this.ux_MoviesList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -82,11 +114,9 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.ux_AddMovies.SuspendLayout();
-            this.ux_MoviesList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.ux_GenresList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ux_TabControl
@@ -105,6 +135,36 @@
             this.ux_TabControl.SelectedIndex = 0;
             this.ux_TabControl.Size = new System.Drawing.Size(784, 446);
             this.ux_TabControl.TabIndex = 3;
+            // 
+            // ux_MoviesList
+            // 
+            this.ux_MoviesList.Controls.Add(this.ux_populateMoviesButton);
+            this.ux_MoviesList.Controls.Add(this.ux_MovieDataGrid);
+            this.ux_MoviesList.Location = new System.Drawing.Point(4, 25);
+            this.ux_MoviesList.Name = "ux_MoviesList";
+            this.ux_MoviesList.Padding = new System.Windows.Forms.Padding(3);
+            this.ux_MoviesList.Size = new System.Drawing.Size(776, 417);
+            this.ux_MoviesList.TabIndex = 6;
+            this.ux_MoviesList.Text = "Movies List";
+            this.ux_MoviesList.UseVisualStyleBackColor = true;
+            // 
+            // ux_populateMoviesButton
+            // 
+            this.ux_populateMoviesButton.Location = new System.Drawing.Point(6, 6);
+            this.ux_populateMoviesButton.Name = "ux_populateMoviesButton";
+            this.ux_populateMoviesButton.Size = new System.Drawing.Size(175, 43);
+            this.ux_populateMoviesButton.TabIndex = 1;
+            this.ux_populateMoviesButton.Text = "Populate Movie List";
+            this.ux_populateMoviesButton.UseVisualStyleBackColor = true;
+            this.ux_populateMoviesButton.Click += new System.EventHandler(this.ux_populateMoviesButton_Click);
+            // 
+            // ux_MovieDataGrid
+            // 
+            this.ux_MovieDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_MovieDataGrid.Location = new System.Drawing.Point(3, 55);
+            this.ux_MovieDataGrid.Name = "ux_MovieDataGrid";
+            this.ux_MovieDataGrid.Size = new System.Drawing.Size(767, 356);
+            this.ux_MovieDataGrid.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -445,7 +505,37 @@
             // 
             // ux_AddMovies
             // 
-            this.ux_AddMovies.Controls.Add(this.UxAddMovies);
+            this.ux_AddMovies.Controls.Add(this.label24);
+            this.ux_AddMovies.Controls.Add(this.label23);
+            this.ux_AddMovies.Controls.Add(this.label22);
+            this.ux_AddMovies.Controls.Add(this.label21);
+            this.ux_AddMovies.Controls.Add(this.label20);
+            this.ux_AddMovies.Controls.Add(this.label19);
+            this.ux_AddMovies.Controls.Add(this.label18);
+            this.ux_AddMovies.Controls.Add(this.label17);
+            this.ux_AddMovies.Controls.Add(this.label7);
+            this.ux_AddMovies.Controls.Add(this.label6);
+            this.ux_AddMovies.Controls.Add(this.label15);
+            this.ux_AddMovies.Controls.Add(this.label16);
+            this.ux_AddMovies.Controls.Add(this.label12);
+            this.ux_AddMovies.Controls.Add(this.label13);
+            this.ux_AddMovies.Controls.Add(this.label14);
+            this.ux_AddMovies.Controls.Add(this.label9);
+            this.ux_AddMovies.Controls.Add(this.label10);
+            this.ux_AddMovies.Controls.Add(this.label11);
+            this.ux_AddMovies.Controls.Add(this.label8);
+            this.ux_AddMovies.Controls.Add(this.ux_Label);
+            this.ux_AddMovies.Controls.Add(this.ux_RottenTomatoesCriticRatingValue);
+            this.ux_AddMovies.Controls.Add(this.ux_GenreIdValue);
+            this.ux_AddMovies.Controls.Add(this.ux_CostValue);
+            this.ux_AddMovies.Controls.Add(this.ux_InternationalRevenueValue);
+            this.ux_AddMovies.Controls.Add(this.ux_DomesticRevenueValue);
+            this.ux_AddMovies.Controls.Add(this.ux_RottenTomatoesAudienceRatingValue);
+            this.ux_AddMovies.Controls.Add(this.ux_IMDBRatingValue);
+            this.ux_AddMovies.Controls.Add(this.ux_ReleaseDateValue);
+            this.ux_AddMovies.Controls.Add(this.ux_MovieNameValue);
+            this.ux_AddMovies.Controls.Add(this.ux_StudioIdValue);
+            this.ux_AddMovies.Controls.Add(this.ux_AddMoviesButton);
             this.ux_AddMovies.Location = new System.Drawing.Point(4, 25);
             this.ux_AddMovies.Name = "ux_AddMovies";
             this.ux_AddMovies.Size = new System.Drawing.Size(776, 417);
@@ -453,64 +543,16 @@
             this.ux_AddMovies.Text = "AddMovies";
             this.ux_AddMovies.UseVisualStyleBackColor = true;
             // 
-            // UxAddMovies
+            // ux_AddMoviesButton
             // 
-            this.UxAddMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UxAddMovies.Location = new System.Drawing.Point(283, 145);
-            this.UxAddMovies.Name = "UxAddMovies";
-            this.UxAddMovies.Size = new System.Drawing.Size(167, 87);
-            this.UxAddMovies.TabIndex = 0;
-            this.UxAddMovies.Text = "Add Movies";
-            this.UxAddMovies.UseVisualStyleBackColor = true;
-            this.UxAddMovies.Click += new System.EventHandler(this.UxAddMovies_Click);
-            // 
-            // ux_MoviesList
-            // 
-            this.ux_MoviesList.Controls.Add(this.ux_populateMoviesButton);
-            this.ux_MoviesList.Controls.Add(this.ux_MovieDataGrid);
-            this.ux_MoviesList.Location = new System.Drawing.Point(4, 25);
-            this.ux_MoviesList.Name = "ux_MoviesList";
-            this.ux_MoviesList.Padding = new System.Windows.Forms.Padding(3);
-            this.ux_MoviesList.Size = new System.Drawing.Size(776, 417);
-            this.ux_MoviesList.TabIndex = 6;
-            this.ux_MoviesList.Text = "Movies List";
-            this.ux_MoviesList.UseVisualStyleBackColor = true;
-            // 
-            // ux_populateMoviesButton
-            // 
-            this.ux_populateMoviesButton.Location = new System.Drawing.Point(6, 6);
-            this.ux_populateMoviesButton.Name = "ux_populateMoviesButton";
-            this.ux_populateMoviesButton.Size = new System.Drawing.Size(175, 43);
-            this.ux_populateMoviesButton.TabIndex = 1;
-            this.ux_populateMoviesButton.Text = "Populate Movie List";
-            this.ux_populateMoviesButton.UseVisualStyleBackColor = true;
-            this.ux_populateMoviesButton.Click += new System.EventHandler(this.ux_populateMoviesButton_Click);
-            // 
-            // ux_MovieDataGrid
-            // 
-            this.ux_MovieDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ux_MovieDataGrid.Location = new System.Drawing.Point(3, 55);
-            this.ux_MovieDataGrid.Name = "ux_MovieDataGrid";
-            this.ux_MovieDataGrid.Size = new System.Drawing.Size(767, 356);
-            this.ux_MovieDataGrid.TabIndex = 0;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 26);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            this.ux_AddMoviesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.ux_AddMoviesButton.Location = new System.Drawing.Point(637, 381);
+            this.ux_AddMoviesButton.Name = "ux_AddMoviesButton";
+            this.ux_AddMoviesButton.Size = new System.Drawing.Size(136, 30);
+            this.ux_AddMoviesButton.TabIndex = 0;
+            this.ux_AddMoviesButton.Text = "Add Movies";
+            this.ux_AddMoviesButton.UseVisualStyleBackColor = true;
+            this.ux_AddMoviesButton.Click += new System.EventHandler(this.UxAddMovies_Click);
             // 
             // ux_GenresList
             // 
@@ -543,6 +585,274 @@
             this.ux_GenresDataView.TabIndex = 2;
             this.ux_GenresDataView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ux_GenresDataView_CellContentClick);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 26);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // ux_StudioIdValue
+            // 
+            this.ux_StudioIdValue.Location = new System.Drawing.Point(324, 53);
+            this.ux_StudioIdValue.Name = "ux_StudioIdValue";
+            this.ux_StudioIdValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_StudioIdValue.TabIndex = 2;
+            // 
+            // ux_ReleaseDateValue
+            // 
+            this.ux_ReleaseDateValue.Location = new System.Drawing.Point(324, 109);
+            this.ux_ReleaseDateValue.Name = "ux_ReleaseDateValue";
+            this.ux_ReleaseDateValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_ReleaseDateValue.TabIndex = 4;
+            // 
+            // ux_MovieNameValue
+            // 
+            this.ux_MovieNameValue.Location = new System.Drawing.Point(324, 81);
+            this.ux_MovieNameValue.Name = "ux_MovieNameValue";
+            this.ux_MovieNameValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_MovieNameValue.TabIndex = 3;
+            // 
+            // ux_InternationalRevenueValue
+            // 
+            this.ux_InternationalRevenueValue.Location = new System.Drawing.Point(324, 221);
+            this.ux_InternationalRevenueValue.Name = "ux_InternationalRevenueValue";
+            this.ux_InternationalRevenueValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_InternationalRevenueValue.TabIndex = 8;
+            // 
+            // ux_DomesticRevenueValue
+            // 
+            this.ux_DomesticRevenueValue.Location = new System.Drawing.Point(324, 193);
+            this.ux_DomesticRevenueValue.Name = "ux_DomesticRevenueValue";
+            this.ux_DomesticRevenueValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_DomesticRevenueValue.TabIndex = 7;
+            // 
+            // ux_RottenTomatoesAudienceRatingValue
+            // 
+            this.ux_RottenTomatoesAudienceRatingValue.Location = new System.Drawing.Point(324, 165);
+            this.ux_RottenTomatoesAudienceRatingValue.Name = "ux_RottenTomatoesAudienceRatingValue";
+            this.ux_RottenTomatoesAudienceRatingValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_RottenTomatoesAudienceRatingValue.TabIndex = 6;
+            // 
+            // ux_IMDBRatingValue
+            // 
+            this.ux_IMDBRatingValue.Location = new System.Drawing.Point(324, 137);
+            this.ux_IMDBRatingValue.Name = "ux_IMDBRatingValue";
+            this.ux_IMDBRatingValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_IMDBRatingValue.TabIndex = 5;
+            // 
+            // ux_RottenTomatoesCriticRatingValue
+            // 
+            this.ux_RottenTomatoesCriticRatingValue.Location = new System.Drawing.Point(324, 305);
+            this.ux_RottenTomatoesCriticRatingValue.Name = "ux_RottenTomatoesCriticRatingValue";
+            this.ux_RottenTomatoesCriticRatingValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_RottenTomatoesCriticRatingValue.TabIndex = 11;
+            // 
+            // ux_GenreIdValue
+            // 
+            this.ux_GenreIdValue.Location = new System.Drawing.Point(324, 277);
+            this.ux_GenreIdValue.Name = "ux_GenreIdValue";
+            this.ux_GenreIdValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_GenreIdValue.TabIndex = 10;
+            // 
+            // ux_CostValue
+            // 
+            this.ux_CostValue.Location = new System.Drawing.Point(324, 249);
+            this.ux_CostValue.Name = "ux_CostValue";
+            this.ux_CostValue.Size = new System.Drawing.Size(275, 22);
+            this.ux_CostValue.TabIndex = 9;
+            // 
+            // ux_Label
+            // 
+            this.ux_Label.AutoSize = true;
+            this.ux_Label.Location = new System.Drawing.Point(250, 53);
+            this.ux_Label.Name = "ux_Label";
+            this.ux_Label.Size = new System.Drawing.Size(68, 16);
+            this.ux_Label.TabIndex = 13;
+            this.ux_Label.Text = "Studio Id";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(228, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 16);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "MovieName";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(74, 168);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(244, 16);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Rotten Tomatoes Audience Rating";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(225, 137);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 16);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "IMDB Rating";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(215, 112);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 16);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Release Date";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(280, 252);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 16);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Cost";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(160, 224);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(158, 16);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "International Revenue";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(180, 196);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(138, 16);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Domestic Revenue";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(104, 308);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(214, 16);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Rotten Tomatoes Critic Rating";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(252, 280);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(66, 16);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Genre Id";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(605, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 16);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "INT";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(605, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 16);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "STRING";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(605, 112);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(102, 16);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "INT (ex. 2014)";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(605, 168);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(32, 16);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "INT";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(605, 249);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 16);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "INT";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(605, 280);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(32, 16);
+            this.label20.TabIndex = 28;
+            this.label20.Text = "INT";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(605, 308);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(32, 16);
+            this.label21.TabIndex = 29;
+            this.label21.Text = "INT";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(605, 224);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(61, 16);
+            this.label22.TabIndex = 24;
+            this.label22.Text = "BIG INT";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(605, 196);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(61, 16);
+            this.label23.TabIndex = 30;
+            this.label23.Text = "BIG INT";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(605, 140);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(126, 16);
+            this.label24.TabIndex = 31;
+            this.label24.Text = "DECIMAL (ex 1.1)";
+            // 
             // ActionSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,6 +863,8 @@
             this.Text = "ActionSelector";
             this.Load += new System.EventHandler(this.ActionSelector_Load);
             this.ux_TabControl.ResumeLayout(false);
+            this.ux_MoviesList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).EndInit();
@@ -565,11 +877,10 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.ux_AddMovies.ResumeLayout(false);
-            this.ux_MoviesList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.ux_AddMovies.PerformLayout();
             this.ux_GenresList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -600,7 +911,7 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage ux_AddMovies;
-        private System.Windows.Forms.Button UxAddMovies;
+        private System.Windows.Forms.Button ux_AddMoviesButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox UXGenreResultListBox;
@@ -621,5 +932,35 @@
         private System.Windows.Forms.TabPage ux_GenresList;
         private System.Windows.Forms.Button ux_GenrePopulateButton;
         private System.Windows.Forms.DataGridView ux_GenresDataView;
+        private System.Windows.Forms.TextBox ux_ReleaseDateValue;
+        private System.Windows.Forms.TextBox ux_MovieNameValue;
+        private System.Windows.Forms.TextBox ux_StudioIdValue;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label ux_Label;
+        private System.Windows.Forms.TextBox ux_RottenTomatoesCriticRatingValue;
+        private System.Windows.Forms.TextBox ux_GenreIdValue;
+        private System.Windows.Forms.TextBox ux_CostValue;
+        private System.Windows.Forms.TextBox ux_InternationalRevenueValue;
+        private System.Windows.Forms.TextBox ux_DomesticRevenueValue;
+        private System.Windows.Forms.TextBox ux_RottenTomatoesAudienceRatingValue;
+        private System.Windows.Forms.TextBox ux_IMDBRatingValue;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

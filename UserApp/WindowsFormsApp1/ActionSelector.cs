@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     public partial class ActionSelector : Form
     {
         private string curUser;
-        string connectionString = @"(localdb)\MSSQLLocalDb; Initial Catalog = Movie; Integrated Security=True;";
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=MovieDatabase;Integrated Security=True";
 
         public ActionSelector(string user)
         {
@@ -91,7 +91,15 @@ namespace WindowsFormsApp1
 
         private void UxAddMovies_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+            /*SqlCommand cmd = new SqlCommand();
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movie.Movies", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_MovieDataGrid.DataSource = dtbl;
+            }*/
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -104,7 +112,7 @@ namespace WindowsFormsApp1
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movies", sqlcon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movie.Movies", sqlcon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 ux_MovieDataGrid.DataSource = dtbl;
@@ -116,7 +124,7 @@ namespace WindowsFormsApp1
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Delete From Movies Where ",sqlcon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Delete From Movies Where",sqlcon);
             }
         }
 
@@ -125,7 +133,7 @@ namespace WindowsFormsApp1
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Genres", sqlcon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movie.Genres", sqlcon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 ux_GenresDataView.DataSource = dtbl;
