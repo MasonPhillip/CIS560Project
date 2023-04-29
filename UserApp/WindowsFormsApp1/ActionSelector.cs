@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         private Movies movieForReviews;
         public Users currentUser;
         public Controller controller = new Controller();
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=MovieDatabase;Integrated Security=True";
 
         public ActionSelector(Users user)
         {
@@ -108,6 +109,70 @@ namespace WindowsFormsApp1
                 uxReviewsForMovieListBox.DataSource = controller.GetReviewsForMovie(movieId);
             }
             
+        }
+
+        private void ux_GenrePopulateButton_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movie.Genres", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_GenresDataView.DataSource = dtbl;
+            }
+        }
+
+        private void ux_CalcHighestPaidWithin_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("Movie.HighestPaidWithin", sqlcon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@StartDate", ux_StartDatePicker.Value);
+                cmd.Parameters.AddWithValue("@EndDate", ux_EndDatePicker.Value);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_HighestPaidWithinData.DataSource = dtbl;
+            }
+        }
+
+        private void ux_ASPbGButton_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("Movie.AverageStudioProfitByGenre", sqlcon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@GenreId", ux_GenrePicker.Value);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_ASPbGDataGrid.DataSource = dtbl;
+            }
+        }
+
+        private void ux_APCbGButton_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("Movie.AverageCostProductionByGenre", sqlcon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@GenreId", ux_APCbGGenrePicker.Value);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                ux_APCbGDataGrid.DataSource = dtbl;
+            }
         }
     }
 }

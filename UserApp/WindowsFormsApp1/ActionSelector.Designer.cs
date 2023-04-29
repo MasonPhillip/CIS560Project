@@ -48,58 +48,61 @@
             this.uxMoviesList = new System.Windows.Forms.ListBox();
             this.uxMovieTitleLabel = new System.Windows.Forms.Label();
             this.uxGetAllMovies = new System.Windows.Forms.Button();
+            this.ux_GenresTab = new System.Windows.Forms.TabPage();
+            this.ux_GenrePopulateButton = new System.Windows.Forms.Button();
+            this.ux_GenresDataView = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.uxMovieListComboBox = new System.Windows.Forms.ComboBox();
+            this.uxReviewsForMovieListBox = new System.Windows.Forms.ListBox();
+            this.uxReviewsPerMovie = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.UXRottenTomatoesRating = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.UXPersonalRatingQuery = new System.Windows.Forms.TextBox();
-            this.UXPersonalReviewLabel = new System.Windows.Forms.Label();
-            this.UXImdbScoreLabel = new System.Windows.Forms.Label();
-            this.UxIMDBScore = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.UxMovieLabel = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ux_CalcHighestPaidWithin = new System.Windows.Forms.Button();
+            this.ux_HighestPaidWithinData = new System.Windows.Forms.DataGridView();
+            this.ux_EndDatePicker = new System.Windows.Forms.NumericUpDown();
+            this.ux_StartDatePicker = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.UxActorsResultBox = new System.Windows.Forms.ListBox();
-            this.UxEndMonth = new System.Windows.Forms.MonthCalendar();
-            this.UxBeginMonth = new System.Windows.Forms.MonthCalendar();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.UXProfitResultBox = new System.Windows.Forms.ListBox();
-            this.UxGenreSelect = new System.Windows.Forms.ComboBox();
+            this.ux_AverageProfitByStudioandGenre = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.UXGenreResultListBox = new System.Windows.Forms.ListBox();
-            this.UxGenreBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ux_AddMovies = new System.Windows.Forms.TabPage();
-            this.UxAddMovies = new System.Windows.Forms.Button();
+            this.ux_dad = new System.Windows.Forms.TabPage();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxReviewsPerMovie = new System.Windows.Forms.Label();
-            this.uxReviewsForMovieListBox = new System.Windows.Forms.ListBox();
-            this.uxMovieListComboBox = new System.Windows.Forms.ComboBox();
+            this.ux_GenrePicker = new System.Windows.Forms.NumericUpDown();
+            this.ux_ASPbGDataGrid = new System.Windows.Forms.DataGridView();
+            this.ux_ASPbGButton = new System.Windows.Forms.Button();
+            this.ux_APCbGButton = new System.Windows.Forms.Button();
+            this.ux_APCbGDataGrid = new System.Windows.Forms.DataGridView();
+            this.ux_APCbGGenrePicker = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.ux_TabControl.SuspendLayout();
             this.ux_MoviesList.SuspendLayout();
+            this.ux_GenresTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).BeginInit();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.ux_AddMovies.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_HighestPaidWithinData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_EndDatePicker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_StartDatePicker)).BeginInit();
+            this.ux_AverageProfitByStudioandGenre.SuspendLayout();
+            this.ux_dad.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_GenrePicker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_ASPbGDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_APCbGDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_APCbGGenrePicker)).BeginInit();
             this.SuspendLayout();
             // 
             // ux_TabControl
             // 
             this.ux_TabControl.Controls.Add(this.ux_MoviesList);
+            this.ux_TabControl.Controls.Add(this.ux_GenresTab);
             this.ux_TabControl.Controls.Add(this.tabPage1);
             this.ux_TabControl.Controls.Add(this.tabPage2);
             this.ux_TabControl.Controls.Add(this.tabPage3);
-            this.ux_TabControl.Controls.Add(this.tabPage4);
-            this.ux_TabControl.Controls.Add(this.tabPage5);
-            this.ux_TabControl.Controls.Add(this.ux_AddMovies);
+            this.ux_TabControl.Controls.Add(this.ux_AverageProfitByStudioandGenre);
+            this.ux_TabControl.Controls.Add(this.ux_dad);
             this.ux_TabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_TabControl.Location = new System.Drawing.Point(4, 2);
             this.ux_TabControl.Name = "ux_TabControl";
@@ -281,6 +284,35 @@
             this.uxGetAllMovies.UseVisualStyleBackColor = true;
             this.uxGetAllMovies.Click += new System.EventHandler(this.uxGetAllMovies_Click);
             // 
+            // ux_GenresTab
+            // 
+            this.ux_GenresTab.Controls.Add(this.ux_GenrePopulateButton);
+            this.ux_GenresTab.Controls.Add(this.ux_GenresDataView);
+            this.ux_GenresTab.Location = new System.Drawing.Point(4, 25);
+            this.ux_GenresTab.Name = "ux_GenresTab";
+            this.ux_GenresTab.Size = new System.Drawing.Size(776, 417);
+            this.ux_GenresTab.TabIndex = 4;
+            this.ux_GenresTab.Text = "Genres";
+            this.ux_GenresTab.UseVisualStyleBackColor = true;
+            // 
+            // ux_GenrePopulateButton
+            // 
+            this.ux_GenrePopulateButton.Location = new System.Drawing.Point(4, 3);
+            this.ux_GenrePopulateButton.Name = "ux_GenrePopulateButton";
+            this.ux_GenrePopulateButton.Size = new System.Drawing.Size(169, 37);
+            this.ux_GenrePopulateButton.TabIndex = 3;
+            this.ux_GenrePopulateButton.Text = "Populate Genres List";
+            this.ux_GenrePopulateButton.UseVisualStyleBackColor = true;
+            this.ux_GenrePopulateButton.Click += new System.EventHandler(this.ux_GenrePopulateButton_Click);
+            // 
+            // ux_GenresDataView
+            // 
+            this.ux_GenresDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_GenresDataView.Location = new System.Drawing.Point(4, 46);
+            this.ux_GenresDataView.Name = "ux_GenresDataView";
+            this.ux_GenresDataView.Size = new System.Drawing.Size(767, 365);
+            this.ux_GenresDataView.TabIndex = 2;
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.uxMovieListComboBox);
@@ -294,16 +326,36 @@
             this.tabPage1.Text = "Personal Review";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // uxMovieListComboBox
+            // 
+            this.uxMovieListComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMovieListComboBox.FormattingEnabled = true;
+            this.uxMovieListComboBox.Location = new System.Drawing.Point(9, 32);
+            this.uxMovieListComboBox.Name = "uxMovieListComboBox";
+            this.uxMovieListComboBox.Size = new System.Drawing.Size(343, 33);
+            this.uxMovieListComboBox.TabIndex = 30;
+            this.uxMovieListComboBox.SelectedValueChanged += new System.EventHandler(this.uxMovieListComboBox_SelectedValueChanged);
+            // 
+            // uxReviewsForMovieListBox
+            // 
+            this.uxReviewsForMovieListBox.FormattingEnabled = true;
+            this.uxReviewsForMovieListBox.ItemHeight = 16;
+            this.uxReviewsForMovieListBox.Location = new System.Drawing.Point(0, 80);
+            this.uxReviewsForMovieListBox.Name = "uxReviewsForMovieListBox";
+            this.uxReviewsForMovieListBox.Size = new System.Drawing.Size(776, 340);
+            this.uxReviewsForMovieListBox.TabIndex = 11;
+            // 
+            // uxReviewsPerMovie
+            // 
+            this.uxReviewsPerMovie.AutoSize = true;
+            this.uxReviewsPerMovie.Location = new System.Drawing.Point(6, 13);
+            this.uxReviewsPerMovie.Name = "uxReviewsPerMovie";
+            this.uxReviewsPerMovie.Size = new System.Drawing.Size(144, 16);
+            this.uxReviewsPerMovie.TabIndex = 10;
+            this.uxReviewsPerMovie.Text = "See Movie Reviews";
+            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.UXRottenTomatoesRating);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.UXPersonalRatingQuery);
-            this.tabPage2.Controls.Add(this.UXPersonalReviewLabel);
-            this.tabPage2.Controls.Add(this.UXImdbScoreLabel);
-            this.tabPage2.Controls.Add(this.UxIMDBScore);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.UxMovieLabel);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -312,85 +364,14 @@
             this.tabPage2.Text = "Compare Ratings";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // UXRottenTomatoesRating
-            // 
-            this.UXRottenTomatoesRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXRottenTomatoesRating.Location = new System.Drawing.Point(578, 143);
-            this.UXRottenTomatoesRating.Name = "UXRottenTomatoesRating";
-            this.UXRottenTomatoesRating.Size = new System.Drawing.Size(41, 38);
-            this.UXRottenTomatoesRating.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(523, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Rotten Tomatoes";
-            // 
-            // UXPersonalRatingQuery
-            // 
-            this.UXPersonalRatingQuery.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXPersonalRatingQuery.Location = new System.Drawing.Point(79, 143);
-            this.UXPersonalRatingQuery.Name = "UXPersonalRatingQuery";
-            this.UXPersonalRatingQuery.Size = new System.Drawing.Size(41, 38);
-            this.UXPersonalRatingQuery.TabIndex = 5;
-            // 
-            // UXPersonalReviewLabel
-            // 
-            this.UXPersonalReviewLabel.AutoSize = true;
-            this.UXPersonalReviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXPersonalReviewLabel.Location = new System.Drawing.Point(41, 120);
-            this.UXPersonalReviewLabel.Name = "UXPersonalReviewLabel";
-            this.UXPersonalReviewLabel.Size = new System.Drawing.Size(105, 20);
-            this.UXPersonalReviewLabel.TabIndex = 4;
-            this.UXPersonalReviewLabel.Text = "Your Rating";
-            // 
-            // UXImdbScoreLabel
-            // 
-            this.UXImdbScoreLabel.AutoSize = true;
-            this.UXImdbScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXImdbScoreLabel.Location = new System.Drawing.Point(309, 120);
-            this.UXImdbScoreLabel.Name = "UXImdbScoreLabel";
-            this.UXImdbScoreLabel.Size = new System.Drawing.Size(54, 20);
-            this.UXImdbScoreLabel.TabIndex = 3;
-            this.UXImdbScoreLabel.Text = "IMDB";
-            // 
-            // UxIMDBScore
-            // 
-            this.UxIMDBScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UxIMDBScore.Location = new System.Drawing.Point(313, 143);
-            this.UxIMDBScore.Name = "UxIMDBScore";
-            this.UxIMDBScore.Size = new System.Drawing.Size(41, 38);
-            this.UxIMDBScore.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(5, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(765, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // UxMovieLabel
-            // 
-            this.UxMovieLabel.AutoSize = true;
-            this.UxMovieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UxMovieLabel.Location = new System.Drawing.Point(6, 19);
-            this.UxMovieLabel.Name = "UxMovieLabel";
-            this.UxMovieLabel.Size = new System.Drawing.Size(94, 20);
-            this.UxMovieLabel.TabIndex = 0;
-            this.UxMovieLabel.Text = "Movie Title";
-            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.ux_CalcHighestPaidWithin);
+            this.tabPage3.Controls.Add(this.ux_HighestPaidWithinData);
+            this.tabPage3.Controls.Add(this.ux_EndDatePicker);
+            this.tabPage3.Controls.Add(this.ux_StartDatePicker);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.UxActorsResultBox);
-            this.tabPage3.Controls.Add(this.UxEndMonth);
-            this.tabPage3.Controls.Add(this.UxBeginMonth);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(776, 417);
@@ -398,10 +379,72 @@
             this.tabPage3.Text = "Actors";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // ux_CalcHighestPaidWithin
+            // 
+            this.ux_CalcHighestPaidWithin.Location = new System.Drawing.Point(225, 34);
+            this.ux_CalcHighestPaidWithin.Name = "ux_CalcHighestPaidWithin";
+            this.ux_CalcHighestPaidWithin.Size = new System.Drawing.Size(330, 30);
+            this.ux_CalcHighestPaidWithin.TabIndex = 8;
+            this.ux_CalcHighestPaidWithin.Text = "Calculate Highest Paid Actor Between Dates";
+            this.ux_CalcHighestPaidWithin.UseVisualStyleBackColor = true;
+            this.ux_CalcHighestPaidWithin.Click += new System.EventHandler(this.ux_CalcHighestPaidWithin_Click);
+            // 
+            // ux_HighestPaidWithinData
+            // 
+            this.ux_HighestPaidWithinData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_HighestPaidWithinData.Location = new System.Drawing.Point(8, 88);
+            this.ux_HighestPaidWithinData.Name = "ux_HighestPaidWithinData";
+            this.ux_HighestPaidWithinData.Size = new System.Drawing.Size(763, 323);
+            this.ux_HighestPaidWithinData.TabIndex = 7;
+            // 
+            // ux_EndDatePicker
+            // 
+            this.ux_EndDatePicker.Location = new System.Drawing.Point(651, 60);
+            this.ux_EndDatePicker.Maximum = new decimal(new int[] {
+            2050,
+            0,
+            0,
+            0});
+            this.ux_EndDatePicker.Minimum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            this.ux_EndDatePicker.Name = "ux_EndDatePicker";
+            this.ux_EndDatePicker.Size = new System.Drawing.Size(120, 22);
+            this.ux_EndDatePicker.TabIndex = 6;
+            this.ux_EndDatePicker.Value = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            // 
+            // ux_StartDatePicker
+            // 
+            this.ux_StartDatePicker.Location = new System.Drawing.Point(8, 60);
+            this.ux_StartDatePicker.Maximum = new decimal(new int[] {
+            2050,
+            0,
+            0,
+            0});
+            this.ux_StartDatePicker.Minimum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            this.ux_StartDatePicker.Name = "ux_StartDatePicker";
+            this.ux_StartDatePicker.Size = new System.Drawing.Size(120, 22);
+            this.ux_StartDatePicker.TabIndex = 5;
+            this.ux_StartDatePicker.Value = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(537, 41);
+            this.label5.Location = new System.Drawing.Point(700, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 4;
@@ -416,123 +459,41 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Start Date";
             // 
-            // UxActorsResultBox
+            // ux_AverageProfitByStudioandGenre
             // 
-            this.UxActorsResultBox.FormattingEnabled = true;
-            this.UxActorsResultBox.ItemHeight = 16;
-            this.UxActorsResultBox.Location = new System.Drawing.Point(3, 231);
-            this.UxActorsResultBox.Name = "UxActorsResultBox";
-            this.UxActorsResultBox.Size = new System.Drawing.Size(768, 180);
-            this.UxActorsResultBox.TabIndex = 2;
-            // 
-            // UxEndMonth
-            // 
-            this.UxEndMonth.Location = new System.Drawing.Point(540, 66);
-            this.UxEndMonth.Name = "UxEndMonth";
-            this.UxEndMonth.TabIndex = 1;
-            // 
-            // UxBeginMonth
-            // 
-            this.UxBeginMonth.Location = new System.Drawing.Point(3, 66);
-            this.UxBeginMonth.Name = "UxBeginMonth";
-            this.UxBeginMonth.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.UXProfitResultBox);
-            this.tabPage4.Controls.Add(this.UxGenreSelect);
-            this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(776, 417);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Profit";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // UXProfitResultBox
-            // 
-            this.UXProfitResultBox.FormattingEnabled = true;
-            this.UXProfitResultBox.ItemHeight = 16;
-            this.UXProfitResultBox.Location = new System.Drawing.Point(5, 145);
-            this.UXProfitResultBox.Name = "UXProfitResultBox";
-            this.UXProfitResultBox.Size = new System.Drawing.Size(768, 260);
-            this.UXProfitResultBox.TabIndex = 2;
-            // 
-            // UxGenreSelect
-            // 
-            this.UxGenreSelect.FormattingEnabled = true;
-            this.UxGenreSelect.Location = new System.Drawing.Point(55, 103);
-            this.UxGenreSelect.Name = "UxGenreSelect";
-            this.UxGenreSelect.Size = new System.Drawing.Size(121, 24);
-            this.UxGenreSelect.TabIndex = 1;
+            this.ux_AverageProfitByStudioandGenre.Controls.Add(this.ux_ASPbGButton);
+            this.ux_AverageProfitByStudioandGenre.Controls.Add(this.ux_ASPbGDataGrid);
+            this.ux_AverageProfitByStudioandGenre.Controls.Add(this.ux_GenrePicker);
+            this.ux_AverageProfitByStudioandGenre.Controls.Add(this.label3);
+            this.ux_AverageProfitByStudioandGenre.Location = new System.Drawing.Point(4, 25);
+            this.ux_AverageProfitByStudioandGenre.Name = "ux_AverageProfitByStudioandGenre";
+            this.ux_AverageProfitByStudioandGenre.Size = new System.Drawing.Size(776, 417);
+            this.ux_AverageProfitByStudioandGenre.TabIndex = 3;
+            this.ux_AverageProfitByStudioandGenre.Text = "Profit";
+            this.ux_AverageProfitByStudioandGenre.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 84);
+            this.label3.Location = new System.Drawing.Point(18, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Genre";
+            this.label3.Text = "Genre Id";
             // 
-            // tabPage5
+            // ux_dad
             // 
-            this.tabPage5.Controls.Add(this.UXGenreResultListBox);
-            this.tabPage5.Controls.Add(this.UxGenreBox);
-            this.tabPage5.Controls.Add(this.label2);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(776, 417);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Genres";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // UXGenreResultListBox
-            // 
-            this.UXGenreResultListBox.FormattingEnabled = true;
-            this.UXGenreResultListBox.ItemHeight = 16;
-            this.UXGenreResultListBox.Location = new System.Drawing.Point(4, 167);
-            this.UXGenreResultListBox.Name = "UXGenreResultListBox";
-            this.UXGenreResultListBox.Size = new System.Drawing.Size(768, 244);
-            this.UXGenreResultListBox.TabIndex = 2;
-            // 
-            // UxGenreBox
-            // 
-            this.UxGenreBox.FormattingEnabled = true;
-            this.UxGenreBox.Location = new System.Drawing.Point(33, 85);
-            this.UxGenreBox.Name = "UxGenreBox";
-            this.UxGenreBox.Size = new System.Drawing.Size(121, 24);
-            this.UxGenreBox.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Genre";
-            // 
-            // ux_AddMovies
-            // 
-            this.ux_AddMovies.Controls.Add(this.UxAddMovies);
-            this.ux_AddMovies.Location = new System.Drawing.Point(4, 25);
-            this.ux_AddMovies.Name = "ux_AddMovies";
-            this.ux_AddMovies.Size = new System.Drawing.Size(776, 417);
-            this.ux_AddMovies.TabIndex = 5;
-            this.ux_AddMovies.Text = "AddMovies";
-            this.ux_AddMovies.UseVisualStyleBackColor = true;
-            // 
-            // UxAddMovies
-            // 
-            this.UxAddMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UxAddMovies.Location = new System.Drawing.Point(283, 145);
-            this.UxAddMovies.Name = "UxAddMovies";
-            this.UxAddMovies.Size = new System.Drawing.Size(167, 87);
-            this.UxAddMovies.TabIndex = 0;
-            this.UxAddMovies.Text = "Add Movies";
-            this.UxAddMovies.UseVisualStyleBackColor = true;
-            this.UxAddMovies.Click += new System.EventHandler(this.UxAddMovies_Click);
+            this.ux_dad.Controls.Add(this.ux_APCbGButton);
+            this.ux_dad.Controls.Add(this.ux_APCbGDataGrid);
+            this.ux_dad.Controls.Add(this.ux_APCbGGenrePicker);
+            this.ux_dad.Controls.Add(this.label1);
+            this.ux_dad.Location = new System.Drawing.Point(4, 25);
+            this.ux_dad.Name = "ux_dad";
+            this.ux_dad.Padding = new System.Windows.Forms.Padding(3);
+            this.ux_dad.Size = new System.Drawing.Size(776, 417);
+            this.ux_dad.TabIndex = 7;
+            this.ux_dad.Text = "Cost";
+            this.ux_dad.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
@@ -551,33 +512,94 @@
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
-            // uxReviewsPerMovie
+            // ux_GenrePicker
             // 
-            this.uxReviewsPerMovie.AutoSize = true;
-            this.uxReviewsPerMovie.Location = new System.Drawing.Point(6, 13);
-            this.uxReviewsPerMovie.Name = "uxReviewsPerMovie";
-            this.uxReviewsPerMovie.Size = new System.Drawing.Size(144, 16);
-            this.uxReviewsPerMovie.TabIndex = 10;
-            this.uxReviewsPerMovie.Text = "See Movie Reviews";
+            this.ux_GenrePicker.Location = new System.Drawing.Point(21, 47);
+            this.ux_GenrePicker.Maximum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.ux_GenrePicker.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ux_GenrePicker.Name = "ux_GenrePicker";
+            this.ux_GenrePicker.Size = new System.Drawing.Size(120, 22);
+            this.ux_GenrePicker.TabIndex = 3;
+            this.ux_GenrePicker.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // uxReviewsForMovieListBox
+            // ux_ASPbGDataGrid
             // 
-            this.uxReviewsForMovieListBox.FormattingEnabled = true;
-            this.uxReviewsForMovieListBox.ItemHeight = 16;
-            this.uxReviewsForMovieListBox.Location = new System.Drawing.Point(0, 80);
-            this.uxReviewsForMovieListBox.Name = "uxReviewsForMovieListBox";
-            this.uxReviewsForMovieListBox.Size = new System.Drawing.Size(776, 340);
-            this.uxReviewsForMovieListBox.TabIndex = 11;
+            this.ux_ASPbGDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_ASPbGDataGrid.Location = new System.Drawing.Point(4, 75);
+            this.ux_ASPbGDataGrid.Name = "ux_ASPbGDataGrid";
+            this.ux_ASPbGDataGrid.Size = new System.Drawing.Size(767, 336);
+            this.ux_ASPbGDataGrid.TabIndex = 4;
             // 
-            // uxMovieListComboBox
+            // ux_ASPbGButton
             // 
-            this.uxMovieListComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxMovieListComboBox.FormattingEnabled = true;
-            this.uxMovieListComboBox.Location = new System.Drawing.Point(9, 32);
-            this.uxMovieListComboBox.Name = "uxMovieListComboBox";
-            this.uxMovieListComboBox.Size = new System.Drawing.Size(343, 33);
-            this.uxMovieListComboBox.TabIndex = 30;
-            this.uxMovieListComboBox.SelectedValueChanged += new System.EventHandler(this.uxMovieListComboBox_SelectedValueChanged);
+            this.ux_ASPbGButton.Location = new System.Drawing.Point(179, 12);
+            this.ux_ASPbGButton.Name = "ux_ASPbGButton";
+            this.ux_ASPbGButton.Size = new System.Drawing.Size(410, 23);
+            this.ux_ASPbGButton.TabIndex = 5;
+            this.ux_ASPbGButton.Text = "Calculate Average Profit Grouped by Studio and Genre";
+            this.ux_ASPbGButton.UseVisualStyleBackColor = true;
+            this.ux_ASPbGButton.Click += new System.EventHandler(this.ux_ASPbGButton_Click);
+            // 
+            // ux_APCbGButton
+            // 
+            this.ux_APCbGButton.Location = new System.Drawing.Point(180, 9);
+            this.ux_APCbGButton.Name = "ux_APCbGButton";
+            this.ux_APCbGButton.Size = new System.Drawing.Size(410, 23);
+            this.ux_APCbGButton.TabIndex = 9;
+            this.ux_APCbGButton.Text = "Calculate Average Production Cost by Genre";
+            this.ux_APCbGButton.UseVisualStyleBackColor = true;
+            this.ux_APCbGButton.Click += new System.EventHandler(this.ux_APCbGButton_Click);
+            // 
+            // ux_APCbGDataGrid
+            // 
+            this.ux_APCbGDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_APCbGDataGrid.Location = new System.Drawing.Point(5, 72);
+            this.ux_APCbGDataGrid.Name = "ux_APCbGDataGrid";
+            this.ux_APCbGDataGrid.Size = new System.Drawing.Size(767, 336);
+            this.ux_APCbGDataGrid.TabIndex = 8;
+            // 
+            // ux_APCbGGenrePicker
+            // 
+            this.ux_APCbGGenrePicker.Location = new System.Drawing.Point(22, 44);
+            this.ux_APCbGGenrePicker.Maximum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.ux_APCbGGenrePicker.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ux_APCbGGenrePicker.Name = "ux_APCbGGenrePicker";
+            this.ux_APCbGGenrePicker.Size = new System.Drawing.Size(120, 22);
+            this.ux_APCbGGenrePicker.TabIndex = 7;
+            this.ux_APCbGGenrePicker.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Genre Id";
             // 
             // ActionSelector
             // 
@@ -590,18 +612,24 @@
             this.ux_TabControl.ResumeLayout(false);
             this.ux_MoviesList.ResumeLayout(false);
             this.ux_MoviesList.PerformLayout();
+            this.ux_GenresTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.ux_AddMovies.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ux_HighestPaidWithinData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_EndDatePicker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_StartDatePicker)).EndInit();
+            this.ux_AverageProfitByStudioandGenre.ResumeLayout(false);
+            this.ux_AverageProfitByStudioandGenre.PerformLayout();
+            this.ux_dad.ResumeLayout(false);
+            this.ux_dad.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ux_GenrePicker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_ASPbGDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_APCbGDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_APCbGGenrePicker)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -611,31 +639,13 @@
         private System.Windows.Forms.TabControl ux_TabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label UxMovieLabel;
-        private System.Windows.Forms.TextBox UXPersonalRatingQuery;
-        private System.Windows.Forms.Label UXPersonalReviewLabel;
-        private System.Windows.Forms.Label UXImdbScoreLabel;
-        private System.Windows.Forms.TextBox UxIMDBScore;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox UXRottenTomatoesRating;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage ux_AddMovies;
-        private System.Windows.Forms.Button UxAddMovies;
+        private System.Windows.Forms.TabPage ux_AverageProfitByStudioandGenre;
+        private System.Windows.Forms.TabPage ux_GenresTab;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox UXGenreResultListBox;
-        private System.Windows.Forms.ComboBox UxGenreBox;
-        private System.Windows.Forms.ListBox UXProfitResultBox;
-        private System.Windows.Forms.ComboBox UxGenreSelect;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox UxActorsResultBox;
-        private System.Windows.Forms.MonthCalendar UxEndMonth;
-        private System.Windows.Forms.MonthCalendar UxBeginMonth;
         private System.Windows.Forms.TabPage ux_MoviesList;
         private System.Windows.Forms.Button uxGetAllMovies;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -659,5 +669,19 @@
         private System.Windows.Forms.ListBox uxReviewsForMovieListBox;
         private System.Windows.Forms.Label uxReviewsPerMovie;
         private System.Windows.Forms.ComboBox uxMovieListComboBox;
+        private System.Windows.Forms.DataGridView ux_GenresDataView;
+        private System.Windows.Forms.Button ux_GenrePopulateButton;
+        private System.Windows.Forms.NumericUpDown ux_EndDatePicker;
+        private System.Windows.Forms.NumericUpDown ux_StartDatePicker;
+        private System.Windows.Forms.Button ux_CalcHighestPaidWithin;
+        private System.Windows.Forms.DataGridView ux_HighestPaidWithinData;
+        private System.Windows.Forms.TabPage ux_dad;
+        private System.Windows.Forms.Button ux_ASPbGButton;
+        private System.Windows.Forms.DataGridView ux_ASPbGDataGrid;
+        private System.Windows.Forms.NumericUpDown ux_GenrePicker;
+        private System.Windows.Forms.Button ux_APCbGButton;
+        private System.Windows.Forms.DataGridView ux_APCbGDataGrid;
+        private System.Windows.Forms.NumericUpDown ux_APCbGGenrePicker;
+        private System.Windows.Forms.Label label1;
     }
 }
