@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
+        private Dictionary<string, string> passwords = new Dictionary<string, string>();
         public Login()
         {
             InitializeComponent();
@@ -35,7 +37,6 @@ namespace WindowsFormsApp1
         /// <param name="e"></param>
         private void UXLoginBtn_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> passwords = new Dictionary<string, string>();
             passwords.Add("a", "1");
             passwords.Add("b", "2");
             string userName = UXUserName.Text;

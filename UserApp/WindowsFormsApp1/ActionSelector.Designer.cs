@@ -68,19 +68,28 @@
             this.ux_GenresList = new System.Windows.Forms.TabPage();
             this.ux_GenrePopulateButton = new System.Windows.Forms.Button();
             this.ux_GenresDataView = new System.Windows.Forms.DataGridView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.UxDeleteButton = new System.Windows.Forms.Button();
+            this.ux_PersonalReview = new System.Windows.Forms.TabPage();
+            this.label29 = new System.Windows.Forms.Label();
+            this.ux_PRRatingId = new System.Windows.Forms.NumericUpDown();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.ux_PersonalReviewMovieId = new System.Windows.Forms.NumericUpDown();
+            this.ux_PersonalReviewUserId = new System.Windows.Forms.NumericUpDown();
+            this.ux_DeletePersonalReview = new System.Windows.Forms.Button();
             this.UXCommentsLabel = new System.Windows.Forms.Label();
-            this.UXUpdateBtn = new System.Windows.Forms.Button();
-            this.UXAddBtn = new System.Windows.Forms.Button();
-            this.UXComments = new System.Windows.Forms.TextBox();
+            this.ux_AddPersonalReview = new System.Windows.Forms.Button();
+            this.ux_PRComments = new System.Windows.Forms.TextBox();
             this.UXRatingLabel = new System.Windows.Forms.Label();
-            this.uxRatingNumber = new System.Windows.Forms.NumericUpDown();
-            this.uxMovieName = new System.Windows.Forms.TextBox();
-            this.UXPersonalReviews = new System.Windows.Forms.ComboBox();
+            this.ux_PersonalReviewRatingNumber = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ux_CompareButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ux_CompareMovieIdPicker = new System.Windows.Forms.NumericUpDown();
+            this.ux_CompareDataGrid = new System.Windows.Forms.DataGridView();
             this.UxMovieLabel = new System.Windows.Forms.Label();
             this.ux_HighestPaidActorswithinDateRange = new System.Windows.Forms.TabPage();
+            this.ux_CalcHighestPaidWithin = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
             this.ux_HighestPaidWithinData = new System.Windows.Forms.DataGridView();
             this.ux_EndDatePicker = new System.Windows.Forms.NumericUpDown();
             this.ux_StartDatePicker = new System.Windows.Forms.NumericUpDown();
@@ -91,20 +100,36 @@
             this.UxGenreSelect = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.ux_ASPbGButton = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.ux_GenrePicker = new System.Windows.Forms.NumericUpDown();
+            this.ux_ASPbGDataGrid = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.ux_CEUsers = new System.Windows.Forms.TabPage();
+            this.label35 = new System.Windows.Forms.Label();
+            this.ux_UserButton = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.ux_UserRecoveryEmail = new System.Windows.Forms.TextBox();
+            this.ux_UserName = new System.Windows.Forms.TextBox();
+            this.ux_UserPassword = new System.Windows.Forms.TextBox();
+            this.ux_UserUserName = new System.Windows.Forms.TextBox();
+            this.ux_UserUserId = new System.Windows.Forms.NumericUpDown();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label25 = new System.Windows.Forms.Label();
-            this.ux_CalcHighestPaidWithin = new System.Windows.Forms.Button();
-            this.ux_ASPbGDataGrid = new System.Windows.Forms.DataGridView();
-            this.ux_GenrePicker = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
-            this.ux_ASPbGButton = new System.Windows.Forms.Button();
-            this.ux_CompareDataGrid = new System.Windows.Forms.DataGridView();
-            this.ux_CompareButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ux_CompareMovieIdPicker = new System.Windows.Forms.NumericUpDown();
+            this.ux_UserList = new System.Windows.Forms.TabPage();
+            this.ux_UsersPopulateButton = new System.Windows.Forms.Button();
+            this.ux_UsersDataGrid = new System.Windows.Forms.DataGridView();
+            this.label36 = new System.Windows.Forms.Label();
+            this.ux_UserDeleteButton = new System.Windows.Forms.Button();
+            this.ux_MovieMovieId = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.ux_TabControl.SuspendLayout();
             this.ux_MoviesList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).BeginInit();
@@ -120,28 +145,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.ux_StudioIdValue)).BeginInit();
             this.ux_GenresList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).BeginInit();
+            this.ux_PersonalReview.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_PRRatingId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_PersonalReviewMovieId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_PersonalReviewUserId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_PersonalReviewRatingNumber)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_CompareMovieIdPicker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_CompareDataGrid)).BeginInit();
             this.ux_HighestPaidActorswithinDateRange.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_HighestPaidWithinData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_EndDatePicker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_StartDatePicker)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ux_ASPbGDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_GenrePicker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ux_CompareDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ux_CompareMovieIdPicker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_ASPbGDataGrid)).BeginInit();
+            this.ux_CEUsers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_UserUserId)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            this.ux_UserList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_UsersDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieMovieId)).BeginInit();
             this.SuspendLayout();
             // 
             // ux_TabControl
             // 
             this.ux_TabControl.Controls.Add(this.ux_MoviesList);
             this.ux_TabControl.Controls.Add(this.ux_AddMovies);
+            this.ux_TabControl.Controls.Add(this.ux_UserList);
+            this.ux_TabControl.Controls.Add(this.ux_CEUsers);
             this.ux_TabControl.Controls.Add(this.ux_GenresList);
-            this.ux_TabControl.Controls.Add(this.tabPage1);
+            this.ux_TabControl.Controls.Add(this.ux_PersonalReview);
             this.ux_TabControl.Controls.Add(this.tabPage2);
             this.ux_TabControl.Controls.Add(this.ux_HighestPaidActorswithinDateRange);
             this.ux_TabControl.Controls.Add(this.tabPage4);
@@ -185,6 +220,9 @@
             // 
             // ux_AddMovies
             // 
+            this.ux_AddMovies.Controls.Add(this.label38);
+            this.ux_AddMovies.Controls.Add(this.label37);
+            this.ux_AddMovies.Controls.Add(this.ux_MovieMovieId);
             this.ux_AddMovies.Controls.Add(this.ux_RottenTomatoesCriticRatingValue);
             this.ux_AddMovies.Controls.Add(this.ux_GenreIdValue);
             this.ux_AddMovies.Controls.Add(this.ux_CostValue);
@@ -238,9 +276,19 @@
             0,
             0,
             0});
+            this.ux_GenreIdValue.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.ux_GenreIdValue.Name = "ux_GenreIdValue";
             this.ux_GenreIdValue.Size = new System.Drawing.Size(275, 22);
             this.ux_GenreIdValue.TabIndex = 39;
+            this.ux_GenreIdValue.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // ux_CostValue
             // 
@@ -323,9 +371,19 @@
             // ux_StudioIdValue
             // 
             this.ux_StudioIdValue.Location = new System.Drawing.Point(324, 51);
+            this.ux_StudioIdValue.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.ux_StudioIdValue.Name = "ux_StudioIdValue";
             this.ux_StudioIdValue.Size = new System.Drawing.Size(275, 22);
             this.ux_StudioIdValue.TabIndex = 32;
+            this.ux_StudioIdValue.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label24
             // 
@@ -517,11 +575,11 @@
             // ux_AddMoviesButton
             // 
             this.ux_AddMoviesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.ux_AddMoviesButton.Location = new System.Drawing.Point(637, 381);
+            this.ux_AddMoviesButton.Location = new System.Drawing.Point(601, 381);
             this.ux_AddMoviesButton.Name = "ux_AddMoviesButton";
-            this.ux_AddMoviesButton.Size = new System.Drawing.Size(136, 30);
+            this.ux_AddMoviesButton.Size = new System.Drawing.Size(172, 30);
             this.ux_AddMoviesButton.TabIndex = 0;
-            this.ux_AddMoviesButton.Text = "Add Movies";
+            this.ux_AddMoviesButton.Text = "Add/Edit Movies";
             this.ux_AddMoviesButton.UseVisualStyleBackColor = true;
             this.ux_AddMoviesButton.Click += new System.EventHandler(this.UxAddMovies_Click);
             // 
@@ -556,34 +614,116 @@
             this.ux_GenresDataView.TabIndex = 2;
             this.ux_GenresDataView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ux_GenresDataView_CellContentClick);
             // 
-            // tabPage1
+            // ux_PersonalReview
             // 
-            this.tabPage1.Controls.Add(this.UxDeleteButton);
-            this.tabPage1.Controls.Add(this.UXCommentsLabel);
-            this.tabPage1.Controls.Add(this.UXUpdateBtn);
-            this.tabPage1.Controls.Add(this.UXAddBtn);
-            this.tabPage1.Controls.Add(this.UXComments);
-            this.tabPage1.Controls.Add(this.UXRatingLabel);
-            this.tabPage1.Controls.Add(this.uxRatingNumber);
-            this.tabPage1.Controls.Add(this.uxMovieName);
-            this.tabPage1.Controls.Add(this.UXPersonalReviews);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(776, 417);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Personal Review";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.ux_PersonalReview.Controls.Add(this.label39);
+            this.ux_PersonalReview.Controls.Add(this.label29);
+            this.ux_PersonalReview.Controls.Add(this.ux_PRRatingId);
+            this.ux_PersonalReview.Controls.Add(this.label28);
+            this.ux_PersonalReview.Controls.Add(this.label27);
+            this.ux_PersonalReview.Controls.Add(this.ux_PersonalReviewMovieId);
+            this.ux_PersonalReview.Controls.Add(this.ux_PersonalReviewUserId);
+            this.ux_PersonalReview.Controls.Add(this.ux_DeletePersonalReview);
+            this.ux_PersonalReview.Controls.Add(this.UXCommentsLabel);
+            this.ux_PersonalReview.Controls.Add(this.ux_AddPersonalReview);
+            this.ux_PersonalReview.Controls.Add(this.ux_PRComments);
+            this.ux_PersonalReview.Controls.Add(this.UXRatingLabel);
+            this.ux_PersonalReview.Controls.Add(this.ux_PersonalReviewRatingNumber);
+            this.ux_PersonalReview.Location = new System.Drawing.Point(4, 25);
+            this.ux_PersonalReview.Name = "ux_PersonalReview";
+            this.ux_PersonalReview.Padding = new System.Windows.Forms.Padding(3);
+            this.ux_PersonalReview.Size = new System.Drawing.Size(776, 417);
+            this.ux_PersonalReview.TabIndex = 0;
+            this.ux_PersonalReview.Text = "Personal Review";
+            this.ux_PersonalReview.UseVisualStyleBackColor = true;
             // 
-            // UxDeleteButton
+            // label29
             // 
-            this.UxDeleteButton.Location = new System.Drawing.Point(631, 378);
-            this.UxDeleteButton.Name = "UxDeleteButton";
-            this.UxDeleteButton.Size = new System.Drawing.Size(118, 33);
-            this.UxDeleteButton.TabIndex = 8;
-            this.UxDeleteButton.Text = "Delete";
-            this.UxDeleteButton.UseVisualStyleBackColor = true;
-            this.UxDeleteButton.Click += new System.EventHandler(this.UxDeleteButton_Click);
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(557, 8);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(69, 16);
+            this.label29.TabIndex = 14;
+            this.label29.Text = "Rating Id";
+            // 
+            // ux_PRRatingId
+            // 
+            this.ux_PRRatingId.Location = new System.Drawing.Point(629, 6);
+            this.ux_PRRatingId.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.ux_PRRatingId.Name = "ux_PRRatingId";
+            this.ux_PRRatingId.Size = new System.Drawing.Size(120, 22);
+            this.ux_PRRatingId.TabIndex = 13;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(7, 128);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(66, 16);
+            this.label28.TabIndex = 12;
+            this.label28.Text = "Movie Id";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(7, 178);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 16);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "User Id";
+            // 
+            // ux_PersonalReviewMovieId
+            // 
+            this.ux_PersonalReviewMovieId.Location = new System.Drawing.Point(7, 147);
+            this.ux_PersonalReviewMovieId.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.ux_PersonalReviewMovieId.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ux_PersonalReviewMovieId.Name = "ux_PersonalReviewMovieId";
+            this.ux_PersonalReviewMovieId.Size = new System.Drawing.Size(120, 22);
+            this.ux_PersonalReviewMovieId.TabIndex = 10;
+            this.ux_PersonalReviewMovieId.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // ux_PersonalReviewUserId
+            // 
+            this.ux_PersonalReviewUserId.Location = new System.Drawing.Point(7, 197);
+            this.ux_PersonalReviewUserId.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ux_PersonalReviewUserId.Name = "ux_PersonalReviewUserId";
+            this.ux_PersonalReviewUserId.Size = new System.Drawing.Size(120, 22);
+            this.ux_PersonalReviewUserId.TabIndex = 9;
+            this.ux_PersonalReviewUserId.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // ux_DeletePersonalReview
+            // 
+            this.ux_DeletePersonalReview.Location = new System.Drawing.Point(629, 34);
+            this.ux_DeletePersonalReview.Name = "ux_DeletePersonalReview";
+            this.ux_DeletePersonalReview.Size = new System.Drawing.Size(118, 33);
+            this.ux_DeletePersonalReview.TabIndex = 8;
+            this.ux_DeletePersonalReview.Text = "Delete";
+            this.ux_DeletePersonalReview.UseVisualStyleBackColor = true;
+            this.ux_DeletePersonalReview.Click += new System.EventHandler(this.ux_DeletePersonalReview_Click);
             // 
             // UXCommentsLabel
             // 
@@ -595,81 +735,52 @@
             this.UXCommentsLabel.Text = "Comments:";
             this.UXCommentsLabel.UseMnemonic = false;
             // 
-            // UXUpdateBtn
+            // ux_AddPersonalReview
             // 
-            this.UXUpdateBtn.Location = new System.Drawing.Point(302, 378);
-            this.UXUpdateBtn.Name = "UXUpdateBtn";
-            this.UXUpdateBtn.Size = new System.Drawing.Size(172, 33);
-            this.UXUpdateBtn.TabIndex = 6;
-            this.UXUpdateBtn.Text = "Update";
-            this.UXUpdateBtn.UseVisualStyleBackColor = true;
-            this.UXUpdateBtn.Click += new System.EventHandler(this.Update_Click);
+            this.ux_AddPersonalReview.Location = new System.Drawing.Point(10, 378);
+            this.ux_AddPersonalReview.Name = "ux_AddPersonalReview";
+            this.ux_AddPersonalReview.Size = new System.Drawing.Size(166, 36);
+            this.ux_AddPersonalReview.TabIndex = 5;
+            this.ux_AddPersonalReview.Text = "Add or Update";
+            this.ux_AddPersonalReview.UseVisualStyleBackColor = true;
+            this.ux_AddPersonalReview.Click += new System.EventHandler(this.ux_AddPersonalReview_Click);
             // 
-            // UXAddBtn
+            // ux_PRComments
             // 
-            this.UXAddBtn.Location = new System.Drawing.Point(10, 378);
-            this.UXAddBtn.Name = "UXAddBtn";
-            this.UXAddBtn.Size = new System.Drawing.Size(117, 36);
-            this.UXAddBtn.TabIndex = 5;
-            this.UXAddBtn.Text = "Add";
-            this.UXAddBtn.UseVisualStyleBackColor = true;
-            this.UXAddBtn.Click += new System.EventHandler(this.UXAddBtn_Click);
-            // 
-            // UXComments
-            // 
-            this.UXComments.AcceptsReturn = true;
-            this.UXComments.Location = new System.Drawing.Point(168, 130);
-            this.UXComments.Multiline = true;
-            this.UXComments.Name = "UXComments";
-            this.UXComments.Size = new System.Drawing.Size(592, 238);
-            this.UXComments.TabIndex = 4;
+            this.ux_PRComments.AcceptsReturn = true;
+            this.ux_PRComments.Location = new System.Drawing.Point(168, 130);
+            this.ux_PRComments.MaxLength = 128;
+            this.ux_PRComments.Multiline = true;
+            this.ux_PRComments.Name = "ux_PRComments";
+            this.ux_PRComments.Size = new System.Drawing.Size(592, 238);
+            this.ux_PRComments.TabIndex = 4;
             // 
             // UXRatingLabel
             // 
             this.UXRatingLabel.AutoSize = true;
-            this.UXRatingLabel.Location = new System.Drawing.Point(7, 111);
+            this.UXRatingLabel.Location = new System.Drawing.Point(7, 231);
             this.UXRatingLabel.Name = "UXRatingLabel";
             this.UXRatingLabel.Size = new System.Drawing.Size(56, 16);
             this.UXRatingLabel.TabIndex = 3;
             this.UXRatingLabel.Text = "Rating:";
+            this.UXRatingLabel.Click += new System.EventHandler(this.UXRatingLabel_Click);
             // 
-            // uxRatingNumber
+            // ux_PersonalReviewRatingNumber
             // 
-            this.uxRatingNumber.Location = new System.Drawing.Point(7, 130);
-            this.uxRatingNumber.Maximum = new decimal(new int[] {
+            this.ux_PersonalReviewRatingNumber.Location = new System.Drawing.Point(7, 250);
+            this.ux_PersonalReviewRatingNumber.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.uxRatingNumber.Minimum = new decimal(new int[] {
+            this.ux_PersonalReviewRatingNumber.Name = "ux_PersonalReviewRatingNumber";
+            this.ux_PersonalReviewRatingNumber.Size = new System.Drawing.Size(120, 22);
+            this.ux_PersonalReviewRatingNumber.TabIndex = 2;
+            this.ux_PersonalReviewRatingNumber.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.uxRatingNumber.Name = "uxRatingNumber";
-            this.uxRatingNumber.Size = new System.Drawing.Size(120, 22);
-            this.uxRatingNumber.TabIndex = 2;
-            this.uxRatingNumber.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // uxMovieName
-            // 
-            this.uxMovieName.Location = new System.Drawing.Point(7, 48);
-            this.uxMovieName.Name = "uxMovieName";
-            this.uxMovieName.Size = new System.Drawing.Size(753, 22);
-            this.uxMovieName.TabIndex = 1;
-            // 
-            // UXPersonalReviews
-            // 
-            this.UXPersonalReviews.FormattingEnabled = true;
-            this.UXPersonalReviews.Location = new System.Drawing.Point(6, 17);
-            this.UXPersonalReviews.Name = "UXPersonalReviews";
-            this.UXPersonalReviews.Size = new System.Drawing.Size(754, 24);
-            this.UXPersonalReviews.TabIndex = 0;
-            this.UXPersonalReviews.SelectedIndexChanged += new System.EventHandler(this.UXPersonalReviews_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -686,6 +797,45 @@
             this.tabPage2.Text = "Compare Ratings";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // ux_CompareButton
+            // 
+            this.ux_CompareButton.Location = new System.Drawing.Point(304, 42);
+            this.ux_CompareButton.Name = "ux_CompareButton";
+            this.ux_CompareButton.Size = new System.Drawing.Size(164, 23);
+            this.ux_CompareButton.TabIndex = 45;
+            this.ux_CompareButton.Text = "Run Query";
+            this.ux_CompareButton.UseVisualStyleBackColor = true;
+            this.ux_CompareButton.Click += new System.EventHandler(this.ux_CompareButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(137, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(556, 16);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Compare Movie Ratings Across Personal Reviews, IMDB, and Rotten Tomatoes";
+            // 
+            // ux_CompareMovieIdPicker
+            // 
+            this.ux_CompareMovieIdPicker.Location = new System.Drawing.Point(10, 42);
+            this.ux_CompareMovieIdPicker.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.ux_CompareMovieIdPicker.Name = "ux_CompareMovieIdPicker";
+            this.ux_CompareMovieIdPicker.Size = new System.Drawing.Size(90, 22);
+            this.ux_CompareMovieIdPicker.TabIndex = 43;
+            // 
+            // ux_CompareDataGrid
+            // 
+            this.ux_CompareDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_CompareDataGrid.Location = new System.Drawing.Point(3, 109);
+            this.ux_CompareDataGrid.Name = "ux_CompareDataGrid";
+            this.ux_CompareDataGrid.Size = new System.Drawing.Size(770, 305);
+            this.ux_CompareDataGrid.TabIndex = 2;
+            // 
             // UxMovieLabel
             // 
             this.UxMovieLabel.AutoSize = true;
@@ -695,7 +845,6 @@
             this.UxMovieLabel.Size = new System.Drawing.Size(76, 20);
             this.UxMovieLabel.TabIndex = 0;
             this.UxMovieLabel.Text = "Movie Id";
-            this.UxMovieLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // ux_HighestPaidActorswithinDateRange
             // 
@@ -712,6 +861,25 @@
             this.ux_HighestPaidActorswithinDateRange.TabIndex = 2;
             this.ux_HighestPaidActorswithinDateRange.Text = "Highest Paid Actors within Date Range";
             this.ux_HighestPaidActorswithinDateRange.UseVisualStyleBackColor = true;
+            // 
+            // ux_CalcHighestPaidWithin
+            // 
+            this.ux_CalcHighestPaidWithin.Location = new System.Drawing.Point(291, 43);
+            this.ux_CalcHighestPaidWithin.Name = "ux_CalcHighestPaidWithin";
+            this.ux_CalcHighestPaidWithin.Size = new System.Drawing.Size(164, 23);
+            this.ux_CalcHighestPaidWithin.TabIndex = 38;
+            this.ux_CalcHighestPaidWithin.Text = "Run Query";
+            this.ux_CalcHighestPaidWithin.UseVisualStyleBackColor = true;
+            this.ux_CalcHighestPaidWithin.Click += new System.EventHandler(this.ux_CalcHighestPaidWithin_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(251, 24);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(273, 16);
+            this.label25.TabIndex = 37;
+            this.label25.Text = "Highest Paid Actors within Date Range";
             // 
             // ux_HighestPaidWithinData
             // 
@@ -835,6 +1003,46 @@
             this.tabPage5.Text = "Average Studio Profit By Genre";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // ux_ASPbGButton
+            // 
+            this.ux_ASPbGButton.Location = new System.Drawing.Point(296, 59);
+            this.ux_ASPbGButton.Name = "ux_ASPbGButton";
+            this.ux_ASPbGButton.Size = new System.Drawing.Size(164, 23);
+            this.ux_ASPbGButton.TabIndex = 42;
+            this.ux_ASPbGButton.Text = "Run Query";
+            this.ux_ASPbGButton.UseVisualStyleBackColor = true;
+            this.ux_ASPbGButton.Click += new System.EventHandler(this.ux_ASPbGButton_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(270, 40);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(222, 16);
+            this.label26.TabIndex = 41;
+            this.label26.Text = "Average Studio Profit By Genre";
+            // 
+            // ux_GenrePicker
+            // 
+            this.ux_GenrePicker.Location = new System.Drawing.Point(15, 34);
+            this.ux_GenrePicker.Maximum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.ux_GenrePicker.Name = "ux_GenrePicker";
+            this.ux_GenrePicker.Size = new System.Drawing.Size(63, 22);
+            this.ux_GenrePicker.TabIndex = 40;
+            // 
+            // ux_ASPbGDataGrid
+            // 
+            this.ux_ASPbGDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ux_ASPbGDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_ASPbGDataGrid.Location = new System.Drawing.Point(4, 129);
+            this.ux_ASPbGDataGrid.Name = "ux_ASPbGDataGrid";
+            this.ux_ASPbGDataGrid.Size = new System.Drawing.Size(769, 285);
+            this.ux_ASPbGDataGrid.TabIndex = 2;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -843,7 +1051,133 @@
             this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Genre Id";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // ux_CEUsers
+            // 
+            this.ux_CEUsers.Controls.Add(this.ux_UserDeleteButton);
+            this.ux_CEUsers.Controls.Add(this.label36);
+            this.ux_CEUsers.Controls.Add(this.label35);
+            this.ux_CEUsers.Controls.Add(this.ux_UserButton);
+            this.ux_CEUsers.Controls.Add(this.label34);
+            this.ux_CEUsers.Controls.Add(this.label33);
+            this.ux_CEUsers.Controls.Add(this.label32);
+            this.ux_CEUsers.Controls.Add(this.label31);
+            this.ux_CEUsers.Controls.Add(this.label30);
+            this.ux_CEUsers.Controls.Add(this.ux_UserRecoveryEmail);
+            this.ux_CEUsers.Controls.Add(this.ux_UserName);
+            this.ux_CEUsers.Controls.Add(this.ux_UserPassword);
+            this.ux_CEUsers.Controls.Add(this.ux_UserUserName);
+            this.ux_CEUsers.Controls.Add(this.ux_UserUserId);
+            this.ux_CEUsers.Location = new System.Drawing.Point(4, 25);
+            this.ux_CEUsers.Name = "ux_CEUsers";
+            this.ux_CEUsers.Padding = new System.Windows.Forms.Padding(3);
+            this.ux_CEUsers.Size = new System.Drawing.Size(776, 417);
+            this.ux_CEUsers.TabIndex = 8;
+            this.ux_CEUsers.Text = "Create and edit Users";
+            this.ux_CEUsers.UseVisualStyleBackColor = true;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(273, 116);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(388, 16);
+            this.label35.TabIndex = 11;
+            this.label35.Text = "<< Leave as 0 to Add, change to userId to edit or delete";
+            // 
+            // ux_UserButton
+            // 
+            this.ux_UserButton.Location = new System.Drawing.Point(380, 266);
+            this.ux_UserButton.Name = "ux_UserButton";
+            this.ux_UserButton.Size = new System.Drawing.Size(151, 23);
+            this.ux_UserButton.TabIndex = 10;
+            this.ux_UserButton.Text = "Add or Edit User";
+            this.ux_UserButton.UseVisualStyleBackColor = true;
+            this.ux_UserButton.Click += new System.EventHandler(this.ux_UserButton_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(24, 229);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(117, 16);
+            this.label34.TabIndex = 9;
+            this.label34.Text = "Recovery Email";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(63, 201);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(77, 16);
+            this.label33.TabIndex = 8;
+            this.label33.Text = "Full Name";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(67, 173);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(74, 16);
+            this.label32.TabIndex = 7;
+            this.label32.Text = "password";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(63, 145);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(78, 16);
+            this.label31.TabIndex = 6;
+            this.label31.Text = "Username";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(83, 116);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(57, 16);
+            this.label30.TabIndex = 5;
+            this.label30.Text = "User Id";
+            // 
+            // ux_UserRecoveryEmail
+            // 
+            this.ux_UserRecoveryEmail.Location = new System.Drawing.Point(147, 226);
+            this.ux_UserRecoveryEmail.MaxLength = 32;
+            this.ux_UserRecoveryEmail.Name = "ux_UserRecoveryEmail";
+            this.ux_UserRecoveryEmail.Size = new System.Drawing.Size(384, 22);
+            this.ux_UserRecoveryEmail.TabIndex = 4;
+            // 
+            // ux_UserName
+            // 
+            this.ux_UserName.Location = new System.Drawing.Point(147, 198);
+            this.ux_UserName.MaxLength = 32;
+            this.ux_UserName.Name = "ux_UserName";
+            this.ux_UserName.Size = new System.Drawing.Size(384, 22);
+            this.ux_UserName.TabIndex = 3;
+            // 
+            // ux_UserPassword
+            // 
+            this.ux_UserPassword.Location = new System.Drawing.Point(147, 170);
+            this.ux_UserPassword.MaxLength = 32;
+            this.ux_UserPassword.Name = "ux_UserPassword";
+            this.ux_UserPassword.Size = new System.Drawing.Size(384, 22);
+            this.ux_UserPassword.TabIndex = 2;
+            // 
+            // ux_UserUserName
+            // 
+            this.ux_UserUserName.Location = new System.Drawing.Point(147, 142);
+            this.ux_UserUserName.MaxLength = 32;
+            this.ux_UserUserName.Name = "ux_UserUserName";
+            this.ux_UserUserName.Size = new System.Drawing.Size(384, 22);
+            this.ux_UserUserName.TabIndex = 1;
+            // 
+            // ux_UserUserId
+            // 
+            this.ux_UserUserId.Location = new System.Drawing.Point(147, 114);
+            this.ux_UserUserId.Name = "ux_UserUserId";
+            this.ux_UserUserId.Size = new System.Drawing.Size(120, 22);
+            this.ux_UserUserId.TabIndex = 0;
             // 
             // openFileDialog1
             // 
@@ -863,103 +1197,88 @@
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
-            // label25
+            // ux_UserList
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(251, 24);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(273, 16);
-            this.label25.TabIndex = 37;
-            this.label25.Text = "Highest Paid Actors within Date Range";
+            this.ux_UserList.Controls.Add(this.ux_UsersPopulateButton);
+            this.ux_UserList.Controls.Add(this.ux_UsersDataGrid);
+            this.ux_UserList.Location = new System.Drawing.Point(4, 25);
+            this.ux_UserList.Name = "ux_UserList";
+            this.ux_UserList.Padding = new System.Windows.Forms.Padding(3);
+            this.ux_UserList.Size = new System.Drawing.Size(776, 417);
+            this.ux_UserList.TabIndex = 9;
+            this.ux_UserList.Text = "Users List";
+            this.ux_UserList.UseVisualStyleBackColor = true;
             // 
-            // ux_CalcHighestPaidWithin
+            // ux_UsersPopulateButton
             // 
-            this.ux_CalcHighestPaidWithin.Location = new System.Drawing.Point(291, 43);
-            this.ux_CalcHighestPaidWithin.Name = "ux_CalcHighestPaidWithin";
-            this.ux_CalcHighestPaidWithin.Size = new System.Drawing.Size(164, 23);
-            this.ux_CalcHighestPaidWithin.TabIndex = 38;
-            this.ux_CalcHighestPaidWithin.Text = "Run Query";
-            this.ux_CalcHighestPaidWithin.UseVisualStyleBackColor = true;
-            this.ux_CalcHighestPaidWithin.Click += new System.EventHandler(this.ux_CalcHighestPaidWithin_Click);
+            this.ux_UsersPopulateButton.Location = new System.Drawing.Point(8, 6);
+            this.ux_UsersPopulateButton.Name = "ux_UsersPopulateButton";
+            this.ux_UsersPopulateButton.Size = new System.Drawing.Size(175, 43);
+            this.ux_UsersPopulateButton.TabIndex = 5;
+            this.ux_UsersPopulateButton.Text = "Populate Users List";
+            this.ux_UsersPopulateButton.UseVisualStyleBackColor = true;
+            this.ux_UsersPopulateButton.Click += new System.EventHandler(this.ux_UsersPopulateButton_Click);
             // 
-            // ux_ASPbGDataGrid
+            // ux_UsersDataGrid
             // 
-            this.ux_ASPbGDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ux_ASPbGDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ux_ASPbGDataGrid.Location = new System.Drawing.Point(4, 129);
-            this.ux_ASPbGDataGrid.Name = "ux_ASPbGDataGrid";
-            this.ux_ASPbGDataGrid.Size = new System.Drawing.Size(769, 285);
-            this.ux_ASPbGDataGrid.TabIndex = 2;
+            this.ux_UsersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_UsersDataGrid.Location = new System.Drawing.Point(5, 55);
+            this.ux_UsersDataGrid.Name = "ux_UsersDataGrid";
+            this.ux_UsersDataGrid.Size = new System.Drawing.Size(767, 356);
+            this.ux_UsersDataGrid.TabIndex = 4;
             // 
-            // ux_GenrePicker
+            // label36
             // 
-            this.ux_GenrePicker.Location = new System.Drawing.Point(15, 34);
-            this.ux_GenrePicker.Maximum = new decimal(new int[] {
-            16,
-            0,
-            0,
-            0});
-            this.ux_GenrePicker.Name = "ux_GenrePicker";
-            this.ux_GenrePicker.Size = new System.Drawing.Size(63, 22);
-            this.ux_GenrePicker.TabIndex = 40;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(203, 269);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(171, 16);
+            this.label36.TabIndex = 12;
+            this.label36.Text = "Must Add all values first";
             // 
-            // label26
+            // ux_UserDeleteButton
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(270, 40);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(222, 16);
-            this.label26.TabIndex = 41;
-            this.label26.Text = "Average Studio Profit By Genre";
+            this.ux_UserDeleteButton.Location = new System.Drawing.Point(380, 295);
+            this.ux_UserDeleteButton.Name = "ux_UserDeleteButton";
+            this.ux_UserDeleteButton.Size = new System.Drawing.Size(151, 23);
+            this.ux_UserDeleteButton.TabIndex = 13;
+            this.ux_UserDeleteButton.Text = "Delete User";
+            this.ux_UserDeleteButton.UseVisualStyleBackColor = true;
+            this.ux_UserDeleteButton.Click += new System.EventHandler(this.ux_UserDeleteButton_Click);
             // 
-            // ux_ASPbGButton
+            // ux_MovieMovieId
             // 
-            this.ux_ASPbGButton.Location = new System.Drawing.Point(296, 59);
-            this.ux_ASPbGButton.Name = "ux_ASPbGButton";
-            this.ux_ASPbGButton.Size = new System.Drawing.Size(164, 23);
-            this.ux_ASPbGButton.TabIndex = 42;
-            this.ux_ASPbGButton.Text = "Run Query";
-            this.ux_ASPbGButton.UseVisualStyleBackColor = true;
-            this.ux_ASPbGButton.Click += new System.EventHandler(this.ux_ASPbGButton_Click);
+            this.ux_MovieMovieId.Location = new System.Drawing.Point(324, 23);
+            this.ux_MovieMovieId.Name = "ux_MovieMovieId";
+            this.ux_MovieMovieId.Size = new System.Drawing.Size(275, 22);
+            this.ux_MovieMovieId.TabIndex = 41;
             // 
-            // ux_CompareDataGrid
+            // label37
             // 
-            this.ux_CompareDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ux_CompareDataGrid.Location = new System.Drawing.Point(3, 109);
-            this.ux_CompareDataGrid.Name = "ux_CompareDataGrid";
-            this.ux_CompareDataGrid.Size = new System.Drawing.Size(770, 305);
-            this.ux_CompareDataGrid.TabIndex = 2;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(252, 25);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(62, 16);
+            this.label37.TabIndex = 42;
+            this.label37.Text = "MovieId";
             // 
-            // ux_CompareButton
+            // label38
             // 
-            this.ux_CompareButton.Location = new System.Drawing.Point(304, 42);
-            this.ux_CompareButton.Name = "ux_CompareButton";
-            this.ux_CompareButton.Size = new System.Drawing.Size(164, 23);
-            this.ux_CompareButton.TabIndex = 45;
-            this.ux_CompareButton.Text = "Run Query";
-            this.ux_CompareButton.UseVisualStyleBackColor = true;
-            this.ux_CompareButton.Click += new System.EventHandler(this.ux_CompareButton_Click);
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(160, 347);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(454, 16);
+            this.label38.TabIndex = 43;
+            this.label38.Text = "Leave MovieId as 0 to Add, change to MovieId to edit selected Id";
             // 
-            // label1
+            // label39
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(556, 16);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Compare Movie Ratings Across Personal Reviews, IMDB, and Rotten Tomatoes";
-            // 
-            // ux_CompareMovieIdPicker
-            // 
-            this.ux_CompareMovieIdPicker.Location = new System.Drawing.Point(10, 42);
-            this.ux_CompareMovieIdPicker.Maximum = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            this.ux_CompareMovieIdPicker.Name = "ux_CompareMovieIdPicker";
-            this.ux_CompareMovieIdPicker.Size = new System.Drawing.Size(90, 22);
-            this.ux_CompareMovieIdPicker.TabIndex = 43;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(25, 8);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(526, 16);
+            this.label39.TabIndex = 44;
+            this.label39.Text = "Leave RatingId as 0 to Add, change RatingId to selected Id to edit or delete";
             // 
             // ActionSelector
             // 
@@ -986,11 +1305,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ux_StudioIdValue)).EndInit();
             this.ux_GenresList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).EndInit();
+            this.ux_PersonalReview.ResumeLayout(false);
+            this.ux_PersonalReview.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_PRRatingId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_PersonalReviewMovieId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_PersonalReviewUserId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_PersonalReviewRatingNumber)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_CompareMovieIdPicker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_CompareDataGrid)).EndInit();
             this.ux_HighestPaidActorswithinDateRange.ResumeLayout(false);
             this.ux_HighestPaidActorswithinDateRange.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_HighestPaidWithinData)).EndInit();
@@ -1000,11 +1324,15 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ux_ASPbGDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_GenrePicker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ux_CompareDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ux_CompareMovieIdPicker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_ASPbGDataGrid)).EndInit();
+            this.ux_CEUsers.ResumeLayout(false);
+            this.ux_CEUsers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_UserUserId)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.ux_UserList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ux_UsersDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieMovieId)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1012,15 +1340,12 @@
         #endregion
 
         private System.Windows.Forms.TabControl ux_TabControl;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox UXPersonalReviews;
-        private System.Windows.Forms.TextBox uxMovieName;
-        private System.Windows.Forms.NumericUpDown uxRatingNumber;
+        private System.Windows.Forms.TabPage ux_PersonalReview;
+        private System.Windows.Forms.NumericUpDown ux_PersonalReviewRatingNumber;
         private System.Windows.Forms.Label UXRatingLabel;
-        private System.Windows.Forms.TextBox UXComments;
-        private System.Windows.Forms.Button UXUpdateBtn;
-        private System.Windows.Forms.Button UXAddBtn;
-        private System.Windows.Forms.Button UxDeleteButton;
+        private System.Windows.Forms.TextBox ux_PRComments;
+        private System.Windows.Forms.Button ux_AddPersonalReview;
+        private System.Windows.Forms.Button ux_DeletePersonalReview;
         private System.Windows.Forms.Label UXCommentsLabel;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label UxMovieLabel;
@@ -1087,5 +1412,33 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown ux_CompareMovieIdPicker;
         private System.Windows.Forms.DataGridView ux_CompareDataGrid;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.NumericUpDown ux_PersonalReviewMovieId;
+        private System.Windows.Forms.NumericUpDown ux_PersonalReviewUserId;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.NumericUpDown ux_PRRatingId;
+        private System.Windows.Forms.TabPage ux_CEUsers;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox ux_UserRecoveryEmail;
+        private System.Windows.Forms.TextBox ux_UserName;
+        private System.Windows.Forms.TextBox ux_UserPassword;
+        private System.Windows.Forms.TextBox ux_UserUserName;
+        private System.Windows.Forms.NumericUpDown ux_UserUserId;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button ux_UserButton;
+        private System.Windows.Forms.TabPage ux_UserList;
+        private System.Windows.Forms.Button ux_UsersPopulateButton;
+        private System.Windows.Forms.DataGridView ux_UsersDataGrid;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Button ux_UserDeleteButton;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.NumericUpDown ux_MovieMovieId;
+        private System.Windows.Forms.Label label39;
     }
 }

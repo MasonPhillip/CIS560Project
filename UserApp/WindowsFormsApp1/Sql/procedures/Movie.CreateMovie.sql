@@ -1,4 +1,5 @@
 CREATE OR ALTER PROCEDURE Movie.CreateMovie
+   @MovieId INT,
    @StudioId INT,
    @MovieName NVARCHAR(256),
    @ReleaseDate SMALLINT,
@@ -8,14 +9,23 @@ CREATE OR ALTER PROCEDURE Movie.CreateMovie
    @InternationlRevenue BIGINT,
    @Cost INT,
    @GenreId INT,
-   @RottenTomatoesCriticRating INT,
-   @MovieId INT OUTPUT
+   @RottenTomatoesCriticRating INT
 AS
-Begin
---Declare @MovieId INT
---SELECT @MovieId = coalesce((select max(@MovieId) + 1),1) 
---FROM Movie.Movies
+	IF @MovieId = 0
 	INSERT INTO Movie.Movies(StudioId, MovieName, [ReleaseDate], IMDBRating, RottenTomatoesAudienceRating, DomesticRevenue, InternationlRevenue, Cost, GenreId, RottenTomatoesCriticRating)
 	VALUES(@StudioId, @MovieName, @ReleaseDate, @IMDBRating, @RottenTomatoesAudienceRating, @DomesticRevenue, @InternationlRevenue, @Cost, @GenreId, @RottenTomatoesCriticRating)
-	SET @MovieId= SCOPE_IDENTITY()
-END
+	ELSE
+	UPDATE Movies
+	SET
+	StudioId = @StudioId,
+	MovieName = @MovieName,
+	[ReleaseDate] = @ReleaseDate,
+	IMDBRating = @IMDBRating,
+	RottenTomatoesAudienceRating = @RottenTomatoesAudienceRating,
+	DomesticRevenue = @DomesticRevenue,
+	InternationlRevenue = @InternationlRevenue,
+	Cost = @Cost,
+	GenreId = @GenreId,
+	RottenTomatoesCriticRating = @RottenTomatoesCriticRating
+	WHERE MovieId = @MovieId
+Go

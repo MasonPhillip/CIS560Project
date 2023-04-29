@@ -58,6 +58,9 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFor
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.SavePersonalRating.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.SaveRole.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.SaveUser.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.DeleteUser.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.DeleteMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.DeletePersonalRating.sql"
 
 Write-Host "Inserting data..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.Genres.sql"

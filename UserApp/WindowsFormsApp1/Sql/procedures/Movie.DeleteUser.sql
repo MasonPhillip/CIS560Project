@@ -1,0 +1,6 @@
+CREATE OR ALTER PROCEDURE Movie.DeleteUser
+	@UserId INT
+AS
+BEGIN
+DELETE FROM Movie.Users WHERE UserId = @UserId
+END

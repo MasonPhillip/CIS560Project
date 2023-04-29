@@ -1,0 +1,6 @@
+CREATE OR ALTER PROCEDURE Movie.DeleteMovie
+	@MovieId INT
+AS
+BEGIN
+DELETE FROM Movie.Movies WHERE MovieId = @MovieId
+END

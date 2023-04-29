@@ -146,6 +146,9 @@
     <Content Include="Sql\Procedures\Movie.CreateRole.sql" />
     <Content Include="Sql\Procedures\Movie.CreateStudio.sql" />
     <Content Include="Sql\Procedures\Movie.CreateUsers.sql" />
+    <Content Include="Sql\Procedures\Movie.DeleteMovie.sql" />
+    <Content Include="Sql\Procedures\Movie.DeletePersonalRating.sql" />
+    <Content Include="Sql\Procedures\Movie.DeleteUser.sql" />
     <Content Include="Sql\Procedures\Movie.HighestPaidWithin.sql" />
     <Content Include="Sql\Procedures\Movie.RatingCompareByMovieName.sql" />
     <Content Include="Sql\Procedures\Movie.SaveMovie.sql" />
