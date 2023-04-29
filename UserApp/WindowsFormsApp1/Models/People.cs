@@ -17,5 +17,10 @@ namespace WindowsFormsApp1.Models
             FirstName = firstName;
             LastName = lastName;
         }
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+        }
     }
 }

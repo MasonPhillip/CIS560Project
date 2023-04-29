@@ -14,5 +14,9 @@ namespace WindowsFormsApp1.Repositories
         PersonalRatings CreatePersonalRating(int movieId, int authorUserId, int personalRating, string ratingDescription);
 
         void SavePersonalRating(int ratingId, int movieId, int authorUserId, int personalRating, string ratingDescription);
+
+        IReadOnlyList<PersonalRatings> RetrievePersonalRatings();
+
+        IReadOnlyList<PersonalRatings> GetReviewsForMovie(int movieId);
     }
 }

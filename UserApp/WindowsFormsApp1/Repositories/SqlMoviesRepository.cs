@@ -20,7 +20,7 @@ namespace WindowsFormsApp1.Repositories
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public Movies CreateMovie(int studioId, string movieName, DateTimeOffset releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
+        public Movies CreateMovie(int studioId, string movieName, Int16 releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
         {
             if (string.IsNullOrWhiteSpace(movieName))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(movieName));
@@ -35,9 +35,19 @@ namespace WindowsFormsApp1.Repositories
             return executor.ExecuteReader(d);
         }
 
-        public void SaveMovie(int movieId, int studioId, string movieName, DateTimeOffset releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
+        public void SaveMovie(int movieId, int studioId, string movieName, Int16 releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
         {
             executor.ExecuteNonQuery(new SaveMovieDataDelegate(movieId, studioId, movieName, releaseDate, imdb, audience, domestic, international, cost, genreId, critic));
+        }
+
+        public IReadOnlyList<Movies> RetrieveMovies()
+        {
+            return executor.ExecuteReader(new RetrieveMovieDataDelegate());
+        }
+
+        public IReadOnlyList<Movies> GetMoviesByName(string movieName)
+        {
+            return executor.ExecuteReader(new GetMoviesByNameDataDelegate(movieName));
         }
     }
 }

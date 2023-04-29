@@ -7,11 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
+        public Controller controller = new Controller();
+
+        public string username;
+
+        public Users user;
+
+        private ActionSelector form;
+
+        private AddAnItem addForm;
+
         public Login()
         {
             InitializeComponent();
@@ -35,28 +46,19 @@ namespace WindowsFormsApp1
         /// <param name="e"></param>
         private void UXLoginBtn_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> passwords = new Dictionary<string, string>();
-            passwords.Add("a", "1");
-            passwords.Add("b", "2");
-            string userName = UXUserName.Text;
-            string password = UXPassword.Text;
-            string curPass;
-            if (passwords.TryGetValue(userName, out curPass))
+            username = UXUserName.Text;
+            Users user = controller.GetUser(username);
+            if(user != null)
             {
-                if(curPass == password)
-                {
-                    ActionSelector actionSelector = new ActionSelector(userName);
-                    actionSelector.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Password is incorrect");
-                }
+                this.Hide();
+                ActionSelector form = new ActionSelector(user);
+                form.Show();
             }
             else
             {
-                MessageBox.Show("Could not find user");
+                MessageBox.Show("User does not exist");
             }
+            this.Close();
         }
     }
 }

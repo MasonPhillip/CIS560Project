@@ -32,5 +32,10 @@ namespace WindowsFormsApp1.Repositories
             var d = new FetchStudioDataDelegate(studioId);
             return executor.ExecuteReader(d);
         }
+
+        public IReadOnlyList<Studios> RetrieveStudios()
+        {
+            return executor.ExecuteReader(new RetrieveStudioDataDelegate());
+        }
     }
 }

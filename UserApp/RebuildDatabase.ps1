@@ -58,6 +58,24 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFor
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.SavePersonalRating.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.SaveRole.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.SaveUser.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.FetchMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.FetchRole.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.FetchPerson.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.FetchPersonalRating.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.FetchGenre.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.FetchStudio.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.FetchUser.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.RetrieveGenre.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.RetrieveMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.RetrievePerson.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.RetrievePersonalRating.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.RetrieveRole.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.RetrieveStudio.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.RetrieveUser.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.GetMoviesByName.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.GetUser.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Procedures\Movie.GetReviewsForMovie.sql"
+
 
 Write-Host "Inserting data..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.Genres.sql"
@@ -65,6 +83,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFor
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.People.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.Movies.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.Roles.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.Users.sql"
 
 
 Write-Host "Rebuild completed."

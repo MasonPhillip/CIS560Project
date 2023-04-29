@@ -34,5 +34,10 @@ namespace WindowsFormsApp1.Repositories
         {
             executor.ExecuteNonQuery(new SaveRoleDataDelegate(roleId, personId, movieId, isDirector, isActor, amountPaid));
         }
+
+        public IReadOnlyList<Roles> RetrieveRoles()
+        {
+            return executor.ExecuteReader(new RetrieveRoleDataDelegate());
+        }
     }
 }

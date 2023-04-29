@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp1</RootNamespace>
     <AssemblyName>WindowsFormsApp1</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,6 +54,12 @@
     <Compile Include="ActionSelector.Designer.cs">
       <DependentUpon>ActionSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddAnItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAnItem.Designer.cs">
+      <DependentUpon>AddAnItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DataDelegates\CreateGenreDataDelegate.cs" />
     <Compile Include="DataDelegates\CreateMovieDataDelegate.cs" />
@@ -68,6 +75,16 @@
     <Compile Include="DataDelegates\FetchRoleDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchStudioDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchUserDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetMoviesByNameDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetReviewForMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetUserDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveGenreDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrievePersonalRatingDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrievePersonDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveRoleDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveStudioDataDelegate.cs" />
+    <Compile Include="DataDelegates\RetrieveUserDataDelegate.cs" />
     <Compile Include="DataDelegates\SaveMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\SavePersonalRatingDataDelegate.cs" />
     <Compile Include="DataDelegates\SaveRoleDataDelegate.cs" />
@@ -85,6 +102,7 @@
     <Compile Include="Models\Roles.cs" />
     <Compile Include="Models\Studios.cs" />
     <Compile Include="Models\Users.cs" />
+    <Compile Include="MovieItems.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IGenresRepository.cs" />
@@ -105,6 +123,9 @@
     <EmbeddedResource Include="ActionSelector.resx">
       <DependentUpon>ActionSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddAnItem.resx">
+      <DependentUpon>AddAnItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -136,6 +158,7 @@
     <Content Include="Sql\Data\Movie.People.sql" />
     <Content Include="Sql\Data\Movie.Roles.sql" />
     <Content Include="Sql\Data\Movie.Studios.sql" />
+    <Content Include="Sql\Data\Movie.Users.sql" />
     <Content Include="Sql\Procedures\Movie.AverageCostProductionByGenre.sql" />
     <Content Include="Sql\Procedures\Movie.AverageStudioProfitByGenre.sql" />
     <Content Include="Sql\Procedures\Movie.CreateMovie.sql" />
@@ -144,8 +167,25 @@
     <Content Include="Sql\Procedures\Movie.CreateRole.sql" />
     <Content Include="Sql\Procedures\Movie.CreateStudio.sql" />
     <Content Include="Sql\Procedures\Movie.CreateUsers.sql" />
+    <Content Include="Sql\Procedures\Movie.FetchGenre.sql" />
+    <Content Include="Sql\Procedures\Movie.FetchMovie.sql" />
+    <Content Include="Sql\Procedures\Movie.FetchPerson.sql" />
+    <Content Include="Sql\Procedures\Movie.FetchPersonalRating.sql" />
+    <Content Include="Sql\Procedures\Movie.FetchRole.sql" />
+    <Content Include="Sql\Procedures\Movie.FetchStudio.sql" />
+    <Content Include="Sql\Procedures\Movie.FetchUser.sql" />
+    <Content Include="Sql\Procedures\Movie.GetMoviesByName.sql" />
+    <Content Include="Sql\Procedures\Movie.GetReviewsForMovie.sql" />
+    <Content Include="Sql\Procedures\Movie.GetUser.sql" />
     <Content Include="Sql\Procedures\Movie.HighestPaidWithin.sql" />
     <Content Include="Sql\Procedures\Movie.RatingCompareByMovieName.sql" />
+    <Content Include="Sql\Procedures\Movie.RetrieveGenre.sql" />
+    <Content Include="Sql\Procedures\Movie.RetrieveMovie.sql" />
+    <Content Include="Sql\Procedures\Movie.RetrievePerson.sql" />
+    <Content Include="Sql\Procedures\Movie.RetrievePersonalRating.sql" />
+    <Content Include="Sql\Procedures\Movie.RetrieveRole.sql" />
+    <Content Include="Sql\Procedures\Movie.RetrieveStudio.sql" />
+    <Content Include="Sql\Procedures\Movie.RetrieveUser.sql" />
     <Content Include="Sql\Procedures\Movie.SaveMovie.sql" />
     <Content Include="Sql\Procedures\Movie.SavePersonalRating.sql" />
     <Content Include="Sql\Procedures\Movie.SaveRole.sql" />

@@ -10,7 +10,7 @@ namespace WindowsFormsApp1.DataDelegates
     {
         public readonly int studioId;
         public readonly string movieName;
-        public readonly int releaseDate;
+        public readonly Int16 releaseDate;
         public readonly decimal imdb;
         public readonly int audience;
         public readonly long domestic;
@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.DataDelegates
         public readonly int genreId;
         public readonly int critic;
 
-        public CreateMovieDataDelegate(int studioId, string movieName, int releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
+        public CreateMovieDataDelegate(int studioId, string movieName, Int16 releaseDate, decimal imdb, int audience, long domestic, long international, int cost, int genreId, int critic)
            : base("Movie.CreateMovie")
         {
             this.studioId = studioId;
@@ -44,7 +44,7 @@ namespace WindowsFormsApp1.DataDelegates
             command.Parameters.AddWithValue("IMDBRating", imdb);
             command.Parameters.AddWithValue("RottenTomatoesAudienceRating", audience);
             command.Parameters.AddWithValue("DomesticRevenue", domestic);
-            command.Parameters.AddWithValue("InternationlRevenue", international);
+            command.Parameters.AddWithValue("InternationalRevenue", international);
             command.Parameters.AddWithValue("Cost", cost);
             command.Parameters.AddWithValue("GenreId", genreId);
             command.Parameters.AddWithValue("RottenTomatoesCriticRating", critic);

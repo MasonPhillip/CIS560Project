@@ -35,5 +35,10 @@ namespace WindowsFormsApp1.Repositories
             var d = new FetchPeopleDataDelegate(personId);
             return executor.ExecuteReader(d);
         }
+
+        public IReadOnlyList<People> RetrievePeople()
+        {
+            return executor.ExecuteReader(new RetrievePersonDataDelegate());
+        }
     }
 }

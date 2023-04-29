@@ -9,9 +9,9 @@ namespace WindowsFormsApp1.DataDelegates
 {
     internal class CreateGenreDataDelegate : NonQueryDataDelegate<Genres>
     {
-        public readonly Genre genre;
+        public readonly string genre;
 
-        public CreateGenreDataDelegate(Genre genre)
+        public CreateGenreDataDelegate(string genre)
            : base("Movie.CreateGenre")
         {
             this.genre = genre;

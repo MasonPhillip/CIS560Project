@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.DataDelegates
                 throw new RecordNotFoundException(genreId.ToString());
 
             return new Genres(genreId,
-               reader.GetValue<Genre>("Genre"));
+               reader.GetString("Genre"));
         }
     }
 }

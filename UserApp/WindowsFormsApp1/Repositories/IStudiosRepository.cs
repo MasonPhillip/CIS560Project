@@ -12,5 +12,7 @@ namespace WindowsFormsApp1.Repositories
         Studios FetchStudio(int studioId);
 
         Studios CreateStudio(string studioName);
+
+        IReadOnlyList<Studios> RetrieveStudios();
     }
 }

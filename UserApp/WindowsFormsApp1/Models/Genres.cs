@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    public enum Genre
+    /*public enum Genre
     {
         Action = 1,
         Adventure = 2,
@@ -24,17 +24,22 @@ namespace WindowsFormsApp1.Models
         Thriller = 14,
         War = 15,
         Western = 16
-    }
+    }*/
 
     public class Genres
     {
         public int GenreId { get; }
-        public Genre Genre { get; }
+        public string Genre { get; }
 
-        internal Genres(int genreId, Genre genre)
+        internal Genres(int genreId, string genre)
         {
             GenreId = genreId;
             Genre = genre;
+        }
+
+        public override string ToString()
+        {
+            return Genre;
         }
     }
 }

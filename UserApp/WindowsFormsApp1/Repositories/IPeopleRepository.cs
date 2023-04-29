@@ -9,7 +9,7 @@ namespace WindowsFormsApp1.Repositories
 {
     public interface IPeopleRepository
     {
-        //IReadOnlyList<People> RetrievePeople();
+        IReadOnlyList<People> RetrievePeople();
 
         People FetchPerson(int personId);
 

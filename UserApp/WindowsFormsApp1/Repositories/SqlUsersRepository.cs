@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.DataDelegates;
 using WindowsFormsApp1.Models;
 
@@ -42,6 +43,17 @@ namespace WindowsFormsApp1.Repositories
         public void SaveUser(int userId, string username, string password, string name, string recoveryEmail)
         {
             executor.ExecuteNonQuery(new SaveUserDataDelegate(userId, username, password, name, recoveryEmail));
+        }
+
+        public IReadOnlyList<Users> RetrieveUsers()
+        {
+            return executor.ExecuteReader(new RetrieveUserDataDelegate());
+        }
+
+        public Users GetUser(string username)
+        {
+            var d = new GetUserDataDelegate(username);
+            return executor.ExecuteReader(d);
         }
     }
 }

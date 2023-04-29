@@ -3,9 +3,10 @@
     "",
     "\\UserApp",
     "\\UserApp\\WindowsFormsApp1",
+    "\\UserApp\\WindowsFormsApp1\\DataDelegates",
     "\\UserApp\\WindowsFormsApp1\\Sql",
     "\\UserApp\\WindowsFormsApp1\\Sql\\procedures"
   ],
-  "SelectedNode": "\\UserApp\\WindowsFormsApp1\\Sql\\procedures\\Movie.CreateMovie.sql",
+  "SelectedNode": "\\UserApp\\WindowsFormsApp1\\Sql\\procedures\\Movie.FetchMovie.sql",
   "PreviewInSolutionExplorer": false
 }

@@ -37,5 +37,15 @@ namespace WindowsFormsApp1.Repositories
         {
             executor.ExecuteNonQuery(new SavePersonalRatingDataDelegate(ratingId, movieId, authorUserId, personalRating, ratingDescription));
         }
+
+        public IReadOnlyList<PersonalRatings> RetrievePersonalRatings()
+        {
+            return executor.ExecuteReader(new RetrievePersonalRatingDataDelegate());
+        }
+
+        public IReadOnlyList<PersonalRatings> GetReviewsForMovie(int movieId)
+        {
+            return executor.ExecuteReader(new GetReviewForMovieDataDelegate(movieId));
+        }
     }
 }

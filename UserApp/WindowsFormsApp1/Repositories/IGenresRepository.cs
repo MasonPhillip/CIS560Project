@@ -11,6 +11,8 @@ namespace WindowsFormsApp1.Repositories
     {
         Genres FetchGenre(int genreId);
 
-        Genres CreateGenre(Genre genre);
+        Genres CreateGenre(string genre);
+
+        IReadOnlyList<Genres> RetrieveGenres();
     }
 }

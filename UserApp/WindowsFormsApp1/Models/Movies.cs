@@ -11,7 +11,7 @@ namespace WindowsFormsApp1.Models
         public int MovieId { get; }
         public int StudioId { get; }
         public string MovieName { get; }
-        public int ReleaseDate { get; }
+        public Int16 ReleaseDate { get; }
         public decimal IMDBRating { get; }
         public int RottenTomatoesAudienceRating { get; }
         public long DomesticRevenue { get; }
@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.Models
         public int Cost { get; }
         public int GenreId { get; }
         public int RottenTomatoesCriticRating { get; }
-        internal Movies(int movieId, int studioId, string movieName, int releaseDate, decimal iMDBRating, int rottenTomatoesAudienceRating, long domesticRevenue, long internationalRevenue, int cost, int genreId, int rottenTomatoesCriticRating)
+        internal Movies(int movieId, int studioId, string movieName, Int16 releaseDate, decimal iMDBRating, int rottenTomatoesAudienceRating, long domesticRevenue, long internationalRevenue, int cost, int genreId, int rottenTomatoesCriticRating)
         {
             MovieId = movieId;
             StudioId = studioId;
@@ -32,6 +32,11 @@ namespace WindowsFormsApp1.Models
             Cost = cost;
             GenreId = genreId;
             RottenTomatoesCriticRating = rottenTomatoesCriticRating;
+        }
+
+        public override string ToString()
+        {
+            return MovieName;
         }
     }
 }

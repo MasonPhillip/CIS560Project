@@ -63,5 +63,6 @@
     <Compile Include="RecordNotFoundException.cs" />
     <Compile Include="SqlCommandExecuter.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

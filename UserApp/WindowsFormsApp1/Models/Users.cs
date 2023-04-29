@@ -21,5 +21,10 @@ namespace WindowsFormsApp1.Models
             Name = name;
             RecoveryEmail = recoveryEmail;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

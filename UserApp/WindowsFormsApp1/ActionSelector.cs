@@ -8,85 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1
 {
     public partial class ActionSelector : Form
     {
-        private string curUser;
-        string connectionString = @"; Initial Catalog= ; Integrated Security=True;"; //put link to local database string then the Db name
+        public AddMovieItemDel AddMovieItem;
 
-        public ActionSelector(string user)
+        private Movies selectedMovie;
+        private Movies movieForReviews;
+        public Users currentUser;
+        public Controller controller = new Controller();
+
+        public ActionSelector(Users user)
         {
             InitializeComponent();
-            curUser = user;
-        }
-
-        /// <summary>
-        /// TODO: this needs to populate uxPersonalReviews with the name of the movies the curUser has rated
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ActionSelector_Load(object sender, EventArgs e)
-        {
-            UXPersonalReviews.Items.Add("New Review");
-            //populate here
-            UXPersonalReviews.SelectedItem = UXPersonalReviews.Items.IndexOf("New Review");
-        }
-
-        /// <summary>
-        /// TODO: populate items when a new review is selected
-        /// note if its a new review it all needs to be set to blank and UXAddBtn needs to be enabled (all other cases the button needs to be diabled)
-        /// items to populate
-        ///     UXMoviename - textbox
-        ///     UXRatingNumber - numeric up down (from personal rating field should be number 1-10)
-        ///     UXComments - textbox multiline (from rating description)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void UXPersonalReviews_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        
-        /// <summary>
-        /// TODO: update the review with any new datas
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Update_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /// <summary>
-        /// TODO: Adds review to db
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void UXAddBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /// <summary>
-        /// TODO: Should delete the review from the database (after a yes no dialog confirms it was intentional)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void UxDeleteButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UXPersonalReviewLabel_Click(object sender, EventArgs e)
-        {
-
+            currentUser = user;
+            uxMoviesList.DataSource = controller.GetMovies();
+            uxMovieListComboBox.DataSource = controller.GetMovies();
+            uxMoviesList.SelectedIndex = -1;
         }
 
         private void UxAddMovies_Click(object sender, EventArgs e)
@@ -94,30 +35,79 @@ namespace WindowsFormsApp1
             openFileDialog1.ShowDialog();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void uxGetAllMovies_Click(object sender, EventArgs e)
         {
-
+            uxMoviesList.DataSource = controller.GetMovies();
+            uxMoviesList.SelectedIndex = -1;
+            textBox1.Text = "";
         }
 
-        private void ux_populateMoviesButton_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            string title = textBox1.Text;
+            if (title != "")
             {
-                sqlcon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Movies", sqlcon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                ux_MovieDataGrid.DataSource = dtbl;
+                uxMoviesList.DataSource = controller.GetMoviesByName(title);
+            }
+            else
+            {
+                uxMoviesList.DataSource = controller.GetMovies();
             }
         }
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void uxAddMovie_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            AddMovieItem(MovieItems.Movie);
+        }
+
+        public void SetAddMovieItemDel(AddMovieItemDel del)
+        {
+            AddMovieItem = del;
+        }
+
+        private void uxAddPersonalRatingButton_Click(object sender, EventArgs e)
+        {
+            AddMovieItem(MovieItems.PersonalRating);
+        }
+
+        private void uxAddRoleButton_Click(object sender, EventArgs e)
+        {
+            AddMovieItem(MovieItems.Role);
+        }
+
+        private void uxMoviesList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(uxMoviesList.SelectedItem != null && uxMoviesList.SelectedIndex >= 0 && uxMoviesList.SelectedItem is Movies movie)
             {
-                sqlcon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Delete From Movies Where ",sqlcon);
+                selectedMovie = controller.FetchMovie(movie.MovieId);
+                Studios selectedStudio = controller.FetchStudio(selectedMovie.StudioId);
+                Genres selectedGenre = controller.FetchGenre(selectedMovie.GenreId);
+
+                uxStudioTextBox.Text = selectedStudio.StudioName;
+                uxGenreTextBox.Text = selectedGenre.Genre;
+                uxDomesticTextBox.Text = selectedMovie.DomesticRevenue.ToString();
+                uxInternationalTextBox.Text = selectedMovie.InternationalRevenue.ToString();
+                uxCostTextBox.Text = selectedMovie.Cost.ToString();
             }
+            else
+            {
+                uxMoviesList.SelectedIndex = -1;
+                uxStudioTextBox.Text = "";
+                uxGenreTextBox.Text = "";
+                uxDomesticTextBox.Text = "";
+                uxInternationalTextBox.Text = "";
+                uxCostTextBox.Text = "";
+            }
+        }
+
+        private void uxMovieListComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (uxMovieListComboBox.SelectedItem != null && uxMovieListComboBox.SelectedItem is Movies movie)
+            {
+                int movieId = movie.MovieId;
+                uxReviewsForMovieListBox.DataSource = controller.GetReviewsForMovie(movieId);
+            }
+            
         }
     }
 }

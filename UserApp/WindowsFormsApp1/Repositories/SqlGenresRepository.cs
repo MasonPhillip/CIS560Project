@@ -18,7 +18,7 @@ namespace WindowsFormsApp1.Repositories
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public Genres CreateGenre(Genre genre)
+        public Genres CreateGenre(string genre)
         {
             var d = new CreateGenreDataDelegate(genre);
             return executor.ExecuteNonQuery(d);
@@ -28,6 +28,11 @@ namespace WindowsFormsApp1.Repositories
         {
             var d = new FetchGenreDataDelegate(genreId);
             return executor.ExecuteReader(d);
+        }
+
+        public IReadOnlyList<Genres> RetrieveGenres()
+        {
+            return executor.ExecuteReader(new RetrieveGenreDataDelegate());
         }
     }
 }

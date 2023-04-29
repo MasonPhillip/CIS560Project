@@ -31,11 +31,11 @@ namespace WindowsFormsApp1.DataDelegates
             return new Movies(movieId,
                reader.GetInt32("StudioId"),
                reader.GetString("MovieName"),
-               reader.GetInt32("ReleaseDate"),
+               reader.GetValue<Int16>("ReleaseDate"),
                reader.GetValue<decimal>("IMDBRating"),
                reader.GetInt32("RottenTomatoesAudienceRating"),
                reader.GetValue<long>("DomesticRevenue"),
-               reader.GetValue<long>("InternationlRevenue"),
+               reader.GetValue<long>("InternationalRevenue"),
                reader.GetInt32("Cost"),
                reader.GetInt32("GenreId"),
                reader.GetInt32("RottenTomatoesCriticRating"));

@@ -30,16 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ux_TabControl = new System.Windows.Forms.TabControl();
+            this.ux_MoviesList = new System.Windows.Forms.TabPage();
+            this.uxCostTextBox = new System.Windows.Forms.TextBox();
+            this.uxCostLabel = new System.Windows.Forms.Label();
+            this.uxInternationalTextBox = new System.Windows.Forms.TextBox();
+            this.uxInternationalLabel = new System.Windows.Forms.Label();
+            this.uxDomesticTextBox = new System.Windows.Forms.TextBox();
+            this.uxDomesticLabel = new System.Windows.Forms.Label();
+            this.uxGenreTextBox = new System.Windows.Forms.TextBox();
+            this.uxGenreLabel = new System.Windows.Forms.Label();
+            this.uxStudioTextBox = new System.Windows.Forms.TextBox();
+            this.uxStudioLabel = new System.Windows.Forms.Label();
+            this.uxAddRoleButton = new System.Windows.Forms.Button();
+            this.uxAddPersonalRatingButton = new System.Windows.Forms.Button();
+            this.uxAddMovie = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.uxMoviesList = new System.Windows.Forms.ListBox();
+            this.uxMovieTitleLabel = new System.Windows.Forms.Label();
+            this.uxGetAllMovies = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.UxDeleteButton = new System.Windows.Forms.Button();
-            this.UXCommentsLabel = new System.Windows.Forms.Label();
-            this.UXUpdateBtn = new System.Windows.Forms.Button();
-            this.UXAddBtn = new System.Windows.Forms.Button();
-            this.UXComments = new System.Windows.Forms.TextBox();
-            this.UXRatingLabel = new System.Windows.Forms.Label();
-            this.uxRatingNumber = new System.Windows.Forms.NumericUpDown();
-            this.uxMovieName = new System.Windows.Forms.TextBox();
-            this.UXPersonalReviews = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.UXRottenTomatoesRating = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,22 +74,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ux_AddMovies = new System.Windows.Forms.TabPage();
             this.UxAddMovies = new System.Windows.Forms.Button();
-            this.ux_MoviesList = new System.Windows.Forms.TabPage();
-            this.ux_populateMoviesButton = new System.Windows.Forms.Button();
-            this.ux_MovieDataGrid = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxReviewsPerMovie = new System.Windows.Forms.Label();
+            this.uxReviewsForMovieListBox = new System.Windows.Forms.ListBox();
+            this.uxMovieListComboBox = new System.Windows.Forms.ComboBox();
             this.ux_TabControl.SuspendLayout();
+            this.ux_MoviesList.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.ux_AddMovies.SuspendLayout();
-            this.ux_MoviesList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,17 +107,185 @@
             this.ux_TabControl.Size = new System.Drawing.Size(784, 446);
             this.ux_TabControl.TabIndex = 3;
             // 
+            // ux_MoviesList
+            // 
+            this.ux_MoviesList.Controls.Add(this.uxCostTextBox);
+            this.ux_MoviesList.Controls.Add(this.uxCostLabel);
+            this.ux_MoviesList.Controls.Add(this.uxInternationalTextBox);
+            this.ux_MoviesList.Controls.Add(this.uxInternationalLabel);
+            this.ux_MoviesList.Controls.Add(this.uxDomesticTextBox);
+            this.ux_MoviesList.Controls.Add(this.uxDomesticLabel);
+            this.ux_MoviesList.Controls.Add(this.uxGenreTextBox);
+            this.ux_MoviesList.Controls.Add(this.uxGenreLabel);
+            this.ux_MoviesList.Controls.Add(this.uxStudioTextBox);
+            this.ux_MoviesList.Controls.Add(this.uxStudioLabel);
+            this.ux_MoviesList.Controls.Add(this.uxAddRoleButton);
+            this.ux_MoviesList.Controls.Add(this.uxAddPersonalRatingButton);
+            this.ux_MoviesList.Controls.Add(this.uxAddMovie);
+            this.ux_MoviesList.Controls.Add(this.textBox1);
+            this.ux_MoviesList.Controls.Add(this.uxMoviesList);
+            this.ux_MoviesList.Controls.Add(this.uxMovieTitleLabel);
+            this.ux_MoviesList.Controls.Add(this.uxGetAllMovies);
+            this.ux_MoviesList.Location = new System.Drawing.Point(4, 25);
+            this.ux_MoviesList.Name = "ux_MoviesList";
+            this.ux_MoviesList.Padding = new System.Windows.Forms.Padding(3);
+            this.ux_MoviesList.Size = new System.Drawing.Size(776, 417);
+            this.ux_MoviesList.TabIndex = 6;
+            this.ux_MoviesList.Text = "Movies List";
+            this.ux_MoviesList.UseVisualStyleBackColor = true;
+            // 
+            // uxCostTextBox
+            // 
+            this.uxCostTextBox.Location = new System.Drawing.Point(395, 256);
+            this.uxCostTextBox.Name = "uxCostTextBox";
+            this.uxCostTextBox.Size = new System.Drawing.Size(174, 22);
+            this.uxCostTextBox.TabIndex = 18;
+            // 
+            // uxCostLabel
+            // 
+            this.uxCostLabel.AutoSize = true;
+            this.uxCostLabel.Location = new System.Drawing.Point(395, 235);
+            this.uxCostLabel.Name = "uxCostLabel";
+            this.uxCostLabel.Size = new System.Drawing.Size(116, 16);
+            this.uxCostLabel.TabIndex = 17;
+            this.uxCostLabel.Text = "Production Cost";
+            // 
+            // uxInternationalTextBox
+            // 
+            this.uxInternationalTextBox.Location = new System.Drawing.Point(395, 196);
+            this.uxInternationalTextBox.Name = "uxInternationalTextBox";
+            this.uxInternationalTextBox.Size = new System.Drawing.Size(174, 22);
+            this.uxInternationalTextBox.TabIndex = 16;
+            // 
+            // uxInternationalLabel
+            // 
+            this.uxInternationalLabel.AutoSize = true;
+            this.uxInternationalLabel.Location = new System.Drawing.Point(395, 175);
+            this.uxInternationalLabel.Name = "uxInternationalLabel";
+            this.uxInternationalLabel.Size = new System.Drawing.Size(149, 16);
+            this.uxInternationalLabel.TabIndex = 15;
+            this.uxInternationalLabel.Text = "Internationl Revenue";
+            // 
+            // uxDomesticTextBox
+            // 
+            this.uxDomesticTextBox.Location = new System.Drawing.Point(395, 135);
+            this.uxDomesticTextBox.Name = "uxDomesticTextBox";
+            this.uxDomesticTextBox.Size = new System.Drawing.Size(174, 22);
+            this.uxDomesticTextBox.TabIndex = 14;
+            // 
+            // uxDomesticLabel
+            // 
+            this.uxDomesticLabel.AutoSize = true;
+            this.uxDomesticLabel.Location = new System.Drawing.Point(395, 116);
+            this.uxDomesticLabel.Name = "uxDomesticLabel";
+            this.uxDomesticLabel.Size = new System.Drawing.Size(138, 16);
+            this.uxDomesticLabel.TabIndex = 13;
+            this.uxDomesticLabel.Text = "Domestic Revenue";
+            // 
+            // uxGenreTextBox
+            // 
+            this.uxGenreTextBox.Location = new System.Drawing.Point(395, 77);
+            this.uxGenreTextBox.Name = "uxGenreTextBox";
+            this.uxGenreTextBox.Size = new System.Drawing.Size(174, 22);
+            this.uxGenreTextBox.TabIndex = 12;
+            // 
+            // uxGenreLabel
+            // 
+            this.uxGenreLabel.AutoSize = true;
+            this.uxGenreLabel.Location = new System.Drawing.Point(395, 58);
+            this.uxGenreLabel.Name = "uxGenreLabel";
+            this.uxGenreLabel.Size = new System.Drawing.Size(49, 16);
+            this.uxGenreLabel.TabIndex = 11;
+            this.uxGenreLabel.Text = "Genre";
+            // 
+            // uxStudioTextBox
+            // 
+            this.uxStudioTextBox.Location = new System.Drawing.Point(395, 23);
+            this.uxStudioTextBox.Name = "uxStudioTextBox";
+            this.uxStudioTextBox.Size = new System.Drawing.Size(174, 22);
+            this.uxStudioTextBox.TabIndex = 10;
+            // 
+            // uxStudioLabel
+            // 
+            this.uxStudioLabel.AutoSize = true;
+            this.uxStudioLabel.Location = new System.Drawing.Point(392, 3);
+            this.uxStudioLabel.Name = "uxStudioLabel";
+            this.uxStudioLabel.Size = new System.Drawing.Size(51, 16);
+            this.uxStudioLabel.TabIndex = 9;
+            this.uxStudioLabel.Text = "Studio";
+            // 
+            // uxAddRoleButton
+            // 
+            this.uxAddRoleButton.Location = new System.Drawing.Point(595, 235);
+            this.uxAddRoleButton.Name = "uxAddRoleButton";
+            this.uxAddRoleButton.Size = new System.Drawing.Size(175, 43);
+            this.uxAddRoleButton.TabIndex = 8;
+            this.uxAddRoleButton.Text = "Add Role";
+            this.uxAddRoleButton.UseVisualStyleBackColor = true;
+            this.uxAddRoleButton.Click += new System.EventHandler(this.uxAddRoleButton_Click);
+            // 
+            // uxAddPersonalRatingButton
+            // 
+            this.uxAddPersonalRatingButton.Location = new System.Drawing.Point(595, 175);
+            this.uxAddPersonalRatingButton.Name = "uxAddPersonalRatingButton";
+            this.uxAddPersonalRatingButton.Size = new System.Drawing.Size(175, 43);
+            this.uxAddPersonalRatingButton.TabIndex = 7;
+            this.uxAddPersonalRatingButton.Text = "Add Review";
+            this.uxAddPersonalRatingButton.UseVisualStyleBackColor = true;
+            this.uxAddPersonalRatingButton.Click += new System.EventHandler(this.uxAddPersonalRatingButton_Click);
+            // 
+            // uxAddMovie
+            // 
+            this.uxAddMovie.Location = new System.Drawing.Point(595, 116);
+            this.uxAddMovie.Name = "uxAddMovie";
+            this.uxAddMovie.Size = new System.Drawing.Size(175, 43);
+            this.uxAddMovie.TabIndex = 6;
+            this.uxAddMovie.Text = "Add Movie";
+            this.uxAddMovie.UseVisualStyleBackColor = true;
+            this.uxAddMovie.Click += new System.EventHandler(this.uxAddMovie_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(596, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(174, 22);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // uxMoviesList
+            // 
+            this.uxMoviesList.FormattingEnabled = true;
+            this.uxMoviesList.ItemHeight = 16;
+            this.uxMoviesList.Location = new System.Drawing.Point(0, 0);
+            this.uxMoviesList.Name = "uxMoviesList";
+            this.uxMoviesList.Size = new System.Drawing.Size(389, 420);
+            this.uxMoviesList.TabIndex = 2;
+            this.uxMoviesList.SelectedIndexChanged += new System.EventHandler(this.uxMoviesList_SelectedIndexChanged);
+            // 
+            // uxMovieTitleLabel
+            // 
+            this.uxMovieTitleLabel.AutoSize = true;
+            this.uxMovieTitleLabel.Location = new System.Drawing.Point(593, 3);
+            this.uxMovieTitleLabel.Name = "uxMovieTitleLabel";
+            this.uxMovieTitleLabel.Size = new System.Drawing.Size(56, 16);
+            this.uxMovieTitleLabel.TabIndex = 3;
+            this.uxMovieTitleLabel.Text = "Search";
+            // 
+            // uxGetAllMovies
+            // 
+            this.uxGetAllMovies.Location = new System.Drawing.Point(595, 58);
+            this.uxGetAllMovies.Name = "uxGetAllMovies";
+            this.uxGetAllMovies.Size = new System.Drawing.Size(175, 43);
+            this.uxGetAllMovies.TabIndex = 1;
+            this.uxGetAllMovies.Text = "Get All Movies";
+            this.uxGetAllMovies.UseVisualStyleBackColor = true;
+            this.uxGetAllMovies.Click += new System.EventHandler(this.uxGetAllMovies_Click);
+            // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.UxDeleteButton);
-            this.tabPage1.Controls.Add(this.UXCommentsLabel);
-            this.tabPage1.Controls.Add(this.UXUpdateBtn);
-            this.tabPage1.Controls.Add(this.UXAddBtn);
-            this.tabPage1.Controls.Add(this.UXComments);
-            this.tabPage1.Controls.Add(this.UXRatingLabel);
-            this.tabPage1.Controls.Add(this.uxRatingNumber);
-            this.tabPage1.Controls.Add(this.uxMovieName);
-            this.tabPage1.Controls.Add(this.UXPersonalReviews);
+            this.tabPage1.Controls.Add(this.uxMovieListComboBox);
+            this.tabPage1.Controls.Add(this.uxReviewsForMovieListBox);
+            this.tabPage1.Controls.Add(this.uxReviewsPerMovie);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -118,102 +293,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personal Review";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // UxDeleteButton
-            // 
-            this.UxDeleteButton.Location = new System.Drawing.Point(631, 378);
-            this.UxDeleteButton.Name = "UxDeleteButton";
-            this.UxDeleteButton.Size = new System.Drawing.Size(118, 33);
-            this.UxDeleteButton.TabIndex = 8;
-            this.UxDeleteButton.Text = "Delete";
-            this.UxDeleteButton.UseVisualStyleBackColor = true;
-            this.UxDeleteButton.Click += new System.EventHandler(this.UxDeleteButton_Click);
-            // 
-            // UXCommentsLabel
-            // 
-            this.UXCommentsLabel.AutoSize = true;
-            this.UXCommentsLabel.Location = new System.Drawing.Point(168, 111);
-            this.UXCommentsLabel.Name = "UXCommentsLabel";
-            this.UXCommentsLabel.Size = new System.Drawing.Size(83, 16);
-            this.UXCommentsLabel.TabIndex = 7;
-            this.UXCommentsLabel.Text = "Comments:";
-            this.UXCommentsLabel.UseMnemonic = false;
-            // 
-            // UXUpdateBtn
-            // 
-            this.UXUpdateBtn.Location = new System.Drawing.Point(302, 378);
-            this.UXUpdateBtn.Name = "UXUpdateBtn";
-            this.UXUpdateBtn.Size = new System.Drawing.Size(172, 33);
-            this.UXUpdateBtn.TabIndex = 6;
-            this.UXUpdateBtn.Text = "Update";
-            this.UXUpdateBtn.UseVisualStyleBackColor = true;
-            this.UXUpdateBtn.Click += new System.EventHandler(this.Update_Click);
-            // 
-            // UXAddBtn
-            // 
-            this.UXAddBtn.Location = new System.Drawing.Point(10, 378);
-            this.UXAddBtn.Name = "UXAddBtn";
-            this.UXAddBtn.Size = new System.Drawing.Size(117, 36);
-            this.UXAddBtn.TabIndex = 5;
-            this.UXAddBtn.Text = "Add";
-            this.UXAddBtn.UseVisualStyleBackColor = true;
-            this.UXAddBtn.Click += new System.EventHandler(this.UXAddBtn_Click);
-            // 
-            // UXComments
-            // 
-            this.UXComments.AcceptsReturn = true;
-            this.UXComments.Location = new System.Drawing.Point(168, 130);
-            this.UXComments.Multiline = true;
-            this.UXComments.Name = "UXComments";
-            this.UXComments.Size = new System.Drawing.Size(592, 238);
-            this.UXComments.TabIndex = 4;
-            // 
-            // UXRatingLabel
-            // 
-            this.UXRatingLabel.AutoSize = true;
-            this.UXRatingLabel.Location = new System.Drawing.Point(7, 111);
-            this.UXRatingLabel.Name = "UXRatingLabel";
-            this.UXRatingLabel.Size = new System.Drawing.Size(56, 16);
-            this.UXRatingLabel.TabIndex = 3;
-            this.UXRatingLabel.Text = "Rating:";
-            // 
-            // uxRatingNumber
-            // 
-            this.uxRatingNumber.Location = new System.Drawing.Point(7, 130);
-            this.uxRatingNumber.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.uxRatingNumber.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.uxRatingNumber.Name = "uxRatingNumber";
-            this.uxRatingNumber.Size = new System.Drawing.Size(120, 22);
-            this.uxRatingNumber.TabIndex = 2;
-            this.uxRatingNumber.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // uxMovieName
-            // 
-            this.uxMovieName.Location = new System.Drawing.Point(7, 48);
-            this.uxMovieName.Name = "uxMovieName";
-            this.uxMovieName.Size = new System.Drawing.Size(753, 22);
-            this.uxMovieName.TabIndex = 1;
-            // 
-            // UXPersonalReviews
-            // 
-            this.UXPersonalReviews.FormattingEnabled = true;
-            this.UXPersonalReviews.Location = new System.Drawing.Point(6, 17);
-            this.UXPersonalReviews.Name = "UXPersonalReviews";
-            this.UXPersonalReviews.Size = new System.Drawing.Size(754, 24);
-            this.UXPersonalReviews.TabIndex = 0;
-            this.UXPersonalReviews.SelectedIndexChanged += new System.EventHandler(this.UXPersonalReviews_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -268,7 +347,6 @@
             this.UXPersonalReviewLabel.Size = new System.Drawing.Size(105, 20);
             this.UXPersonalReviewLabel.TabIndex = 4;
             this.UXPersonalReviewLabel.Text = "Your Rating";
-            this.UXPersonalReviewLabel.Click += new System.EventHandler(this.UXPersonalReviewLabel_Click);
             // 
             // UXImdbScoreLabel
             // 
@@ -305,7 +383,6 @@
             this.UxMovieLabel.Size = new System.Drawing.Size(94, 20);
             this.UxMovieLabel.TabIndex = 0;
             this.UxMovieLabel.Text = "Movie Title";
-            this.UxMovieLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabPage3
             // 
@@ -435,7 +512,6 @@
             this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Genre";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ux_AddMovies
             // 
@@ -458,36 +534,6 @@
             this.UxAddMovies.UseVisualStyleBackColor = true;
             this.UxAddMovies.Click += new System.EventHandler(this.UxAddMovies_Click);
             // 
-            // ux_MoviesList
-            // 
-            this.ux_MoviesList.Controls.Add(this.ux_populateMoviesButton);
-            this.ux_MoviesList.Controls.Add(this.ux_MovieDataGrid);
-            this.ux_MoviesList.Location = new System.Drawing.Point(4, 25);
-            this.ux_MoviesList.Name = "ux_MoviesList";
-            this.ux_MoviesList.Padding = new System.Windows.Forms.Padding(3);
-            this.ux_MoviesList.Size = new System.Drawing.Size(776, 417);
-            this.ux_MoviesList.TabIndex = 6;
-            this.ux_MoviesList.Text = "Movies List";
-            this.ux_MoviesList.UseVisualStyleBackColor = true;
-            // 
-            // ux_populateMoviesButton
-            // 
-            this.ux_populateMoviesButton.Location = new System.Drawing.Point(6, 6);
-            this.ux_populateMoviesButton.Name = "ux_populateMoviesButton";
-            this.ux_populateMoviesButton.Size = new System.Drawing.Size(175, 43);
-            this.ux_populateMoviesButton.TabIndex = 1;
-            this.ux_populateMoviesButton.Text = "Populate Movie List";
-            this.ux_populateMoviesButton.UseVisualStyleBackColor = true;
-            this.ux_populateMoviesButton.Click += new System.EventHandler(this.ux_populateMoviesButton_Click);
-            // 
-            // ux_MovieDataGrid
-            // 
-            this.ux_MovieDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ux_MovieDataGrid.Location = new System.Drawing.Point(3, 55);
-            this.ux_MovieDataGrid.Name = "ux_MovieDataGrid";
-            this.ux_MovieDataGrid.Size = new System.Drawing.Size(767, 356);
-            this.ux_MovieDataGrid.TabIndex = 0;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -497,28 +543,55 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 26);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // uxReviewsPerMovie
+            // 
+            this.uxReviewsPerMovie.AutoSize = true;
+            this.uxReviewsPerMovie.Location = new System.Drawing.Point(6, 13);
+            this.uxReviewsPerMovie.Name = "uxReviewsPerMovie";
+            this.uxReviewsPerMovie.Size = new System.Drawing.Size(144, 16);
+            this.uxReviewsPerMovie.TabIndex = 10;
+            this.uxReviewsPerMovie.Text = "See Movie Reviews";
+            // 
+            // uxReviewsForMovieListBox
+            // 
+            this.uxReviewsForMovieListBox.FormattingEnabled = true;
+            this.uxReviewsForMovieListBox.ItemHeight = 16;
+            this.uxReviewsForMovieListBox.Location = new System.Drawing.Point(0, 80);
+            this.uxReviewsForMovieListBox.Name = "uxReviewsForMovieListBox";
+            this.uxReviewsForMovieListBox.Size = new System.Drawing.Size(776, 340);
+            this.uxReviewsForMovieListBox.TabIndex = 11;
+            // 
+            // uxMovieListComboBox
+            // 
+            this.uxMovieListComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxMovieListComboBox.FormattingEnabled = true;
+            this.uxMovieListComboBox.Location = new System.Drawing.Point(9, 32);
+            this.uxMovieListComboBox.Name = "uxMovieListComboBox";
+            this.uxMovieListComboBox.Size = new System.Drawing.Size(343, 33);
+            this.uxMovieListComboBox.TabIndex = 30;
+            this.uxMovieListComboBox.SelectedValueChanged += new System.EventHandler(this.uxMovieListComboBox_SelectedValueChanged);
             // 
             // ActionSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(791, 450);
             this.Controls.Add(this.ux_TabControl);
             this.Name = "ActionSelector";
             this.Text = "ActionSelector";
-            this.Load += new System.EventHandler(this.ActionSelector_Load);
             this.ux_TabControl.ResumeLayout(false);
+            this.ux_MoviesList.ResumeLayout(false);
+            this.ux_MoviesList.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uxRatingNumber)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -528,8 +601,6 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.ux_AddMovies.ResumeLayout(false);
-            this.ux_MoviesList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieDataGrid)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -539,15 +610,6 @@
 
         private System.Windows.Forms.TabControl ux_TabControl;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox UXPersonalReviews;
-        private System.Windows.Forms.TextBox uxMovieName;
-        private System.Windows.Forms.NumericUpDown uxRatingNumber;
-        private System.Windows.Forms.Label UXRatingLabel;
-        private System.Windows.Forms.TextBox UXComments;
-        private System.Windows.Forms.Button UXUpdateBtn;
-        private System.Windows.Forms.Button UXAddBtn;
-        private System.Windows.Forms.Button UxDeleteButton;
-        private System.Windows.Forms.Label UXCommentsLabel;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label UxMovieLabel;
         private System.Windows.Forms.TextBox UXPersonalRatingQuery;
@@ -575,9 +637,27 @@
         private System.Windows.Forms.MonthCalendar UxEndMonth;
         private System.Windows.Forms.MonthCalendar UxBeginMonth;
         private System.Windows.Forms.TabPage ux_MoviesList;
-        private System.Windows.Forms.Button ux_populateMoviesButton;
-        private System.Windows.Forms.DataGridView ux_MovieDataGrid;
+        private System.Windows.Forms.Button uxGetAllMovies;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ListBox uxMoviesList;
+        private System.Windows.Forms.Label uxMovieTitleLabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button uxAddMovie;
+        private System.Windows.Forms.Button uxAddRoleButton;
+        private System.Windows.Forms.Button uxAddPersonalRatingButton;
+        private System.Windows.Forms.Label uxStudioLabel;
+        private System.Windows.Forms.TextBox uxCostTextBox;
+        private System.Windows.Forms.Label uxCostLabel;
+        private System.Windows.Forms.TextBox uxInternationalTextBox;
+        private System.Windows.Forms.Label uxInternationalLabel;
+        private System.Windows.Forms.TextBox uxDomesticTextBox;
+        private System.Windows.Forms.Label uxDomesticLabel;
+        private System.Windows.Forms.TextBox uxGenreTextBox;
+        private System.Windows.Forms.Label uxGenreLabel;
+        private System.Windows.Forms.TextBox uxStudioTextBox;
+        private System.Windows.Forms.ListBox uxReviewsForMovieListBox;
+        private System.Windows.Forms.Label uxReviewsPerMovie;
+        private System.Windows.Forms.ComboBox uxMovieListComboBox;
     }
 }

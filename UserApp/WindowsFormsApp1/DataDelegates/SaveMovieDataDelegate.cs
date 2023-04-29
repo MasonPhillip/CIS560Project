@@ -49,7 +49,7 @@ namespace WindowsFormsApp1.DataDelegates
             command.Parameters.AddWithValue("IMDBRating", imdb);
             command.Parameters.AddWithValue("RottenTomatoesAudienceRating", audience);
             command.Parameters.AddWithValue("DomesticRevenue", domestic);
-            command.Parameters.AddWithValue("InternationlRevenue", international);
+            command.Parameters.AddWithValue("InternationalRevenue", international);
             command.Parameters.AddWithValue("Cost", cost);
             command.Parameters.AddWithValue("GenreId", genreId);
             command.Parameters.AddWithValue("RottenTomatoesCriticRating", critic);

@@ -4,10 +4,10 @@
    StudioId INT NOT NULL,
    MovieName NVARCHAR(256) NOT NULL,
    [ReleaseDate] SMALLINT NOT NULL,
-   IMDBRating DECIMAL(2,1) NOT NULL,
+   IMDBRating DECIMAL(3,1) NOT NULL,
    RottenTomatoesAudienceRating INT NOT NULL,
    DomesticRevenue BIGINT NOT NULL,
-   InternationlRevenue BIGINT NOT NULL,
+   InternationalRevenue BIGINT NOT NULL,
    Cost INT NOT NULL,
    GenreId INT NOT NULL,
    RottenTomatoesCriticRating INT NOT NULL,
@@ -16,7 +16,7 @@
 
 /***************************** Modify values here *****************************/
 
-INSERT @MoviesStaging(StudioId, MovieName, [ReleaseDate], IMDBRating, RottenTomatoesAudienceRating, DomesticRevenue, InternationlRevenue, Cost, GenreId, RottenTomatoesCriticRating)
+INSERT @MoviesStaging(StudioId, MovieName, [ReleaseDate], IMDBRating, RottenTomatoesAudienceRating, DomesticRevenue, InternationalRevenue, Cost, GenreId, RottenTomatoesCriticRating)
 VALUES
   (1, N'Lord of the Rings: Fellowship of the Ring',2001, 8.8, 95, 316115420, 898204420,93000000 ,6, 91),
  (2, N'Lord of the Rings: The Two Towers',2002, 8.8, 95, 342952511, 947944270,94000000 ,6, 95),
@@ -137,10 +137,10 @@ WHEN MATCHED THEN
    M.IMDBRating = MS.IMDBRating,
    M.RottenTomatoesAudienceRating = MS.RottenTomatoesAudienceRating,
    M.DomesticRevenue = MS.DomesticRevenue,
-   M.InternationlRevenue = MS.InternationlRevenue,
+   M.InternationalRevenue = MS.InternationalRevenue,
    M.Cost = MS.Cost,
    M.GenreId = MS.GenreId,
    M.RottenTomatoesCriticRating = MS.RottenTomatoesCriticRating
 WHEN NOT MATCHED THEN
-   INSERT(StudioId, MovieName, ReleaseDate, IMDBRating, RottenTomatoesAudienceRating , DomesticRevenue , InternationlRevenue , Cost, GenreId, RottenTomatoesCriticRating)
-   VALUES(MS.StudioId, MS.MovieName, MS.ReleaseDate, MS.IMDBRating, MS.RottenTomatoesAudienceRating , MS.DomesticRevenue , MS.InternationlRevenue , MS.Cost, MS.GenreId, MS.RottenTomatoesCriticRating);
+   INSERT(StudioId, MovieName, ReleaseDate, IMDBRating, RottenTomatoesAudienceRating , DomesticRevenue , InternationalRevenue , Cost, GenreId, RottenTomatoesCriticRating)
+   VALUES(MS.StudioId, MS.MovieName, MS.ReleaseDate, MS.IMDBRating, MS.RottenTomatoesAudienceRating , MS.DomesticRevenue , MS.InternationalRevenue , MS.Cost, MS.GenreId, MS.RottenTomatoesCriticRating);

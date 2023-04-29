@@ -22,5 +22,10 @@ namespace WindowsFormsApp1.Models
             PersonalRating = personalRating;
             RatingDescription = ratingDescription;
         }
+
+        public override string ToString()
+        {
+            return RatingDescription;
+        }
     }
 }

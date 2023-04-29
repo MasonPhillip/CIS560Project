@@ -34,8 +34,8 @@ namespace WindowsFormsApp1.DataDelegates
             return new Roles(roleId,
                reader.GetInt32("PersonId"),
                reader.GetInt32("MovieId"),
-               reader.GetByte("isDirector"),
-               reader.GetByte("isActor"),
+               reader.GetValue<bool>("isDirector"),
+               reader.GetValue<bool>("isActor"),
                reader.GetInt32("AmountPaid"));
         }
     }

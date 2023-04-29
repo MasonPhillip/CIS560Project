@@ -15,5 +15,10 @@ namespace WindowsFormsApp1.Models
             StudioId = studioId;
             StudioName = studioName;
         }
+
+        public override string ToString()
+        {
+            return StudioName;
+        }
     }
 }

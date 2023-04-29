@@ -34,18 +34,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.UXLoginBtn = new System.Windows.Forms.Button();
+            this.uxCreateUserButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UXUserName
             // 
-            this.UXUserName.Location = new System.Drawing.Point(266, 148);
+            this.UXUserName.Location = new System.Drawing.Point(30, 83);
             this.UXUserName.Name = "UXUserName";
             this.UXUserName.Size = new System.Drawing.Size(260, 20);
             this.UXUserName.TabIndex = 0;
             // 
             // UXPassword
             // 
-            this.UXPassword.Location = new System.Drawing.Point(266, 265);
+            this.UXPassword.Location = new System.Drawing.Point(30, 140);
             this.UXPassword.Name = "UXPassword";
             this.UXPassword.Size = new System.Drawing.Size(260, 20);
             this.UXPassword.TabIndex = 1;
@@ -54,7 +55,7 @@
             // 
             this.Lo.AutoSize = true;
             this.Lo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lo.Location = new System.Drawing.Point(360, 9);
+            this.Lo.Location = new System.Drawing.Point(124, 9);
             this.Lo.Name = "Lo";
             this.Lo.Size = new System.Drawing.Size(70, 25);
             this.Lo.TabIndex = 2;
@@ -65,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(356, 125);
+            this.label1.Location = new System.Drawing.Point(120, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 3;
@@ -75,7 +76,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(356, 242);
+            this.label2.Location = new System.Drawing.Point(120, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 4;
@@ -84,7 +85,7 @@
             // UXLoginBtn
             // 
             this.UXLoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UXLoginBtn.Location = new System.Drawing.Point(360, 323);
+            this.UXLoginBtn.Location = new System.Drawing.Point(58, 175);
             this.UXLoginBtn.Name = "UXLoginBtn";
             this.UXLoginBtn.Size = new System.Drawing.Size(75, 31);
             this.UXLoginBtn.TabIndex = 5;
@@ -92,11 +93,22 @@
             this.UXLoginBtn.UseVisualStyleBackColor = true;
             this.UXLoginBtn.Click += new System.EventHandler(this.UXLoginBtn_Click);
             // 
+            // uxCreateUserButton
+            // 
+            this.uxCreateUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxCreateUserButton.Location = new System.Drawing.Point(186, 175);
+            this.uxCreateUserButton.Name = "uxCreateUserButton";
+            this.uxCreateUserButton.Size = new System.Drawing.Size(75, 31);
+            this.uxCreateUserButton.TabIndex = 6;
+            this.uxCreateUserButton.Text = "Create";
+            this.uxCreateUserButton.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(324, 226);
+            this.Controls.Add(this.uxCreateUserButton);
             this.Controls.Add(this.UXLoginBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -119,6 +131,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button UXLoginBtn;
+        private System.Windows.Forms.Button uxCreateUserButton;
     }
 }
 
