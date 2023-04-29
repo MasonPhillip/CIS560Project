@@ -80,6 +80,8 @@
             this.ux_MovieBox = new System.Windows.Forms.ComboBox();
             this.ux_MovieCompareDataGrid = new System.Windows.Forms.DataGridView();
             this.ux_MovieCompareButton = new System.Windows.Forms.Button();
+            this.ux_ReviewRefresh = new System.Windows.Forms.Button();
+            this.ux_CompareRefresh = new System.Windows.Forms.Button();
             this.ux_TabControl.SuspendLayout();
             this.ux_MoviesList.SuspendLayout();
             this.ux_GenresTab.SuspendLayout();
@@ -322,6 +324,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ux_ReviewRefresh);
             this.tabPage1.Controls.Add(this.uxMovieListComboBox);
             this.tabPage1.Controls.Add(this.uxReviewsForMovieListBox);
             this.tabPage1.Controls.Add(this.uxReviewsPerMovie);
@@ -363,6 +366,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ux_CompareRefresh);
             this.tabPage2.Controls.Add(this.ux_MovieCompareButton);
             this.tabPage2.Controls.Add(this.ux_MovieCompareDataGrid);
             this.tabPage2.Controls.Add(this.ux_MovieBox);
@@ -648,6 +652,26 @@
             this.ux_MovieCompareButton.UseVisualStyleBackColor = true;
             this.ux_MovieCompareButton.Click += new System.EventHandler(this.ux_MovieCompareButton_Click);
             // 
+            // ux_ReviewRefresh
+            // 
+            this.ux_ReviewRefresh.Location = new System.Drawing.Point(518, 32);
+            this.ux_ReviewRefresh.Name = "ux_ReviewRefresh";
+            this.ux_ReviewRefresh.Size = new System.Drawing.Size(164, 23);
+            this.ux_ReviewRefresh.TabIndex = 31;
+            this.ux_ReviewRefresh.Text = "Refresh";
+            this.ux_ReviewRefresh.UseVisualStyleBackColor = true;
+            this.ux_ReviewRefresh.Click += new System.EventHandler(this.ux_ReviewRefresh_Click);
+            // 
+            // ux_CompareRefresh
+            // 
+            this.ux_CompareRefresh.Location = new System.Drawing.Point(597, 36);
+            this.ux_CompareRefresh.Name = "ux_CompareRefresh";
+            this.ux_CompareRefresh.Size = new System.Drawing.Size(173, 23);
+            this.ux_CompareRefresh.TabIndex = 3;
+            this.ux_CompareRefresh.Text = "Refresh";
+            this.ux_CompareRefresh.UseVisualStyleBackColor = true;
+            this.ux_CompareRefresh.Click += new System.EventHandler(this.ux_CompareRefresh_Click);
+            // 
             // ActionSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -736,5 +760,7 @@
         private System.Windows.Forms.ComboBox ux_MovieBox;
         private System.Windows.Forms.Button ux_MovieCompareButton;
         private System.Windows.Forms.DataGridView ux_MovieCompareDataGrid;
+        private System.Windows.Forms.Button ux_ReviewRefresh;
+        private System.Windows.Forms.Button ux_CompareRefresh;
     }
 }

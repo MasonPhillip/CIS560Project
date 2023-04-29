@@ -206,5 +206,15 @@ namespace WindowsFormsApp1
                 selectedMovieId = selectedMovie.MovieId;
             }
         }
+
+        private void ux_ReviewRefresh_Click(object sender, EventArgs e)
+        {
+            uxMovieListComboBox.DataSource = controller.GetMovies();
+        }
+
+        private void ux_CompareRefresh_Click(object sender, EventArgs e)
+        {
+            ux_MovieBox.DataSource = controller.GetMovies();
+        }
     }
 }
