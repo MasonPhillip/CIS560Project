@@ -76,11 +76,16 @@
             this.ux_APCbGDataGrid = new System.Windows.Forms.DataGridView();
             this.ux_APCbGGenrePicker = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.uxAddUserButton = new System.Windows.Forms.Button();
+            this.ux_MovieBox = new System.Windows.Forms.ComboBox();
+            this.ux_MovieCompareDataGrid = new System.Windows.Forms.DataGridView();
+            this.ux_MovieCompareButton = new System.Windows.Forms.Button();
             this.ux_TabControl.SuspendLayout();
             this.ux_MoviesList.SuspendLayout();
             this.ux_GenresTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_HighestPaidWithinData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_EndDatePicker)).BeginInit();
@@ -92,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ux_ASPbGDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_APCbGDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_APCbGGenrePicker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieCompareDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // ux_TabControl
@@ -112,6 +118,7 @@
             // 
             // ux_MoviesList
             // 
+            this.ux_MoviesList.Controls.Add(this.uxAddUserButton);
             this.ux_MoviesList.Controls.Add(this.uxCostTextBox);
             this.ux_MoviesList.Controls.Add(this.uxCostLabel);
             this.ux_MoviesList.Controls.Add(this.uxInternationalTextBox);
@@ -356,6 +363,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ux_MovieCompareButton);
+            this.tabPage2.Controls.Add(this.ux_MovieCompareDataGrid);
+            this.tabPage2.Controls.Add(this.ux_MovieBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -601,6 +611,43 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Genre Id";
             // 
+            // uxAddUserButton
+            // 
+            this.uxAddUserButton.Location = new System.Drawing.Point(595, 294);
+            this.uxAddUserButton.Name = "uxAddUserButton";
+            this.uxAddUserButton.Size = new System.Drawing.Size(175, 43);
+            this.uxAddUserButton.TabIndex = 19;
+            this.uxAddUserButton.Text = "Add User";
+            this.uxAddUserButton.UseVisualStyleBackColor = true;
+            this.uxAddUserButton.Click += new System.EventHandler(this.uxAddUserButton_Click);
+            // 
+            // ux_MovieBox
+            // 
+            this.ux_MovieBox.FormattingEnabled = true;
+            this.ux_MovieBox.Location = new System.Drawing.Point(6, 6);
+            this.ux_MovieBox.Name = "ux_MovieBox";
+            this.ux_MovieBox.Size = new System.Drawing.Size(419, 24);
+            this.ux_MovieBox.TabIndex = 0;
+            this.ux_MovieBox.SelectedIndexChanged += new System.EventHandler(this.ux_MovieBox_SelectedIndexChanged);
+            // 
+            // ux_MovieCompareDataGrid
+            // 
+            this.ux_MovieCompareDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_MovieCompareDataGrid.Location = new System.Drawing.Point(6, 97);
+            this.ux_MovieCompareDataGrid.Name = "ux_MovieCompareDataGrid";
+            this.ux_MovieCompareDataGrid.Size = new System.Drawing.Size(764, 314);
+            this.ux_MovieCompareDataGrid.TabIndex = 1;
+            // 
+            // ux_MovieCompareButton
+            // 
+            this.ux_MovieCompareButton.Location = new System.Drawing.Point(597, 7);
+            this.ux_MovieCompareButton.Name = "ux_MovieCompareButton";
+            this.ux_MovieCompareButton.Size = new System.Drawing.Size(173, 23);
+            this.ux_MovieCompareButton.TabIndex = 2;
+            this.ux_MovieCompareButton.Text = "Compare";
+            this.ux_MovieCompareButton.UseVisualStyleBackColor = true;
+            this.ux_MovieCompareButton.Click += new System.EventHandler(this.ux_MovieCompareButton_Click);
+            // 
             // ActionSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,6 +663,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ux_GenresDataView)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ux_HighestPaidWithinData)).EndInit();
@@ -630,6 +678,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ux_ASPbGDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_APCbGDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ux_APCbGGenrePicker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ux_MovieCompareDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -683,5 +732,9 @@
         private System.Windows.Forms.DataGridView ux_APCbGDataGrid;
         private System.Windows.Forms.NumericUpDown ux_APCbGGenrePicker;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button uxAddUserButton;
+        private System.Windows.Forms.ComboBox ux_MovieBox;
+        private System.Windows.Forms.Button ux_MovieCompareButton;
+        private System.Windows.Forms.DataGridView ux_MovieCompareDataGrid;
     }
 }

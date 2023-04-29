@@ -35,8 +35,8 @@ namespace WindowsFormsApp1
             uxPersonComboBox.DataSource = controller.GetPeople();
             uxStudioComboBox.DataSource = controller.GetStudios();
             uxUsersComboBox.DataSource = controller.GetUsers();
-            
-            switch(item)
+
+            switch (item)
             {
                 case MovieItems.Movie:
                     uxAudienceRatingLabel.Visible = true;
@@ -82,6 +82,16 @@ namespace WindowsFormsApp1
                     uxPersonLabel.Visible = true;
                     uxPersonComboBox.Visible = true;
                     break;
+                case MovieItems.User:
+                    uxUserNameLabel.Visible = true;
+                    uxUserNameTextBox.Visible = true;
+                    uxPasswordLabel.Visible = true;
+                    uxPasswordTextBox.Visible = true;
+                    uxNameLabel.Visible = true;
+                    uxNameTextBox.Visible = true;
+                    uxEmailLabel.Visible = true;
+                    uxEmailTextBox.Visible = true;
+                    break;
                 default:
                     break;
             }
@@ -90,7 +100,7 @@ namespace WindowsFormsApp1
 
         private void uxOKButton_Click(object sender, EventArgs e)
         {
-            switch(currentMovieItem)
+            switch (currentMovieItem)
             {
                 case MovieItems.Movie:
                     string movieName = uxMovieTitleTextBox.Text;
@@ -119,6 +129,13 @@ namespace WindowsFormsApp1
                     bool isActor = Convert.ToBoolean(uxActorComboBox.SelectedValue);
                     int amountPaid = Convert.ToInt32(uxAmountPaidTextBox.Text);
                     controller.CreateRole(personId, movieID, isDirector, isActor, amountPaid);
+                    break;
+                case MovieItems.User:
+                    string username = uxUserNameTextBox.Text;
+                    string password = uxPasswordTextBox.Text;
+                    string name = uxNameTextBox.Text;
+                    string email = uxEmailTextBox.Text;
+                    controller.CreateUser(username, password, name, email);
                     break;
                 default:
                     return;
@@ -168,6 +185,14 @@ namespace WindowsFormsApp1
             uxPersonLabel.Visible = false;
             uxUserLabel.Visible = false;
             uxUsersComboBox.Visible = false;
+            uxUserNameLabel.Visible = false;
+            uxUserNameTextBox.Visible = false;
+            uxPasswordLabel.Visible = false;
+            uxPasswordTextBox.Visible = false;
+            uxNameLabel.Visible = false;
+            uxNameTextBox.Visible = false;
+            uxEmailLabel.Visible = false;
+            uxEmailTextBox.Visible = false;
         }
     }
 }

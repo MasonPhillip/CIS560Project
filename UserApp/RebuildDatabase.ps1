@@ -84,6 +84,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFor
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.Movies.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.Roles.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.Users.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "WindowsFormsApp1\Sql\Data\Movie.PersonalRatings.sql"
 
 
 Write-Host "Rebuild completed."

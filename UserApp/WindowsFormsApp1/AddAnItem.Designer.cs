@@ -65,6 +65,14 @@
             this.uxAmountPaidTextBox = new System.Windows.Forms.TextBox();
             this.uxUserLabel = new System.Windows.Forms.Label();
             this.uxUsersComboBox = new System.Windows.Forms.ComboBox();
+            this.uxUserNameLabel = new System.Windows.Forms.Label();
+            this.uxUserNameTextBox = new System.Windows.Forms.TextBox();
+            this.uxPasswordLabel = new System.Windows.Forms.Label();
+            this.uxPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.uxNameLabel = new System.Windows.Forms.Label();
+            this.uxNameTextBox = new System.Windows.Forms.TextBox();
+            this.uxEmailLabel = new System.Windows.Forms.Label();
+            this.uxEmailTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // uxMovieTitleLabel
@@ -420,11 +428,91 @@
             this.uxUsersComboBox.Size = new System.Drawing.Size(343, 33);
             this.uxUsersComboBox.TabIndex = 38;
             // 
+            // uxUserNameLabel
+            // 
+            this.uxUserNameLabel.AutoSize = true;
+            this.uxUserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxUserNameLabel.Location = new System.Drawing.Point(11, 9);
+            this.uxUserNameLabel.Name = "uxUserNameLabel";
+            this.uxUserNameLabel.Size = new System.Drawing.Size(105, 25);
+            this.uxUserNameLabel.TabIndex = 39;
+            this.uxUserNameLabel.Text = "UserName";
+            // 
+            // uxUserNameTextBox
+            // 
+            this.uxUserNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxUserNameTextBox.Location = new System.Drawing.Point(16, 34);
+            this.uxUserNameTextBox.Name = "uxUserNameTextBox";
+            this.uxUserNameTextBox.Size = new System.Drawing.Size(344, 30);
+            this.uxUserNameTextBox.TabIndex = 40;
+            // 
+            // uxPasswordLabel
+            // 
+            this.uxPasswordLabel.AutoSize = true;
+            this.uxPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxPasswordLabel.Location = new System.Drawing.Point(14, 85);
+            this.uxPasswordLabel.Name = "uxPasswordLabel";
+            this.uxPasswordLabel.Size = new System.Drawing.Size(98, 25);
+            this.uxPasswordLabel.TabIndex = 41;
+            this.uxPasswordLabel.Text = "Password";
+            // 
+            // uxPasswordTextBox
+            // 
+            this.uxPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxPasswordTextBox.Location = new System.Drawing.Point(16, 113);
+            this.uxPasswordTextBox.Name = "uxPasswordTextBox";
+            this.uxPasswordTextBox.Size = new System.Drawing.Size(344, 30);
+            this.uxPasswordTextBox.TabIndex = 42;
+            // 
+            // uxNameLabel
+            // 
+            this.uxNameLabel.AutoSize = true;
+            this.uxNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxNameLabel.Location = new System.Drawing.Point(14, 163);
+            this.uxNameLabel.Name = "uxNameLabel";
+            this.uxNameLabel.Size = new System.Drawing.Size(64, 25);
+            this.uxNameLabel.TabIndex = 43;
+            this.uxNameLabel.Text = "Name";
+            // 
+            // uxNameTextBox
+            // 
+            this.uxNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxNameTextBox.Location = new System.Drawing.Point(17, 191);
+            this.uxNameTextBox.Name = "uxNameTextBox";
+            this.uxNameTextBox.Size = new System.Drawing.Size(344, 30);
+            this.uxNameTextBox.TabIndex = 44;
+            // 
+            // uxEmailLabel
+            // 
+            this.uxEmailLabel.AutoSize = true;
+            this.uxEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxEmailLabel.Location = new System.Drawing.Point(14, 238);
+            this.uxEmailLabel.Name = "uxEmailLabel";
+            this.uxEmailLabel.Size = new System.Drawing.Size(147, 25);
+            this.uxEmailLabel.TabIndex = 45;
+            this.uxEmailLabel.Text = "Recovery Email";
+            // 
+            // uxEmailTextBox
+            // 
+            this.uxEmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxEmailTextBox.Location = new System.Drawing.Point(17, 266);
+            this.uxEmailTextBox.Name = "uxEmailTextBox";
+            this.uxEmailTextBox.Size = new System.Drawing.Size(344, 30);
+            this.uxEmailTextBox.TabIndex = 46;
+            // 
             // AddAnItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uxEmailTextBox);
+            this.Controls.Add(this.uxEmailLabel);
+            this.Controls.Add(this.uxNameTextBox);
+            this.Controls.Add(this.uxNameLabel);
+            this.Controls.Add(this.uxPasswordTextBox);
+            this.Controls.Add(this.uxPasswordLabel);
+            this.Controls.Add(this.uxUserNameTextBox);
+            this.Controls.Add(this.uxUserNameLabel);
             this.Controls.Add(this.uxUsersComboBox);
             this.Controls.Add(this.uxUserLabel);
             this.Controls.Add(this.uxAmountPaidTextBox);
@@ -508,5 +596,13 @@
         private System.Windows.Forms.TextBox uxAmountPaidTextBox;
         private System.Windows.Forms.Label uxUserLabel;
         private System.Windows.Forms.ComboBox uxUsersComboBox;
+        private System.Windows.Forms.Label uxUserNameLabel;
+        private System.Windows.Forms.TextBox uxUserNameTextBox;
+        private System.Windows.Forms.Label uxPasswordLabel;
+        private System.Windows.Forms.TextBox uxPasswordTextBox;
+        private System.Windows.Forms.Label uxNameLabel;
+        private System.Windows.Forms.TextBox uxNameTextBox;
+        private System.Windows.Forms.Label uxEmailLabel;
+        private System.Windows.Forms.TextBox uxEmailTextBox;
     }
 }

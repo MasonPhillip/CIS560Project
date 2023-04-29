@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class ActionSelector : Form
     {
         public AddMovieItemDel AddMovieItem;
-
+        private int selectedMovieId;
         private Movies selectedMovie;
         private Movies movieForReviews;
         public Users currentUser;
@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
             uxMoviesList.DataSource = controller.GetMovies();
             uxMovieListComboBox.DataSource = controller.GetMovies();
             uxMoviesList.SelectedIndex = -1;
+            ux_MovieBox.DataSource = controller.GetMovies();
         }
 
         private void UxAddMovies_Click(object sender, EventArgs e)
@@ -172,6 +173,37 @@ namespace WindowsFormsApp1
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 ux_APCbGDataGrid.DataSource = dtbl;
+            }
+        }
+
+        private void uxAddUserButton_Click(object sender, EventArgs e)
+        {
+            AddMovieItem(MovieItems.User);
+        }
+
+        private void ux_MovieCompareButton_Click(object sender, EventArgs e)
+        {
+                using (SqlConnection sqlcon = new SqlConnection(connectionString))
+                {
+                    sqlcon.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd = new SqlCommand("Movie.RatingCompareByMovieName", sqlcon);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MovieId", selectedMovieId);
+                    cmd.ExecuteNonQuery();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+                    ux_MovieCompareDataGrid.DataSource = dtbl;
+                }
+        }
+
+        private void ux_MovieBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ux_MovieBox.SelectedItem != null && ux_MovieBox.SelectedIndex >= 0 && ux_MovieBox.SelectedItem is Movies movie)
+            {
+                selectedMovie = controller.FetchMovie(movie.MovieId);
+                selectedMovieId = selectedMovie.MovieId;
             }
         }
     }

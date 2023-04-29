@@ -6,7 +6,7 @@ BEGIN
       MovieId INT NOT NULL,
       AuthorUserId INT NOT NULL,
       PersonalRating INT NOT NULL,
-      RatingDescription NVARCHAR(256) NOT NULL,
+      RatingDescription NVARCHAR(1000) NOT NULL,
 
       CONSTRAINT PK_Movie_PersonalRatings_RatingId PRIMARY KEY CLUSTERED
       (
